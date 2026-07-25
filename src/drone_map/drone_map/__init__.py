@@ -1,0 +1,1 @@
+"""Static obstacle map package."""

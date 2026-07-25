@@ -1,0 +1,6 @@
+drone_ground_station_2d:
+  ros__parameters:
+    path_history_limit: 3000
+    goal_publish_repetitions: 5
+    goal_publish_interval_s: 0.08
+    maximum_occupied_points: 6000

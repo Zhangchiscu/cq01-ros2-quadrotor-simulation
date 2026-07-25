@@ -1,0 +1,66 @@
+========================================================================
+CQ01 REQUIREMENT CLOSURE V1.4 AUDIT
+time=20260723_221951
+========================================================================
+
+[1] Nodes
+/local_perception_filter
+/sensor_noise_bridge
+
+[2] Global map QoS
+Type: sensor_msgs/msg/PointCloud2
+
+Publisher count: 1
+
+Node name: cq01_v9_teacher_interface_bridge
+Node namespace: /
+Topic type: sensor_msgs/msg/PointCloud2
+Endpoint type: PUBLISHER
+GID: 01.0f.a1.ef.48.34.cb.fc.00.00.00.00.00.00.11.03.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: TRANSIENT_LOCAL
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 1
+
+Node name: local_perception_filter
+Node namespace: /
+Topic type: sensor_msgs/msg/PointCloud2
+Endpoint type: SUBSCRIPTION
+GID: 01.0f.a1.ef.d3.35.a1.7a.00.00.00.00.00.00.15.04.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: TRANSIENT_LOCAL
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+
+[3] Sensor-noise status
+data: '{"enabled": true, "odom_samples": 2716, "imu_samples": 2716, "configured": {"odom_position_sigma_m": 0.02, "odom_velocity_sigma_...'
+---
+
+[4] Local-perception status
+data: '{"mode": "LOCAL_POINTCLOUD_RANGE_SIMULATION_V14", "sensing_radius_m": 12.0, "filter_rate_hz": 5.0, "odom_messages": 470, "pointc...'
+---
+
+[5] Local cloud type
+sensor_msgs/msg/PointCloud2
+
+[6] Local cloud width
+37
+---
+
+[7] Perception marker
+visualization_msgs/msg/Marker
+
+========================================================================
+V1.4 AUDIT COMPLETE
+========================================================================

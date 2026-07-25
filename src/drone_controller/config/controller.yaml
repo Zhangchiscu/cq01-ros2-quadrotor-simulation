@@ -1,0 +1,54 @@
+quadrotor_controller:
+  ros__parameters:
+    control_rate_hz: 100.0
+    odom_timeout_s: 0.30
+
+    mass: 1.36
+    gravity: 9.81
+    arm_length: 0.225
+
+    inertia_xx: 0.030
+    inertia_yy: 0.030
+    inertia_zz: 0.050
+
+    thrust_coefficient: 8.54858e-6
+    torque_coefficient: 1.60e-7
+
+    minimum_rpm: 0.0
+    maximum_rpm: 10000.0
+
+    kp_x: 2.0
+    kp_y: 2.0
+    kp_z: 5.0
+
+    kd_x: 2.4
+    kd_y: 2.4
+    kd_z: 3.5
+
+    ki_x: 0.05
+    ki_y: 0.05
+    ki_z: 0.25
+
+    integral_limit_x: 1.0
+    integral_limit_y: 1.0
+    integral_limit_z: 1.0
+
+    attitude_gain_roll: 1.2
+    attitude_gain_pitch: 1.2
+    attitude_gain_yaw: 0.40
+
+    angular_rate_gain_roll: 0.25
+    angular_rate_gain_pitch: 0.25
+    angular_rate_gain_yaw: 0.12
+
+    maximum_horizontal_acceleration: 3.0
+    maximum_upward_acceleration: 4.0
+    maximum_downward_acceleration: 4.0
+    maximum_tilt_deg: 30.0
+
+    maximum_roll_torque: 0.80
+    maximum_pitch_torque: 0.80
+    maximum_yaw_torque: 0.08
+
+    minimum_goal_z: 0.0
+    maximum_goal_z: 300.0

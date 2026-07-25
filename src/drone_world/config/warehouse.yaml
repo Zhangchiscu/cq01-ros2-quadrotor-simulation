@@ -1,0 +1,26 @@
+world:
+  name: warehouse
+  frame_id: map
+  resolution: 0.20
+  planning_z: 1.50
+  bounds: {min_x: -8.0, max_x: 8.0, min_y: -6.0, max_y: 6.0, min_z: 0.0, max_z: 5.0}
+  obstacles:
+    - {id: shelf_a, type: box, category: shelf, center: [-3.0, -2.4, 1.25], size: [3.2, 0.9, 2.5]}
+    - {id: shelf_b, type: rotated_box, category: shelf, center: [0.0, -2.1, 1.25], size: [3.0, 0.9, 2.5], yaw: 0.18}
+    - {id: shelf_c, type: rotated_box, category: shelf, center: [3.2, -1.8, 1.25], size: [3.0, 0.9, 2.5], yaw: -0.14}
+    - {id: shelf_d, type: box, category: shelf, center: [-2.5, 2.3, 1.25], size: [3.5, 0.9, 2.5]}
+    - {id: shelf_e, type: rotated_box, category: shelf, center: [1.4, 2.4, 1.25], size: [3.8, 0.9, 2.5], yaw: 0.12}
+    - id: loading_door
+      type: doorway
+      category: doorway
+      center: [6.2, 1.0, 0.0]
+      total_width: 4.2
+      total_height: 3.8
+      opening_width: 2.2
+      opening_height: 2.4
+      thickness: 0.5
+      yaw: 1.57079632679
+      base_z: 0.0
+    - {id: support_column_1, type: cylinder, category: column, center: [-5.7, 0.0, 2.0], radius: 0.45, height: 4.0}
+    - {id: support_column_2, type: cylinder, category: column, center: [5.4, -4.5, 2.0], radius: 0.45, height: 4.0}
+    - {id: overhead_beam, type: beam, category: beam, center: [0.0, 0.2, 3.2], size: [5.0, 0.55, 0.55], project_to_2d: false}

@@ -1,0 +1,31 @@
+{
+  "scenario": "forest",
+  "goal": [
+    8.0,
+    0.0,
+    1.5
+  ],
+  "success": true,
+  "overall_pass": true,
+  "criteria": {
+    "mission_successful": true,
+    "planned_path_received": true,
+    "final_error_below_0_3_m": true,
+    "safety_grid_collision_free": true,
+    "physical_clearance_above_required_margin": true,
+    "path_ratio_below_1_5": true,
+    "no_motor_saturation": true
+  },
+  "arrival_time_s": 4.6119819390000885,
+  "final_error_m": 0.045880398719063485,
+  "steady_state_error_m": 0.04505350159588521,
+  "planned_path_length_m": 8.100617126551965,
+  "actual_path_length_m": 8.63777844426946,
+  "actual_over_planned_path_ratio": 1.0663111599185207,
+  "minimum_pointcloud_clearance_m": 1.1520213290686285,
+  "safety_grid_collision_samples": 0,
+  "required_physical_clearance_m": 0.3,
+  "maximum_motor_rpm": 7365.00341796875,
+  "sample_count": 117,
+  "planned_waypoint_count": 2
+}

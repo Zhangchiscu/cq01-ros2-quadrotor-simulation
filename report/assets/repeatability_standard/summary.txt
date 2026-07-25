@@ -1,0 +1,21 @@
+===== Standard Avoidance Repeatability Summary =====
+Runs: 3
+Successful runs: 3
+Overall pass: True
+
+Arrival time: 12.184 ± 0.036 s  [min=12.145, max=12.214]
+Final error: 0.0197 ± 0.0004 m  [min=0.0194, max=0.0201]
+Steady-state error: 0.0160 ± 0.0008 m  [min=0.0153, max=0.0169]
+Planned path length: 9.386 ± 0.000 m  [min=9.386, max=9.386]
+Actual path length: 10.168 ± 0.002 m  [min=10.166, max=10.170]
+Actual/planned path ratio: 1.083 ± 0.000   [min=1.083, max=1.083]
+Minimum obstacle clearance: 0.230 ± 0.000 m  [min=0.230, max=0.230]
+Minimum safety-zone clearance: 0.053 ± 0.000 m  [min=0.053, max=0.053]
+Maximum motor RPM: 7376.3 ± 0.0 RPM  [min=7376.3, max=7376.3]
+
+Acceptance criteria:
+- all_runs_successful: PASS
+- all_final_errors_below_0_3_m: PASS
+- all_obstacle_clearances_positive: PASS
+- all_safety_zone_clearances_positive: PASS
+- no_motor_saturation: PASS

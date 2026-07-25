@@ -1,0 +1,75 @@
+{
+  "pass": true,
+  "generated_at": "2026-07-23T22:57:34",
+  "scope": "Teacher course acceptance evidence. Multi-UAV intentionally excluded by final user decision.",
+  "checks": {
+    "01_hover_teacher_exact": true,
+    "02_single_goal_teacher_exact": true,
+    "03_four_waypoint_multi_goal": true,
+    "04_static_obstacle_P0_P15": true,
+    "05_bridge_and_narrow_corridor": true,
+    "06_required_stability_figures": true,
+    "06_quantitative_metrics_present": true,
+    "07_sensor_noise_and_local_perception_evidence": true
+  },
+  "advisory": {
+    "teacher_interface_strict_audit_pass": true,
+    "README_present": true,
+    "ai_usage_present": true,
+    "multi_uav_excluded_by_user_decision": true,
+    "experimental_e2e_motor_ai_excluded_from_final_runtime": true
+  },
+  "failed_criteria": [],
+  "sources": {
+    "course_acceptance_summary": "/home/zhangxianzhe/drone_task/your_drone_sim_ws/results/cq01_course_acceptance/course_acceptance_20260721_211341/summary.json",
+    "integrated_summary": "/home/zhangxianzhe/drone_task/your_drone_sim_ws/results/cq01_v9_mc/integrated/v9_mc_20260723_222614/summary.json",
+    "route_clearance_summary": "/home/zhangxianzhe/drone_task/your_drone_sim_ws/results/cq01_v9_mc/course_clearance/route_clearance_20260723_224404/summary.json",
+    "nominal_bonus_summary": "/home/zhangxianzhe/drone_task/your_drone_sim_ws/results/cq01_bonus_suite/nominal_full_20260723_221932/bonus_summary.json",
+    "quantitative_metrics": "/home/zhangxianzhe/drone_task/your_drone_sim_ws/results/cq01_bonus_suite/cq01_report_metrics_v4_20260722_210244/report_metrics.json",
+    "requirement_closure_audit": "/home/zhangxianzhe/drone_task/your_drone_sim_ws/results/cq01_requirement_closure/requirement_closure_v14_audit_20260723_221951.txt",
+    "teacher_interface_summary": "/home/zhangxianzhe/drone_task/your_drone_sim_ws/results/teacher_interface_final_audit_20260723_225227/teacher_interface_summary.json",
+    "required_figure_sources": {
+      "01_position_error_curve.png": "/home/zhangxianzhe/drone_task/your_drone_sim_ws/results/final_acceptance/final_acceptance_20260723_223733/06_stability_metrics/01_position_error_curve.png",
+      "02_four_motor_rpm_curves.png": "/home/zhangxianzhe/drone_task/your_drone_sim_ws/results/final_acceptance/final_acceptance_20260723_223733/06_stability_metrics/02_four_motor_rpm_curves.png",
+      "03_multi_target_actual_trajectory.png": "/home/zhangxianzhe/drone_task/your_drone_sim_ws/results/final_acceptance/final_acceptance_20260723_223733/06_stability_metrics/03_multi_target_actual_trajectory.png",
+      "04_route_planned_vs_actual.png": "/home/zhangxianzhe/drone_task/your_drone_sim_ws/results/final_acceptance/final_acceptance_20260723_223733/06_stability_metrics/04_route_planned_vs_actual.png",
+      "05_minimum_obstacle_distance_curve.png": "/home/zhangxianzhe/drone_task/your_drone_sim_ws/results/final_acceptance/final_acceptance_20260723_223733/06_stability_metrics/05_minimum_obstacle_distance_curve.png",
+      "06_route_altitude_profile.png": "/home/zhangxianzhe/drone_task/your_drone_sim_ws/results/final_acceptance/final_acceptance_20260723_223733/06_stability_metrics/06_route_altitude_profile.png"
+    }
+  },
+  "teacher_exact_reference": {
+    "hover_m": [
+      0.0,
+      0.0,
+      1.5
+    ],
+    "single_goal_m": [
+      2.0,
+      1.0,
+      1.5
+    ],
+    "multi_goal_m": [
+      [
+        3.0,
+        1.0,
+        1.5
+      ],
+      [
+        3.0,
+        3.0,
+        1.5
+      ],
+      [
+        1.0,
+        3.0,
+        1.5
+      ],
+      [
+        1.0,
+        1.0,
+        1.5
+      ]
+    ],
+    "final_error_limit_m": 0.3
+  }
+}

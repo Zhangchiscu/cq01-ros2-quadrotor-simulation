@@ -1,0 +1,24 @@
+===== Trajectory Execution Summary =====
+Mode: smooth
+Success: True
+Overall pass: True
+Arrival time: 40.03123099500044 s
+Final error: 0.0912 m
+Reference path length: 10.499 m
+Actual path length: 10.767 m
+Minimum clearance: 0.489 m
+Maximum acceleration: 1.364 m/s^2
+RMS acceleration: 0.121 m/s^2
+Maximum jerk: 13.474 m/s^3
+RMS jerk: 0.740 m/s^3
+Maximum motor RPM: 6478.2
+
+Acceptance criteria:
+- mission_successful: PASS
+- planner_3d_succeeded: PASS
+- trajectory_generated: PASS
+- collision_checked_reference: PASS
+- final_error_below_0_3_m: PASS
+- physical_clearance_above_0_3_m: PASS
+- path_ratio_below_1_5: PASS
+- no_motor_saturation: PASS

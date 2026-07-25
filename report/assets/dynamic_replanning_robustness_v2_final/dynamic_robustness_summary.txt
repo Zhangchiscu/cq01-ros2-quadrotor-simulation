@@ -1,0 +1,81 @@
+===== Dynamic Replanning Robustness Regression =====
+Overall pass: True
+Run count: 5
+Pass count: 5
+Success rate: 100.0%
+Mean arrival time: 26.650 s
+Worst dynamic clearance: 2.233 m
+Worst static clearance: 1.762 m
+Maximum replan latency: 71.642 ms
+Total successful replans: 38
+Total temporary failed replans: 3
+
+[nominal run 1]
+Overall pass: True
+Mission success: True
+Failure reason: none
+Parameters: speed=0.55 m/s, delay=3.00 s, dwell=8.00 s
+Arrival time: 27.284 s
+Final error: 0.0077 m
+Minimum dynamic clearance: 2.595 m
+Minimum static clearance: 1.765 m
+Successful replans: 8/8
+Temporary failed replans: 0
+
+[slow_crossing run 1]
+Overall pass: True
+Mission success: True
+Failure reason: none
+Parameters: speed=0.45 m/s, delay=2.50 s, dwell=8.00 s
+Arrival time: 26.663 s
+Final error: 0.0071 m
+Minimum dynamic clearance: 2.233 m
+Minimum static clearance: 1.766 m
+Successful replans: 8/8
+Temporary failed replans: 0
+
+[fast_crossing run 1]
+Overall pass: True
+Mission success: True
+Failure reason: none
+Parameters: speed=0.70 m/s, delay=3.20 s, dwell=6.00 s
+Arrival time: 24.502 s
+Final error: 0.0071 m
+Minimum dynamic clearance: 2.618 m
+Minimum static clearance: 1.762 m
+Successful replans: 5/6
+Temporary failed replans: 1
+
+[early_entry run 1]
+Overall pass: True
+Mission success: True
+Failure reason: none
+Parameters: speed=0.55 m/s, delay=2.00 s, dwell=8.00 s
+Arrival time: 26.063 s
+Final error: 0.0069 m
+Minimum dynamic clearance: 2.432 m
+Minimum static clearance: 1.768 m
+Successful replans: 8/8
+Temporary failed replans: 1
+
+[late_entry run 1]
+Overall pass: True
+Mission success: True
+Failure reason: none
+Parameters: speed=0.55 m/s, delay=4.50 s, dwell=8.00 s
+Arrival time: 28.740 s
+Final error: 0.0075 m
+Minimum dynamic clearance: 2.519 m
+Minimum static clearance: 1.765 m
+Successful replans: 9/10
+Temporary failed replans: 1
+
+Regression criteria:
+- all_cases_passed: PASS
+- all_missions_successful: PASS
+- every_case_detected_predicted_collision: PASS
+- every_case_completed_online_replan: PASS
+- all_final_errors_below_0_3_m: PASS
+- all_dynamic_clearances_above_0_3_m: PASS
+- all_static_clearances_above_0_3_m: PASS
+- all_no_motor_saturation: PASS

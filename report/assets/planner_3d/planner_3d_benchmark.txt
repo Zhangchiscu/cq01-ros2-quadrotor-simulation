@@ -1,0 +1,25 @@
+===== 3D A* Benchmark Summary =====
+Overall pass: True
+
+[overflight_3d]
+Overall pass: True
+Arrival time: 23.388600076999865 s
+Final error: 0.0115 m
+Minimum clearance: 0.492 m
+Maximum altitude: 3.461 m
+Fixed-height path exists: False
+Planning time: 78.44 ms
+
+[underpass_3d]
+Overall pass: True
+Arrival time: 20.77436926900009 s
+Final error: 0.0092 m
+Minimum clearance: 1.117 m
+Maximum altitude: 1.503 m
+Fixed-height path exists: True
+Planning time: 18.61 ms
+
+Benchmark criteria:
+- all_scenarios_passed: PASS
+- overflight_requires_3d: PASS
+- underpass_fixed_height_is_feasible: PASS

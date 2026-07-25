@@ -1,0 +1,23 @@
+world:
+  name: chongqing_style
+  frame_id: map
+  resolution: 0.25
+  planning_z: 2.50
+  bounds: {min_x: -14.0, max_x: 14.0, min_y: -10.0, max_y: 10.0, min_z: 0.0, max_z: 18.0}
+  obstacles:
+    - {id: river_plane, type: box, category: river, center: [0.0, -8.6, -0.15], size: [28.0, 2.8, 0.25], collidable: false, project_to_2d: false, publish_cloud: false}
+    - {id: terrace_low, type: terrain_block, category: terrain, center: [-7.5, -4.2, 0.75], size: [11.0, 5.5, 1.5]}
+    - {id: terrace_mid, type: terrain_block, category: terrain, center: [-2.0, 0.0, 1.7], size: [14.0, 4.5, 3.4]}
+    - {id: terrace_high, type: terrain_block, category: terrain, center: [5.5, 4.8, 2.8], size: [15.0, 5.0, 5.6]}
+    - {id: hongyadong_block_a, type: building, category: building, center: [-8.2, -3.4, 5.0], size: [3.0, 2.2, 8.5]}
+    - {id: hongyadong_block_b, type: building, category: building, center: [-4.8, -3.0, 6.1], size: [3.0, 2.4, 10.2]}
+    - {id: jiefangbei_tower_a, type: building, category: building, center: [-1.0, 1.0, 8.0], size: [3.0, 3.0, 12.5]}
+    - {id: jiefangbei_tower_b, type: building, category: building, center: [3.3, 1.7, 9.2], size: [3.5, 3.2, 14.8], yaw: 0.15}
+    - {id: jiaochangkou_block_a, type: building, category: building, center: [6.5, 5.2, 7.5], size: [3.6, 3.4, 9.5]}
+    - {id: jiaochangkou_block_b, type: building, category: building, center: [10.2, 5.5, 8.8], size: [3.0, 3.5, 12.0], yaw: -0.12}
+    - {id: canyon_building_a, type: building, category: building, center: [-6.0, 2.7, 7.3], size: [3.0, 3.8, 11.0]}
+    - {id: canyon_building_b, type: building, category: building, center: [7.6, -0.8, 7.8], size: [3.4, 3.0, 13.0]}
+    - {id: elevated_bridge, type: bridge, category: bridge, center: [0.0, -5.8, 4.4], size: [17.0, 1.1, 0.55], project_to_2d: false}
+    - {id: bridge_pillar_a, type: cylinder, category: column, center: [-6.0, -5.8, 2.2], radius: 0.45, height: 4.4}
+    - {id: bridge_pillar_b, type: cylinder, category: column, center: [0.0, -5.8, 2.2], radius: 0.45, height: 4.4}
+    - {id: bridge_pillar_c, type: cylinder, category: column, center: [6.0, -5.8, 2.2], radius: 0.45, height: 4.4}

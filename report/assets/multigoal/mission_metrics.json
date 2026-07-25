@@ -1,0 +1,181 @@
+{
+  "scenario": "continuous_multi_goal_avoidance",
+  "success": true,
+  "termination_reason": "all_goals_reached",
+  "overall_pass": true,
+  "criteria": {
+    "all_goals_reached": true,
+    "all_final_errors_below_0_3_m": true,
+    "physical_clearance_positive": true,
+    "safety_zone_clearance_positive": true,
+    "no_motor_saturation": true,
+    "path_ratio_below_1_4": true
+  },
+  "goal_count": 4,
+  "goals_reached": 4,
+  "total_mission_time_s": 28.73797886600005,
+  "total_planned_path_length_m": 19.02629868282868,
+  "total_actual_path_length_m": 19.63995326707834,
+  "actual_over_planned_path_ratio": 1.032252967036804,
+  "maximum_final_error_m": 0.05667312637642654,
+  "mean_final_error_m": 0.05358248649151676,
+  "minimum_obstacle_clearance_m": 0.19117187954565354,
+  "minimum_safety_zone_clearance_m": 0.04948507162833381,
+  "maximum_motor_rpm": 7407.1630859375,
+  "rpm_saturation_ratio": 0.0,
+  "rpm_limit": 10000.0,
+  "segments": [
+    {
+      "goal_index": 1,
+      "goal": {
+        "x": 1.5,
+        "y": -2.5,
+        "z": 1.5
+      },
+      "arrival_time_s": 4.57398104800086,
+      "final_error_m": 0.048607255263091016,
+      "maximum_error_m": 3.278719262151,
+      "planned_path_length_m": 2.950080013305719,
+      "actual_path_length_m": 3.7200406021998536,
+      "minimum_obstacle_clearance_m": 0.22158639652876608,
+      "minimum_safety_zone_clearance_m": 0.05464533897481753,
+      "maximum_motor_rpm": 7407.1630859375,
+      "planned_points": [
+        [
+          -0.049999985843896866,
+          -0.049999941140413284,
+          1.52
+        ],
+        [
+          0.45000002160668373,
+          -1.3499999605119228,
+          1.52
+        ],
+        [
+          1.5,
+          -2.5,
+          1.52
+        ]
+      ]
+    },
+    {
+      "goal_index": 2,
+      "goal": {
+        "x": 6.5,
+        "y": 0.0,
+        "z": 1.5
+      },
+      "arrival_time_s": 8.308469425001022,
+      "final_error_m": 0.05531523408695614,
+      "maximum_error_m": 5.584276715827553,
+      "planned_path_length_m": 6.566853673692028,
+      "actual_path_length_m": 6.498330185763358,
+      "minimum_obstacle_clearance_m": 0.23860914381717493,
+      "minimum_safety_zone_clearance_m": 0.10899934003198815,
+      "maximum_motor_rpm": 6582.83544921875,
+      "planned_points": [
+        [
+          1.550000037997961,
+          -2.5499999783933163,
+          1.52
+        ],
+        [
+          3.850000072270632,
+          -2.8499999828636646,
+          1.52
+        ],
+        [
+          4.650000084191561,
+          -2.8499999828636646,
+          1.52
+        ],
+        [
+          6.350000109523535,
+          -0.64999995008111,
+          1.52
+        ],
+        [
+          6.5,
+          0.0,
+          1.52
+        ]
+      ]
+    },
+    {
+      "goal_index": 3,
+      "goal": {
+        "x": 1.5,
+        "y": 2.5,
+        "z": 1.5
+      },
+      "arrival_time_s": 8.2635211980014,
+      "final_error_m": 0.05667312637642654,
+      "maximum_error_m": 5.589337106615344,
+      "planned_path_length_m": 6.604344726572136,
+      "actual_path_length_m": 6.5096299178430925,
+      "minimum_obstacle_clearance_m": 0.19117187954565354,
+      "minimum_safety_zone_clearance_m": 0.07806885797927453,
+      "maximum_motor_rpm": 6535.84814453125,
+      "planned_points": [
+        [
+          6.550000112503767,
+          0.050000060349702835,
+          1.52
+        ],
+        [
+          6.250000108033419,
+          0.9500000737607479,
+          1.52
+        ],
+        [
+          4.550000082701445,
+          2.850000102072954,
+          1.52
+        ],
+        [
+          2.0500000454485416,
+          2.750000100582838,
+          1.52
+        ],
+        [
+          1.5,
+          2.5,
+          1.52
+        ]
+      ]
+    },
+    {
+      "goal_index": 4,
+      "goal": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.5
+      },
+      "arrival_time_s": 4.438402498000869,
+      "final_error_m": 0.053734330239593335,
+      "maximum_error_m": 2.914090074465815,
+      "planned_path_length_m": 2.905020269258798,
+      "actual_path_length_m": 2.911952561272038,
+      "minimum_obstacle_clearance_m": 0.22040416890106176,
+      "minimum_safety_zone_clearance_m": 0.04948507162833381,
+      "maximum_motor_rpm": 6532.42724609375,
+      "planned_points": [
+        [
+          1.450000036507845,
+          2.4500000961124897,
+          1.52
+        ],
+        [
+          0.3500000201165676,
+          1.1500000767409801,
+          1.52
+        ],
+        [
+          0.0,
+          0.0,
+          1.52
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+# ROS / colcon
+build/
+install/
+log/
+
+# Runtime results
+results/
+*.bag
+*.bag2
+*.db3
+*.mcap
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Temporary / generated archives
+*.zip
+*.tar
+*.tar.gz
+*.7z
+*.rar
+
+# Local environment and secrets
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+
+# LaTeX build products
+*.aux
+*.out
+*.toc
+*.synctex.gz
+
+# Experimental branches intentionally excluded
+src/cq01_e2e_motor_ai/
+src/cq01_multi_uav/

@@ -1,0 +1,31 @@
+{
+  "scenario": "urban_canyon",
+  "goal": [
+    11.0,
+    0.0,
+    1.5
+  ],
+  "success": true,
+  "overall_pass": true,
+  "criteria": {
+    "mission_successful": true,
+    "planned_path_received": true,
+    "final_error_below_0_3_m": true,
+    "safety_grid_collision_free": true,
+    "physical_clearance_above_required_margin": true,
+    "path_ratio_below_1_5": true,
+    "no_motor_saturation": true
+  },
+  "arrival_time_s": 4.7235465160001695,
+  "final_error_m": 0.05301021718818691,
+  "steady_state_error_m": 0.061562596906568755,
+  "planned_path_length_m": 10.875718367078104,
+  "actual_path_length_m": 12.039974290104329,
+  "actual_over_planned_path_ratio": 1.1070509444737504,
+  "minimum_pointcloud_clearance_m": 1.5007704924127865,
+  "safety_grid_collision_samples": 0,
+  "required_physical_clearance_m": 0.3,
+  "maximum_motor_rpm": 7372.12158203125,
+  "sample_count": 119,
+  "planned_waypoint_count": 2
+}

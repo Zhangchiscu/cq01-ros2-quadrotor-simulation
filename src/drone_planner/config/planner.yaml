@@ -1,0 +1,10 @@
+astar_planner:
+  ros__parameters:
+    waypoint_tolerance_m: 0.25
+    goal_tolerance_m: 0.20
+    command_rate_hz: 10.0
+
+    default_flight_height_m: 1.5
+    allow_diagonal: true
+    occupancy_threshold: 50
+    path_z_offset_m: 0.02

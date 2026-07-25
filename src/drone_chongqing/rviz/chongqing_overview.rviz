@@ -1,0 +1,50 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+  - Class: rviz_common/Views
+    Name: Views
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: true
+      Name: Chongqing Yuzhong Peninsula
+      Topic:
+        Depth: 1
+        Durability Policy: Transient Local
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /chongqing/scene_markers
+      Value: true
+    - Class: rviz_default_plugins/Axes
+      Enabled: true
+      Length: 20
+      Name: Map Axes
+      Radius: 0.50
+      Reference Frame: map
+      Value: true
+  Enabled: true
+  Global Options:
+    Background Color: 21; 24; 29
+    Fixed Frame: map
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz_default_plugins/Interact
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Select
+    - Class: rviz_default_plugins/FocusCamera
+    - Class: rviz_default_plugins/Measure
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Distance: 690
+      Focal Point:
+        X: 5
+        Y: 0
+        Z: 45
+      Pitch: 0.68
+      Yaw: 0.90
+Window Geometry:
+  Height: 920
+  Width: 1500

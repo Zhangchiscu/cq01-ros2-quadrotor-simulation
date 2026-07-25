@@ -1,0 +1,196 @@
+{
+  "dataset_name": "Chongqing Yuzhong 3D Urban UAV Navigation Benchmark",
+  "scenario": "hongyadong_kuixinglou_roi",
+  "frame_id": "map",
+  "source_crs": "EPSG:32648",
+  "source_units": "metres",
+  "local_origin": {
+    "easting_m": 652709.4954026823,
+    "northing_m": 3270943.8030328914,
+    "elevation_m": 205.0,
+    "note": "The runtime z origin is rounded down to 205 m so all valid terrain remains non-negative."
+  },
+  "resolution_m": 5.0,
+  "inflation_radius_m": 7.5,
+  "bounds": {
+    "min_x": 0.0,
+    "max_x": 600.0,
+    "min_y": 0.0,
+    "max_y": 600.0,
+    "min_z": 0.0,
+    "max_z": 350.0
+  },
+  "dimensions": {
+    "x": 120,
+    "y": 120,
+    "z": 70
+  },
+  "base_occupied_voxels": 198585,
+  "inflated_occupied_voxels": 237305,
+  "free_voxels": 770695,
+  "terrain": {
+    "visual_mesh_step_m": 15.0,
+    "minimum_local_z_m": 0.5674223984776745,
+    "maximum_local_z_m": 95.64978390131955,
+    "relief_m": 95.08236150284188,
+    "vertical_scale": 1.0,
+    "source_resolution_m": 30.0
+  },
+  "features": {
+    "real_building_footprints_in_roi": 109,
+    "rendered_building_solids": 108,
+    "roads_in_roi": 89,
+    "railways_in_roi": 21,
+    "bridges_in_roi": 25,
+    "landmark_and_attraction_points": 17
+  },
+  "building_height_policy": {
+    "top_height": "height_total_m",
+    "base_height": "base_height_m",
+    "solid_height": "solid_height_m",
+    "quality_field": "height_quality",
+    "note": "Footprints are real OSM geometries. Heights use OSM height where available, derive from OSM levels where available, otherwise retain deterministic category estimates."
+  },
+  "landmarks": [
+    {
+      "category": "landmarks",
+      "name": "魁星楼",
+      "x": 325.5034219068475,
+      "y": 206.13037034031004,
+      "z": 70.62386208241344
+    },
+    {
+      "category": "landmarks",
+      "name": "洪崖洞",
+      "x": 274.4965780932689,
+      "y": 393.86962965968996,
+      "z": 73.6126473665368
+    },
+    {
+      "category": "attractions",
+      "name": "小什字",
+      "x": 346.6590198725462,
+      "y": 457.4444889468141,
+      "z": 53.16067485980568
+    },
+    {
+      "category": "attractions",
+      "name": "小什字",
+      "x": 274.73833606997505,
+      "y": 329.0740885864943,
+      "z": 85.75864304138895
+    },
+    {
+      "category": "attractions",
+      "name": "朝天门商场",
+      "x": 553.0269721676596,
+      "y": 586.8598696789704,
+      "z": 59.06629121371691
+    },
+    {
+      "category": "attractions",
+      "name": "Old building",
+      "x": 366.1707839452429,
+      "y": 2.7879904345609248,
+      "z": 50.32492533650242
+    },
+    {
+      "category": "attractions",
+      "name": "重慶解放碑來福士廣場江景亞朵酒店",
+      "x": 422.88950615003705,
+      "y": 543.8756822352298,
+      "z": 57.08338723565896
+    },
+    {
+      "category": "attractions",
+      "name": "小什字",
+      "x": 540.545056973584,
+      "y": 333.7345522576943,
+      "z": 38.81062407747254
+    },
+    {
+      "category": "attractions",
+      "name": "朝天门隧道",
+      "x": 439.7863914364716,
+      "y": 586.8025388629176,
+      "z": 59.393208415910465
+    },
+    {
+      "category": "attractions",
+      "name": "解放碑威斯汀酒店",
+      "x": 5.029816386057064,
+      "y": 107.19254082161933,
+      "z": 85.7561725599474
+    },
+    {
+      "category": "attractions",
+      "name": "千厮门隧道",
+      "x": 275.4736743987305,
+      "y": 465.2325791786425,
+      "z": 59.00608334965716
+    },
+    {
+      "category": "attractions",
+      "name": "千厮门隧道",
+      "x": 268.443486870965,
+      "y": 501.1941938800737,
+      "z": 51.73469179307574
+    },
+    {
+      "category": "attractions",
+      "name": "千厮门地下道",
+      "x": 16.340567279141396,
+      "y": 597.3492106972262,
+      "z": 77.63110144564212
+    },
+    {
+      "category": "attractions",
+      "name": "解放碑地下环道",
+      "x": 51.707753603346646,
+      "y": 433.43841451918706,
+      "z": 48.594818240796
+    },
+    {
+      "category": "attractions",
+      "name": "解放碑地下环道",
+      "x": 22.399490980198607,
+      "y": 511.5393200791441,
+      "z": 58.1659469293794
+    },
+    {
+      "category": "attractions",
+      "name": "望龙门缆车",
+      "x": 545.416973904008,
+      "y": 10.294148622546345,
+      "z": 25.694233295543143
+    },
+    {
+      "category": "attractions",
+      "name": "朝天门街道",
+      "x": 322.406799642602,
+      "y": 527.7325935331173,
+      "z": 54.281865604376605
+    }
+  ],
+  "topics": {
+    "terrain_markers": "/chongqing/terrain_markers",
+    "building_markers": "/chongqing/building_markers",
+    "context_markers": "/chongqing/context_markers",
+    "raw_voxel_cloud": "/drone/voxel_cloud_raw",
+    "inflated_voxel_cloud": "/drone/voxel_cloud",
+    "voxel_metadata": "/drone/voxel_metadata",
+    "status": "/chongqing/map_status"
+  },
+  "planner_compatibility": {
+    "compatible_with": "drone_planner_3d",
+    "metadata_contract": "resolution_m + bounds + dimensions",
+    "collision_cloud": "/drone/voxel_cloud",
+    "raw_clearance_cloud": "/drone/voxel_cloud_raw"
+  },
+  "known_limits": [
+    "The DEM source resolution is 30 m; the 15 m visual mesh is bilinearly resampled and does not add terrain detail.",
+    "Buildings are extruded with a flat terrain base sampled at each footprint representative point.",
+    "Most missing OSM heights retain deterministic category estimates; height_quality records the source.",
+    "The 5 m collision voxel resolution and 7.5 m inflation radius are conservative for city-scale planning."
+  ]
+}

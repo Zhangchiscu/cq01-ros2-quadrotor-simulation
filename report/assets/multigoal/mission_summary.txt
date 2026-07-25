@@ -1,0 +1,25 @@
+===== Continuous Multi-Goal Avoidance Summary =====
+Overall pass: True
+Goals reached: 4/4
+Total mission time: 28.738 s
+Total planned path length: 19.026 m
+Total actual path length: 19.640 m
+Actual/planned path ratio: 1.032
+Maximum final error: 0.0567 m
+Minimum physical obstacle clearance: 0.191 m
+Minimum safety-zone clearance: 0.049 m
+Maximum motor RPM: 7407.2 RPM
+
+Per-goal results:
+- Goal 1: time=4.574 s, error=0.0486 m, planned=2.950 m, actual=3.720 m
+- Goal 2: time=8.308 s, error=0.0553 m, planned=6.567 m, actual=6.498 m
+- Goal 3: time=8.264 s, error=0.0567 m, planned=6.604 m, actual=6.510 m
+- Goal 4: time=4.438 s, error=0.0537 m, planned=2.905 m, actual=2.912 m
+
+Acceptance criteria:
+- all_goals_reached: PASS
+- all_final_errors_below_0_3_m: PASS
+- physical_clearance_positive: PASS
+- safety_zone_clearance_positive: PASS
+- no_motor_saturation: PASS
+- path_ratio_below_1_4: PASS

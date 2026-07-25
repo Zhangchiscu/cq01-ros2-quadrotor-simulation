@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>drone_corridor</name>
+  <version>0.1.0</version>
+
+  <description>
+    Narrow S-corridor scenario and evaluation for the ROS2 quadrotor simulator.
+  </description>
+
+  <maintainer email="taccettabellus@gmail.com">
+    Xianzhe Zhang
+  </maintainer>
+
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <exec_depend>ament_index_python</exec_depend>
+  <exec_depend>drone_bringup</exec_depend>
+  <exec_depend>drone_controller</exec_depend>
+  <exec_depend>drone_dynamics</exec_depend>
+  <exec_depend>drone_evaluation</exec_depend>
+  <exec_depend>drone_map</exec_depend>
+  <exec_depend>drone_planner</exec_depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>python3-matplotlib</exec_depend>
+  <exec_depend>rviz2</exec_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

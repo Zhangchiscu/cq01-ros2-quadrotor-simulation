@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "termination_reason": "goal_reached",
+  "goal_m": {
+    "x": 6.5,
+    "y": 0.0,
+    "z": 1.5
+  },
+  "samples": 2840,
+  "planned_waypoints": 7,
+  "arrival_time_s": 12.174801545999799,
+  "final_error_m": 0.019408863173224024,
+  "steady_state_error_m": 0.0154346992024313,
+  "maximum_position_error_m": 6.670832032063167,
+  "z_overshoot_m": 0.056043463132690485,
+  "planned_path_length_m": 8.945996495787451,
+  "actual_path_length_m": 10.167877565318687,
+  "actual_over_planned_path_ratio": 1.1365841211883554,
+  "minimum_obstacle_clearance_m": 0.22986776893944724,
+  "minimum_safety_zone_clearance_m": 0.05297699260764436,
+  "maximum_absolute_roll_deg": 15.56131550941931,
+  "maximum_absolute_pitch_deg": 16.66389824847435,
+  "maximum_motor_rpm": 7376.2724609375,
+  "rpm_saturation_ratio": 0.0,
+  "rpm_limit": 10000.0
+}

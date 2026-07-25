@@ -1,0 +1,170 @@
+{
+  "scenario": "standard_avoidance_repeatability",
+  "run_count": 3,
+  "success_count": 3,
+  "overall_pass": true,
+  "criteria": {
+    "all_runs_successful": true,
+    "all_final_errors_below_0_3_m": true,
+    "all_obstacle_clearances_positive": true,
+    "all_safety_zone_clearances_positive": true,
+    "no_motor_saturation": true
+  },
+  "statistics": {
+    "arrival_time_s": {
+      "count": 3.0,
+      "mean": 12.183751463666946,
+      "std": 0.03570531679822817,
+      "min": 12.144559692000257,
+      "max": 12.214432178000607,
+      "coefficient_of_variation": 0.0029305683807409133
+    },
+    "final_error_m": {
+      "count": 3.0,
+      "mean": 0.0196665364675904,
+      "std": 0.0003564285166412155,
+      "min": 0.01938934263953968,
+      "max": 0.020068598699528758,
+      "coefficient_of_variation": 0.018123603880560984
+    },
+    "steady_state_error_m": {
+      "count": 3.0,
+      "mean": 0.01599874790755497,
+      "std": 0.0008179126432002192,
+      "min": 0.015345273518959184,
+      "max": 0.016916001409412434,
+      "coefficient_of_variation": 0.05112354091247243
+    },
+    "planned_path_length_m": {
+      "count": 3.0,
+      "mean": 9.386286441292102,
+      "std": 0.0,
+      "min": 9.386286441292102,
+      "max": 9.386286441292102,
+      "coefficient_of_variation": 0.0
+    },
+    "actual_path_length_m": {
+      "count": 3.0,
+      "mean": 10.168325950991248,
+      "std": 0.0019610317516906123,
+      "min": 10.166152993466499,
+      "max": 10.169964097432453,
+      "coefficient_of_variation": 0.00019285689317418501
+    },
+    "actual_over_planned_path_ratio": {
+      "count": 3.0,
+      "mean": 1.0833172431494102,
+      "std": 0.0002089251978358792,
+      "min": 1.0830857397174256,
+      "max": 1.0834917686607988,
+      "coefficient_of_variation": 0.00019285689317424112
+    },
+    "minimum_obstacle_clearance_m": {
+      "count": 3.0,
+      "mean": 0.22992661495363917,
+      "std": 9.629815750228309e-05,
+      "min": 0.22986411085772987,
+      "max": 0.23003751160991262,
+      "coefficient_of_variation": 0.00041882127269911746
+    },
+    "minimum_safety_zone_clearance_m": {
+      "count": 3.0,
+      "mean": 0.05305289082543926,
+      "std": 0.00021527796354349894,
+      "min": 0.05281349625053108,
+      "max": 0.05323057328096103,
+      "coefficient_of_variation": 0.004057798928466148
+    },
+    "maximum_absolute_roll_deg": {
+      "count": 3.0,
+      "mean": 15.58530733085395,
+      "std": 0.037984082563657796,
+      "min": 15.561309263889907,
+      "max": 15.629100390735514,
+      "coefficient_of_variation": 0.0024371725085241915
+    },
+    "maximum_absolute_pitch_deg": {
+      "count": 3.0,
+      "mean": 16.706616831058444,
+      "std": 0.0682529117530176,
+      "min": 16.665014975757195,
+      "max": 16.785386924559422,
+      "coefficient_of_variation": 0.004085382004220746
+    },
+    "maximum_motor_rpm": {
+      "count": 3.0,
+      "mean": 7376.27734375,
+      "std": 0.003813598474563796,
+      "min": 7376.27490234375,
+      "max": 7376.28173828125,
+      "coefficient_of_variation": 5.170085528027359e-07
+    },
+    "rpm_saturation_ratio": {
+      "count": 3.0,
+      "mean": 0.0,
+      "std": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "coefficient_of_variation": 0.0
+    }
+  },
+  "runs": [
+    {
+      "run": 1,
+      "result_directory": "/home/zhangxianzhe/drone_task/your_drone_sim_ws/results/avoidance_20260711_025526",
+      "success": true,
+      "termination_reason": "goal_reached",
+      "arrival_time_s": 12.192262520999975,
+      "final_error_m": 0.01938934263953968,
+      "steady_state_error_m": 0.015345273518959184,
+      "planned_path_length_m": 9.386286441292102,
+      "actual_path_length_m": 10.16886076207479,
+      "actual_over_planned_path_ratio": 1.0833742210700061,
+      "minimum_obstacle_clearance_m": 0.23003751160991262,
+      "minimum_safety_zone_clearance_m": 0.05323057328096103,
+      "maximum_absolute_roll_deg": 15.629100390735514,
+      "maximum_absolute_pitch_deg": 16.785386924559422,
+      "maximum_motor_rpm": 7376.27490234375,
+      "rpm_saturation_ratio": 0.0,
+      "rpm_limit": 10000.0
+    },
+    {
+      "run": 2,
+      "result_directory": "/home/zhangxianzhe/drone_task/your_drone_sim_ws/results/avoidance_20260711_025548",
+      "success": true,
+      "termination_reason": "goal_reached",
+      "arrival_time_s": 12.214432178000607,
+      "final_error_m": 0.020068598699528758,
+      "steady_state_error_m": 0.016916001409412434,
+      "planned_path_length_m": 9.386286441292102,
+      "actual_path_length_m": 10.169964097432453,
+      "actual_over_planned_path_ratio": 1.0834917686607988,
+      "minimum_obstacle_clearance_m": 0.22987822239327502,
+      "minimum_safety_zone_clearance_m": 0.05311460294482565,
+      "maximum_absolute_roll_deg": 15.561309263889907,
+      "maximum_absolute_pitch_deg": 16.665014975757195,
+      "maximum_motor_rpm": 7376.28173828125,
+      "rpm_saturation_ratio": 0.0,
+      "rpm_limit": 10000.0
+    },
+    {
+      "run": 3,
+      "result_directory": "/home/zhangxianzhe/drone_task/your_drone_sim_ws/results/avoidance_20260711_025610",
+      "success": true,
+      "termination_reason": "goal_reached",
+      "arrival_time_s": 12.144559692000257,
+      "final_error_m": 0.019541668063702756,
+      "steady_state_error_m": 0.015734968794293286,
+      "planned_path_length_m": 9.386286441292102,
+      "actual_path_length_m": 10.166152993466499,
+      "actual_over_planned_path_ratio": 1.0830857397174256,
+      "minimum_obstacle_clearance_m": 0.22986411085772987,
+      "minimum_safety_zone_clearance_m": 0.05281349625053108,
+      "maximum_absolute_roll_deg": 15.565512337936433,
+      "maximum_absolute_pitch_deg": 16.669448592858718,
+      "maximum_motor_rpm": 7376.275390625,
+      "rpm_saturation_ratio": 0.0,
+      "rpm_limit": 10000.0
+    }
+  ]
+}

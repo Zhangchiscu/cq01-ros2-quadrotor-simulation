@@ -1,0 +1,185 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "鹅岭二厂",
+        "name_en": "Eling Testbed 2",
+        "group": "west"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.5318,
+          29.5533
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "李子坝轨道穿楼",
+        "name_en": "Liziba Monorail",
+        "group": "west"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.5352,
+          29.5529
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "十八梯",
+        "name_en": "Shibati",
+        "group": "central"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.5702,
+          29.5488
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "较场口",
+        "name_en": "Jiaochangkou",
+        "group": "central"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.5719,
+          29.5522
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "解放碑",
+        "name_en": "Jiefangbei",
+        "group": "central"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.577,
+          29.5572
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "魁星楼",
+        "name_en": "Kuixinglou",
+        "group": "central"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.5797,
+          29.5607
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "洪崖洞",
+        "name_en": "Hongyadong",
+        "group": "east"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.5792,
+          29.5624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "千厮门嘉陵江大桥",
+        "name_en": "Qiansimen Bridge",
+        "group": "east"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.583,
+          29.5664
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "白象居",
+        "name_en": "Baixiangju",
+        "group": "south"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.581,
+          29.5488
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "朝天门",
+        "name_en": "Chaotianmen",
+        "group": "east"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.5915,
+          29.568
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "重庆来福士",
+        "name_en": "Raffles City Chongqing",
+        "group": "east"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.592,
+          29.567
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "人民大礼堂",
+        "name_en": "Great Hall of the People",
+        "group": "northwest"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.5525,
+          29.5632
+        ]
+      }
+    }
+  ]
+}

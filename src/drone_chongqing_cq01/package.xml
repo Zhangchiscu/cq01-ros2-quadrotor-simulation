@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>drone_chongqing_cq01</name>
+  <version>0.3.0</version>
+  <description>CQ-01 Jialing foothill to Eling ridge 3D mission.</description>
+  <maintainer email="taccettabellus@gmail.com">Xianzhe Zhang</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>ament_index_python</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>nav_msgs</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>visualization_msgs</exec_depend>
+  <exec_depend>tf2_ros</exec_depend>
+  <exec_depend>python3-numpy</exec_depend>
+  <exec_depend>python3-matplotlib</exec_depend>
+
+  <exec_depend>drone_dynamics</exec_depend>
+  <exec_depend>drone_controller</exec_depend>
+  <exec_depend>drone_planner_3d</exec_depend>
+  <exec_depend>drone_bringup</exec_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

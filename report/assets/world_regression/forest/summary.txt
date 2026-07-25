@@ -1,0 +1,23 @@
+===== World Scenario Mission Summary =====
+Scenario: forest
+Goal: [8.0, 0.0, 1.5]
+Success: True
+Overall pass: True
+Arrival time: 4.6119819390000885 s
+Final error: 0.0459 m
+Steady-state error: 0.0451 m
+Planned path length: 8.101 m
+Actual path length: 8.638 m
+Actual/planned ratio: 1.066
+Minimum point-cloud clearance: 1.152 m
+Safety-grid collision samples: 0
+Maximum motor RPM: 7365.0
+
+Acceptance criteria:
+- mission_successful: PASS
+- planned_path_received: PASS
+- final_error_below_0_3_m: PASS
+- safety_grid_collision_free: PASS
+- physical_clearance_above_required_margin: PASS
+- path_ratio_below_1_5: PASS
+- no_motor_saturation: PASS

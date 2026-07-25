@@ -1,0 +1,29 @@
+world:
+  name: random_clutter
+  frame_id: map
+  resolution: 0.20
+  planning_z: 1.50
+  bounds: {min_x: -10.0, max_x: 10.0, min_y: -7.0, max_y: 7.0, min_z: 0.0, max_z: 6.0}
+  obstacles:
+    - {id: boundary_column_a, type: cylinder, category: column, center: [-8.8, -5.8, 2.5], radius: 0.45, height: 5.0}
+    - {id: boundary_column_b, type: cylinder, category: column, center: [8.8, 5.8, 2.5], radius: 0.45, height: 5.0}
+  random:
+    enabled: true
+    seed: 20260711
+    count: 24
+    bounds: {min_x: -8.5, max_x: 8.5, min_y: -5.8, max_y: 5.8}
+    minimum_size: 0.55
+    maximum_size: 1.35
+    minimum_height: 1.2
+    maximum_height: 4.8
+    cylinder_probability: 0.40
+    keepout_radius: 1.15
+    keepout_points:
+      - [-8.0, 0.0]
+      - [-6.0, -1.8]
+      - [-3.5, -2.5]
+      - [-1.0, -1.0]
+      - [1.5, 1.2]
+      - [4.0, 2.4]
+      - [6.5, 1.0]
+      - [8.0, 0.0]

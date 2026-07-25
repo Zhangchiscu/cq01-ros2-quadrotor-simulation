@@ -1,0 +1,655 @@
+scene:
+  name: CQ-01 V3 Irregular Chongqing Mountain City
+  frame_id: world
+  world_bounds:
+    x_min: 0.0
+    x_max: 360.0
+    y_min: -110.0
+    y_max: 110.0
+    z_min: 0.0
+    z_max: 190.0
+  sampling:
+    terrain_resolution: 2.5
+    terrain_visual_resolution: 5.0
+    obstacle_resolution: 1.5
+  terrain:
+    model: mountain_city_v3
+    base_profile:
+    - - 0.0
+      - 2.0
+    - - 55.0
+      - 4.0
+    - - 95.0
+      - 22.0
+    - - 150.0
+      - 38.0
+    - - 210.0
+      - 50.0
+    - - 270.0
+      - 60.0
+    - - 360.0
+      - 68.0
+    lateral_tilt: 0.025
+    undulation:
+      amp_x: 1.8
+      period_x: 48.0
+      amp_y: 2.3
+      period_y: 52.0
+      cross_amp: 1.2
+      cross_period: 75.0
+    terraces:
+    - name: mid_lower
+      center:
+      - 112.0
+      - 48.0
+      radius:
+      - 62.0
+      - 42.0
+      target_z: 32.0
+      strength: 0.72
+      yaw_deg: -8.0
+    - name: mid_upper
+      center:
+      - 174.0
+      - 52.0
+      radius:
+      - 58.0
+      - 40.0
+      target_z: 45.0
+      strength: 0.62
+      yaw_deg: 12.0
+    - name: upper_city
+      center:
+      - 275.0
+      - -38.0
+      radius:
+      - 98.0
+      - 66.0
+      target_z: 63.0
+      strength: 0.78
+      yaw_deg: -10.0
+    - name: terminal_ridge
+      center:
+      - 330.0
+      - 22.0
+      radius:
+      - 52.0
+      - 38.0
+      target_z: 72.0
+      strength: 0.62
+      yaw_deg: 5.0
+    ridges:
+    - name: north_mid_ridge
+      center:
+      - 145.0
+      - 72.0
+      sigma:
+      - 55.0
+      - 28.0
+      height: 9.0
+    - name: north_back_ridge
+      center:
+      - 245.0
+      - 58.0
+      sigma:
+      - 75.0
+      - 35.0
+      height: 11.0
+    - name: south_high_ridge
+      center:
+      - 320.0
+      - -70.0
+      sigma:
+      - 60.0
+      - 30.0
+      height: 12.0
+    canyon:
+      p0:
+      - 105.0
+      - 38.0
+      p1:
+      - 245.0
+      - -22.0
+      floor_half_width: 12.0
+      shoulder_width: 50.0
+      floor_z0: 4.0
+      floor_z1: 12.0
+      edge_power: 1.7
+  terrain_visual:
+    enabled: true
+    alpha: 1.0
+    base_z: -3.0
+    low_color:
+    - 0.2
+    - 0.43
+    - 0.25
+    - 1.0
+    mid_color:
+    - 0.43
+    - 0.5
+    - 0.25
+    - 1.0
+    high_color:
+    - 0.49
+    - 0.35
+    - 0.22
+    - 1.0
+    ridge_color:
+    - 0.58
+    - 0.45
+    - 0.3
+    - 1.0
+    valley_color:
+    - 0.12
+    - 0.31
+    - 0.34
+    - 1.0
+    edge_color:
+    - 0.96
+    - 0.78
+    - 0.28
+    - 0.9
+    edge_width: 0.45
+  structure_visual:
+    collision_alpha: 0.96
+    visual_only_alpha: 0.88
+  collision_boxes:
+  - id: A01
+    zone: A
+    center_xy:
+    - 24.0
+    - -30.0
+    size:
+    - 14.0
+    - 18.0
+    - 29.0
+    yaw_deg: 8.0
+  - id: A02
+    zone: A
+    center_xy:
+    - 43.0
+    - 23.0
+    size:
+    - 17.0
+    - 14.0
+    - 37.0
+    yaw_deg: -13.0
+  - id: A03
+    zone: A
+    center_xy:
+    - 59.0
+    - -47.0
+    size:
+    - 19.0
+    - 16.0
+    - 43.0
+    yaw_deg: 16.0
+  - id: A04
+    zone: A
+    center_xy:
+    - 67.0
+    - 42.0
+    size:
+    - 14.0
+    - 21.0
+    - 32.0
+    yaw_deg: -7.0
+  - id: A05
+    zone: A
+    center_xy:
+    - 78.0
+    - -11.0
+    size:
+    - 12.0
+    - 12.0
+    - 34.0
+    yaw_deg: 11.0
+  - id: A06
+    zone: A
+    center_xy:
+    - 91.0
+    - 18.0
+    size:
+    - 16.0
+    - 13.0
+    - 41.0
+    yaw_deg: -18.0
+  - id: B01
+    zone: B
+    center_xy:
+    - 97.0
+    - 52.0
+    size:
+    - 18.0
+    - 15.0
+    - 56.0
+    yaw_deg: -11.0
+  - id: B02
+    zone: B
+    center_xy:
+    - 115.0
+    - 72.0
+    size:
+    - 15.0
+    - 20.0
+    - 73.0
+    yaw_deg: 15.0
+  - id: B03
+    zone: B
+    center_xy:
+    - 136.0
+    - 48.0
+    size:
+    - 21.0
+    - 15.0
+    - 65.0
+    yaw_deg: 5.0
+  - id: B04
+    zone: B
+    center_xy:
+    - 151.0
+    - 75.0
+    size:
+    - 17.0
+    - 18.0
+    - 79.0
+    yaw_deg: -14.0
+  - id: B05
+    zone: B
+    center_xy:
+    - 169.0
+    - 53.0
+    size:
+    - 15.0
+    - 17.0
+    - 61.0
+    yaw_deg: 18.0
+  - id: B06
+    zone: B
+    center_xy:
+    - 121.0
+    - 25.0
+    size:
+    - 13.0
+    - 13.0
+    - 49.0
+    yaw_deg: -20.0
+  - id: B07
+    zone: B
+    center_xy:
+    - 147.0
+    - 18.0
+    size:
+    - 14.0
+    - 12.0
+    - 55.0
+    yaw_deg: 9.0
+  - id: B08
+    zone: B
+    center_xy:
+    - 178.0
+    - 74.0
+    size:
+    - 18.0
+    - 15.0
+    - 70.0
+    yaw_deg: -4.0
+  - id: B09
+    zone: B
+    center_xy:
+    - 190.0
+    - 47.0
+    size:
+    - 15.0
+    - 18.0
+    - 58.0
+    yaw_deg: 13.0
+  - id: C01
+    zone: C
+    center_xy:
+    - 132.0
+    - -8.0
+    size:
+    - 14.0
+    - 16.0
+    - 43.0
+    yaw_deg: -16.0
+  - id: C02
+    zone: C
+    center_xy:
+    - 151.0
+    - -22.0
+    size:
+    - 16.0
+    - 13.0
+    - 50.0
+    yaw_deg: 12.0
+  - id: C03
+    zone: C
+    center_xy:
+    - 174.0
+    - 35.0
+    size:
+    - 15.0
+    - 15.0
+    - 47.0
+    yaw_deg: -8.0
+  - id: C04
+    zone: C
+    center_xy:
+    - 208.0
+    - 27.0
+    size:
+    - 17.0
+    - 14.0
+    - 54.0
+    yaw_deg: 17.0
+  - id: C05
+    zone: C
+    center_xy:
+    - 225.0
+    - -42.0
+    size:
+    - 16.0
+    - 18.0
+    - 59.0
+    yaw_deg: -12.0
+  - id: C06
+    zone: C
+    center_xy:
+    - 241.0
+    - -2.0
+    size:
+    - 14.0
+    - 14.0
+    - 48.0
+    yaw_deg: 7.0
+  - id: D_DECK
+    zone: D
+    size:
+    - 11.0
+    - 88.0
+    - 4.0
+    yaw_deg: 68.0
+    center:
+    - 190.0
+    - 8.0
+    - 39.0
+    bottom_on_terrain: false
+  - id: D_PIER_W
+    zone: D
+    size:
+    - 5.0
+    - 6.0
+    - 31.0
+    yaw_deg: 68.0
+    center:
+    - 213.1795963641697
+    - -1.365164835397799
+    - 20.5
+    bottom_on_terrain: false
+  - id: D_PIER_E
+    zone: D
+    size:
+    - 5.0
+    - 6.0
+    - 31.0
+    yaw_deg: 68.0
+    center:
+    - 166.8204036358303
+    - 17.3651648353978
+    - 20.5
+    bottom_on_terrain: false
+  - id: D_ABUT_W
+    zone: D
+    center_xy:
+    - 228.94172189180506
+    - -7.733476923468302
+    size:
+    - 12.0
+    - 10.0
+    - 14.0
+    yaw_deg: 68.0
+  - id: D_ABUT_E
+    zone: D
+    center_xy:
+    - 151.05827810819494
+    - 23.733476923468302
+    size:
+    - 12.0
+    - 10.0
+    - 14.0
+    yaw_deg: 68.0
+  - id: E01
+    zone: E
+    center_xy:
+    - 229.0
+    - -56.0
+    size:
+    - 18.0
+    - 17.0
+    - 66.0
+    yaw_deg: -12.0
+  - id: E02
+    zone: E
+    center_xy:
+    - 246.0
+    - -76.0
+    size:
+    - 16.0
+    - 20.0
+    - 83.0
+    yaw_deg: 15.0
+  - id: E03
+    zone: E
+    center_xy:
+    - 263.0
+    - -48.0
+    size:
+    - 20.0
+    - 15.0
+    - 79.0
+    yaw_deg: 6.0
+  - id: E04
+    zone: E
+    center_xy:
+    - 279.0
+    - -67.0
+    size:
+    - 17.0
+    - 18.0
+    - 93.0
+    yaw_deg: -16.0
+  - id: E05
+    zone: E
+    center_xy:
+    - 291.0
+    - -39.0
+    size:
+    - 15.0
+    - 20.0
+    - 76.0
+    yaw_deg: 10.0
+  - id: E06
+    zone: E
+    center_xy:
+    - 309.0
+    - -61.0
+    size:
+    - 20.0
+    - 18.0
+    - 106.0
+    yaw_deg: -5.0
+  - id: E07
+    zone: E
+    center_xy:
+    - 327.0
+    - -36.0
+    size:
+    - 16.0
+    - 20.0
+    - 87.0
+    yaw_deg: 18.0
+  - id: E08
+    zone: E
+    center_xy:
+    - 239.0
+    - -19.0
+    size:
+    - 14.0
+    - 16.0
+    - 63.0
+    yaw_deg: -15.0
+  - id: E09
+    zone: E
+    center_xy:
+    - 259.0
+    - 4.0
+    size:
+    - 16.0
+    - 14.0
+    - 75.0
+    yaw_deg: 12.0
+  - id: E10
+    zone: E
+    center_xy:
+    - 281.0
+    - 19.0
+    size:
+    - 18.0
+    - 16.0
+    - 89.0
+    yaw_deg: -9.0
+  - id: E11
+    zone: E
+    center_xy:
+    - 306.0
+    - 3.0
+    size:
+    - 15.0
+    - 18.0
+    - 73.0
+    yaw_deg: 14.0
+  - id: E12
+    zone: E
+    center_xy:
+    - 326.0
+    - 31.0
+    size:
+    - 18.0
+    - 16.0
+    - 99.0
+    yaw_deg: -17.0
+  - id: E13
+    zone: E
+    center_xy:
+    - 344.0
+    - 7.0
+    size:
+    - 16.0
+    - 18.0
+    - 81.0
+    yaw_deg: 8.0
+  - id: F01
+    zone: F
+    center_xy:
+    - 296.0
+    - 43.0
+    size:
+    - 24.0
+    - 14.0
+    - 58.0
+    yaw_deg: -7.0
+  - id: F02
+    zone: F
+    center_xy:
+    - 313.0
+    - -16.0
+    size:
+    - 22.0
+    - 13.0
+    - 52.0
+    yaw_deg: 11.0
+  visual_only_boxes:
+  - id: V01
+    zone: V
+    center_xy:
+    - 75
+    - 88
+    size:
+    - 17
+    - 20
+    - 62
+    yaw_deg: -8
+  - id: V02
+    zone: V
+    center_xy:
+    - 110
+    - -88
+    size:
+    - 19
+    - 18
+    - 70
+    yaw_deg: 12
+  - id: V03
+    zone: V
+    center_xy:
+    - 170
+    - 94
+    size:
+    - 16
+    - 21
+    - 82
+    yaw_deg: -14
+  - id: V04
+    zone: V
+    center_xy:
+    - 215
+    - 82
+    size:
+    - 20
+    - 17
+    - 88
+    yaw_deg: 9
+  - id: V05
+    zone: V
+    center_xy:
+    - 255
+    - 84
+    size:
+    - 18
+    - 20
+    - 102
+    yaw_deg: -11
+  - id: V06
+    zone: V
+    center_xy:
+    - 286
+    - -93
+    size:
+    - 20
+    - 18
+    - 112
+    yaw_deg: 13
+  - id: V07
+    zone: V
+    center_xy:
+    - 331
+    - -86
+    size:
+    - 19
+    - 22
+    - 118
+    yaw_deg: -6
+  - id: V08
+    zone: V
+    center_xy:
+    - 350
+    - 63
+    size:
+    - 17
+    - 18
+    - 96
+    yaw_deg: 17
+  zone_labels: []
+  elevation_callouts: []

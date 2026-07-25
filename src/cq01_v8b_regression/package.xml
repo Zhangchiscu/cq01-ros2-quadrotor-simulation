@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>cq01_v8b_regression</name>
+  <version>8.4.0</version>
+  <description>
+    CQ-01 V8-B isolated P11-P15 high-altitude H14 replan and P3.1
+    rapid-ascent, circle and figure-eight regression.
+  </description>
+  <maintainer email="taccettabellus@gmail.com">Xianzhe Zhang</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>nav_msgs</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>std_srvs</exec_depend>
+  <exec_depend>visualization_msgs</exec_depend>
+  <exec_depend>tf2_ros</exec_depend>
+  <exec_depend>rviz2</exec_depend>
+  <exec_depend>python3-matplotlib</exec_depend>
+
+  <exec_depend>cq01_v2_scene</exec_depend>
+  <exec_depend>drone_dynamics</exec_depend>
+  <exec_depend>drone_controller</exec_depend>
+  <exec_depend>drone_planner_3d</exec_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

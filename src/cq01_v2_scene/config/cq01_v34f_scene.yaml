@@ -1,0 +1,1717 @@
+scene:
+  name: CQ-01 V3.4F Structured Street-Canyon Mountain City
+  frame_id: world
+  world_bounds:
+    x_min: 0.0
+    x_max: 430.0
+    y_min: -160.0
+    y_max: 160.0
+    z_min: 0.0
+    z_max: 300.0
+  sampling:
+    terrain_resolution: 2.5
+    terrain_visual_resolution: 4.0
+    obstacle_resolution: 1.5
+  terrain:
+    model: mountain_city_v33
+    base_profile:
+    - - 0.0
+      - 1.0
+    - - 50.0
+      - 3.0
+    - - 90.0
+      - 7.0
+    - - 130.0
+      - 12.0
+    - - 180.0
+      - 18.0
+    - - 230.0
+      - 24.0
+    - - 280.0
+      - 32.0
+    - - 330.0
+      - 40.0
+    - - 380.0
+      - 48.0
+    - - 430.0
+      - 55.0
+    lateral_tilt: 0.008
+    undulation:
+      amp_x: 1.2
+      period_x: 60.0
+      amp_y: 1.4
+      period_y: 67.0
+      cross_amp: 0.8
+      cross_period: 91.0
+    urban_plateaus:
+    - name: LOWER_MOUNTAIN_CITY
+      center:
+      - 120.0
+      - 50.0
+      radius:
+      - 115.0
+      - 78.0
+      target_z: 72.0
+      top_ratio: 0.62
+      edge_power: 1.6
+      yaw_deg: -14.0
+      super_power: 4.0
+    - name: MID_MOUNTAIN_CITY
+      center:
+      - 225.0
+      - 35.0
+      radius:
+      - 130.0
+      - 92.0
+      target_z: 118.0
+      top_ratio: 0.6
+      edge_power: 1.65
+      yaw_deg: -8.0
+      super_power: 4.5
+    - name: HIGH_MOUNTAIN_CITY
+      center:
+      - 335.0
+      - -35.0
+      radius:
+      - 140.0
+      - 105.0
+      target_z: 172.0
+      top_ratio: 0.62
+      edge_power: 1.75
+      yaw_deg: 7.0
+      super_power: 4.2
+    - name: TERMINAL_RIDGE_CITY
+      center:
+      - 392.0
+      - 45.0
+      radius:
+      - 76.0
+      - 58.0
+      target_z: 195.0
+      top_ratio: 0.58
+      edge_power: 1.8
+      yaw_deg: 12.0
+      super_power: 4.0
+    terraces:
+    - name: foot_city_shelf
+      center:
+      - 80.0
+      - -35.0
+      radius:
+      - 80.0
+      - 55.0
+      target_z: 28.0
+      strength: 0.8
+      yaw_deg: 8.0
+    - name: lower_city_shelf
+      center:
+      - 155.0
+      - -10.0
+      radius:
+      - 75.0
+      - 50.0
+      target_z: 55.0
+      strength: 0.65
+      yaw_deg: -5.0
+    - name: upper_city_shelf
+      center:
+      - 280.0
+      - 20.0
+      radius:
+      - 85.0
+      - 55.0
+      target_z: 105.0
+      strength: 0.5
+      yaw_deg: -8.0
+    ridges:
+    - name: north_urban_ridge
+      center:
+      - 185.0
+      - 95.0
+      sigma:
+      - 110.0
+      - 30.0
+      height: 18.0
+    - name: back_urban_ridge
+      center:
+      - 300.0
+      - 90.0
+      sigma:
+      - 120.0
+      - 35.0
+      height: 22.0
+    - name: south_high_ridge
+      center:
+      - 345.0
+      - -112.0
+      sigma:
+      - 90.0
+      - 30.0
+      height: 17.0
+    canyons:
+    - name: MAIN_RIVER_GORGE
+      p0:
+      - 100.0
+      - 95.0
+      p1:
+      - 325.0
+      - -75.0
+      floor_half_width: 13.0
+      shoulder_width: 46.0
+      floor_z0: 2.0
+      floor_z1: 8.0
+      edge_power: 6.0
+      visual_wall_offset: 18.0
+    - name: BRANCH_RAVINE
+      p0:
+      - 215.0
+      - 130.0
+      p1:
+      - 255.0
+      - 40.0
+      floor_half_width: 8.0
+      shoulder_width: 28.0
+      floor_z0: 24.0
+      floor_z1: 14.0
+      edge_power: 5.0
+      visual_wall_offset: 12.0
+  terrain_visual:
+    enabled: true
+    alpha: 1.0
+    base_z: -3.0
+    low_color:
+    - 0.14
+    - 0.37
+    - 0.18
+    - 1.0
+    mid_color:
+    - 0.39
+    - 0.46
+    - 0.2
+    - 1.0
+    high_color:
+    - 0.5
+    - 0.34
+    - 0.18
+    - 1.0
+    ridge_color:
+    - 0.42
+    - 0.3
+    - 0.23
+    - 1.0
+    summit_color:
+    - 0.5
+    - 0.43
+    - 0.34
+    - 1.0
+    valley_color:
+    - 0.07
+    - 0.23
+    - 0.3
+    - 1.0
+    cliff_color:
+    - 0.2
+    - 0.16
+    - 0.14
+    - 1.0
+    edge_color:
+    - 0.76
+    - 0.66
+    - 0.43
+    - 0.42
+    edge_width: 0.25
+    color_breaks:
+    - 28.0
+    - 75.0
+    - 125.0
+    - 175.0
+    show_canyon_walls: true
+    show_boundary: false
+    mask:
+      center:
+      - 215.0
+      - 0.0
+      radius:
+      - 225.0
+      - 162.0
+      yaw_deg: -2.0
+      roughness_1: 0.075
+      frequency_1: 5.0
+      roughness_2: 0.045
+      frequency_2: 11.0
+      side_notch: 0.055
+    callouts:
+    - text: MOUNTAIN FOOT / LOWER CITY  0-30 m
+      position_xy:
+      - 40.0
+      - -120.0
+      z: 24.0
+      scale: 3.0
+    - text: TERRACED MID-CITY  70-120 m
+      position_xy:
+      - 155.0
+      - 75.0
+      z: 145.0
+      scale: 3.2
+    - text: MAIN RIVER GORGE  2-8 m
+      position_xy:
+      - 212.0
+      - 10.0
+      z: 42.0
+      scale: 3.2
+      color:
+      - 0.55
+      - 0.9
+      - 1.0
+      - 1.0
+    - text: HIGH MOUNTAIN CITY  150-190 m
+      position_xy:
+      - 335.0
+      - -45.0
+      z: 215.0
+      scale: 3.4
+    - text: TERMINAL RIDGE  ~200 m
+      position_xy:
+      - 395.0
+      - 45.0
+      z: 225.0
+      scale: 3.3
+  structure_visual:
+    collision_alpha: 1.0
+    visual_only_alpha: 1.0
+  collision_boxes:
+  - id: A01
+    zone: A
+    center_xy:
+    - 25.0
+    - -95.0
+    size:
+    - 16.0
+    - 18.0
+    - 26.0
+    yaw_deg: 8.0
+  - id: A02
+    zone: A
+    center_xy:
+    - 48.0
+    - -70.0
+    size:
+    - 18.0
+    - 15.0
+    - 34.0
+    yaw_deg: -12.0
+  - id: A03
+    zone: A
+    center_xy:
+    - 72.0
+    - -105.0
+    size:
+    - 15.0
+    - 20.0
+    - 30.0
+    yaw_deg: 15.0
+  - id: A04
+    zone: A
+    center_xy:
+    - 82.0
+    - -45.0
+    size:
+    - 17.0
+    - 16.0
+    - 42.0
+    yaw_deg: -8.0
+  - id: A05
+    zone: A
+    center_xy:
+    - 55.0
+    - 35.0
+    size:
+    - 15.0
+    - 17.0
+    - 38.0
+    yaw_deg: 13.0
+  - id: A06
+    zone: A
+    center_xy:
+    - 95.0
+    - 12.0
+    size:
+    - 14.0
+    - 14.0
+    - 44.0
+    yaw_deg: -16.0
+  - id: A07
+    zone: A
+    center_xy:
+    - 105.0
+    - -68.0
+    size:
+    - 16.0
+    - 15.0
+    - 40.0
+    yaw_deg: 5.0
+  - id: A08
+    zone: A
+    center_xy:
+    - 120.0
+    - -28.0
+    size:
+    - 13.0
+    - 13.0
+    - 46.0
+    yaw_deg: 18.0
+  - id: B01
+    zone: B
+    center_xy:
+    - 105.0
+    - 58.0
+    size:
+    - 18.0
+    - 16.0
+    - 55.0
+    yaw_deg: -10.0
+  - id: B02
+    zone: B
+    center_xy:
+    - 125.0
+    - 78.0
+    size:
+    - 15.0
+    - 20.0
+    - 68.0
+    yaw_deg: 14.0
+  - id: B03
+    zone: B
+    center_xy:
+    - 142.0
+    - 50.0
+    size:
+    - 20.0
+    - 15.0
+    - 62.0
+    yaw_deg: 4.0
+  - id: B04
+    zone: B
+    center_xy:
+    - 158.0
+    - 82.0
+    size:
+    - 17.0
+    - 18.0
+    - 74.0
+    yaw_deg: -15.0
+  - id: B05
+    zone: B
+    center_xy:
+    - 176.0
+    - 58.0
+    size:
+    - 15.0
+    - 17.0
+    - 58.0
+    yaw_deg: 17.0
+  - id: B06
+    zone: B
+    center_xy:
+    - 132.0
+    - 24.0
+    size:
+    - 14.0
+    - 13.0
+    - 50.0
+    yaw_deg: -19.0
+  - id: B07
+    zone: B
+    center_xy:
+    - 162.0
+    - 18.0
+    size:
+    - 15.0
+    - 12.0
+    - 57.0
+    yaw_deg: 8.0
+  - id: B08
+    zone: B
+    center_xy:
+    - 187.0
+    - 76.0
+    size:
+    - 18.0
+    - 15.0
+    - 66.0
+    yaw_deg: -4.0
+  - id: B09
+    zone: B
+    center_xy:
+    - 202.0
+    - 48.0
+    size:
+    - 15.0
+    - 18.0
+    - 60.0
+    yaw_deg: 12.0
+  - id: B10
+    zone: B
+    center_xy:
+    - 190.0
+    - 103.0
+    size:
+    - 16.0
+    - 16.0
+    - 52.0
+    yaw_deg: -9.0
+  - id: C01
+    zone: C
+    center_xy:
+    - 145.0
+    - -2.0
+    size:
+    - 14.0
+    - 16.0
+    - 42.0
+    yaw_deg: -16.0
+  - id: C02
+    zone: C
+    center_xy:
+    - 165.0
+    - -16.0
+    size:
+    - 16.0
+    - 13.0
+    - 48.0
+    yaw_deg: 12.0
+  - id: C03
+    zone: C
+    center_xy:
+    - 178.0
+    - 45.0
+    size:
+    - 15.0
+    - 15.0
+    - 45.0
+    yaw_deg: -8.0
+  - id: C04
+    zone: C
+    center_xy:
+    - 205.0
+    - 38.0
+    size:
+    - 17.0
+    - 14.0
+    - 52.0
+    yaw_deg: 17.0
+  - id: C05
+    zone: C
+    center_xy:
+    - 238.0
+    - -38.0
+    size:
+    - 16.0
+    - 18.0
+    - 55.0
+    yaw_deg: -12.0
+  - id: C06
+    zone: C
+    center_xy:
+    - 258.0
+    - -3.0
+    size:
+    - 14.0
+    - 14.0
+    - 46.0
+    yaw_deg: 7.0
+  - id: C07
+    zone: C
+    center_xy:
+    - 228.0
+    - 55.0
+    size:
+    - 13.0
+    - 15.0
+    - 50.0
+    yaw_deg: -6.0
+  - id: C08
+    zone: C
+    center_xy:
+    - 270.0
+    - -58.0
+    size:
+    - 16.0
+    - 16.0
+    - 58.0
+    yaw_deg: 14.0
+  - id: D_DECK
+    zone: D
+    size:
+    - 14.0
+    - 112.0
+    - 4.0
+    yaw_deg: 53.0
+    center:
+    - 212.5
+    - 10.0
+    - 58.0
+    bottom_on_terrain: false
+  - id: D_PIER_W
+    zone: D
+    size:
+    - 5.0
+    - 7.0
+    - 50.0
+    yaw_deg: 53.0
+    center:
+    - 194.44554930543853
+    - -13.959065301418786
+    - 27.0
+    bottom_on_terrain: false
+  - id: D_PIER_E
+    zone: D
+    size:
+    - 5.0
+    - 7.0
+    - 50.0
+    yaw_deg: 53.0
+    center:
+    - 230.55445069456147
+    - 33.95906530141879
+    - 27.0
+    bottom_on_terrain: false
+  - id: D_ABUT_W
+    zone: D
+    center_xy:
+    - 182.40924884239757
+    - -29.931775502364644
+    size:
+    - 15.0
+    - 13.0
+    - 22.0
+    yaw_deg: 53.0
+  - id: D_ABUT_E
+    zone: D
+    center_xy:
+    - 242.59075115760243
+    - 49.931775502364644
+    size:
+    - 15.0
+    - 13.0
+    - 22.0
+    yaw_deg: 53.0
+  - id: E01
+    zone: E
+    center_xy:
+    - 270.0
+    - -80.0
+    size:
+    - 18.0
+    - 17.0
+    - 65.0
+    yaw_deg: -12.0
+  - id: E02
+    zone: E
+    center_xy:
+    - 290.0
+    - -62.0
+    size:
+    - 16.0
+    - 20.0
+    - 78.0
+    yaw_deg: 15.0
+  - id: E03
+    zone: E
+    center_xy:
+    - 308.0
+    - -88.0
+    size:
+    - 20.0
+    - 15.0
+    - 72.0
+    yaw_deg: 6.0
+  - id: E04
+    zone: E
+    center_xy:
+    - 326.0
+    - -58.0
+    size:
+    - 17.0
+    - 18.0
+    - 88.0
+    yaw_deg: -16.0
+  - id: E05
+    zone: E
+    center_xy:
+    - 344.0
+    - -78.0
+    size:
+    - 15.0
+    - 20.0
+    - 74.0
+    yaw_deg: 10.0
+  - id: E06
+    zone: E
+    center_xy:
+    - 362.0
+    - -52.0
+    size:
+    - 20.0
+    - 18.0
+    - 94.0
+    yaw_deg: -5.0
+  - id: E07
+    zone: E
+    center_xy:
+    - 382.0
+    - -70.0
+    size:
+    - 16.0
+    - 20.0
+    - 82.0
+    yaw_deg: 18.0
+  - id: E08
+    zone: E
+    center_xy:
+    - 285.0
+    - -24.0
+    size:
+    - 14.0
+    - 16.0
+    - 62.0
+    yaw_deg: -15.0
+  - id: E09
+    zone: E
+    center_xy:
+    - 305.0
+    - 2.0
+    size:
+    - 16.0
+    - 14.0
+    - 72.0
+    yaw_deg: 12.0
+  - id: E10
+    zone: E
+    center_xy:
+    - 329.0
+    - 20.0
+    size:
+    - 18.0
+    - 16.0
+    - 84.0
+    yaw_deg: -9.0
+  - id: E11
+    zone: E
+    center_xy:
+    - 352.0
+    - 4.0
+    size:
+    - 15.0
+    - 18.0
+    - 70.0
+    yaw_deg: 14.0
+  - id: E12
+    zone: E
+    center_xy:
+    - 375.0
+    - 30.0
+    size:
+    - 18.0
+    - 16.0
+    - 90.0
+    yaw_deg: -17.0
+  - id: E13
+    zone: E
+    center_xy:
+    - 400.0
+    - 8.0
+    size:
+    - 16.0
+    - 18.0
+    - 76.0
+    yaw_deg: 8.0
+  - id: E14
+    zone: E
+    center_xy:
+    - 395.0
+    - -38.0
+    size:
+    - 18.0
+    - 17.0
+    - 86.0
+    yaw_deg: -6.0
+  - id: F01
+    zone: F
+    center_xy:
+    - 385.0
+    - 70.0
+    size:
+    - 26.0
+    - 15.0
+    - 55.0
+    yaw_deg: -7.0
+  - id: F02
+    zone: F
+    center_xy:
+    - 405.0
+    - -18.0
+    size:
+    - 24.0
+    - 14.0
+    - 52.0
+    yaw_deg: 11.0
+  - id: A09
+    zone: A
+    center_xy:
+    - 38.0
+    - -8.0
+    size:
+    - 13.0
+    - 12.0
+    - 32.0
+    yaw_deg: -11.0
+  - id: A10
+    zone: A
+    center_xy:
+    - 107.09
+    - -108.03
+    size:
+    - 14.0
+    - 13.0
+    - 38.0
+    yaw_deg: 9.0
+  - id: B11
+    zone: B
+    center_xy:
+    - 92.0
+    - 92.0
+    size:
+    - 15.0
+    - 14.0
+    - 52.0
+    yaw_deg: -8.0
+  - id: B12
+    zone: B
+    center_xy:
+    - 150.0
+    - 112.0
+    size:
+    - 14.0
+    - 16.0
+    - 60.0
+    yaw_deg: 13.0
+  - id: B13
+    zone: B
+    center_xy:
+    - 218.0
+    - 86.0
+    size:
+    - 15.0
+    - 13.0
+    - 56.0
+    yaw_deg: -15.0
+  - id: C09
+    zone: C
+    center_xy:
+    - 184.0
+    - -48.0
+    size:
+    - 13.0
+    - 15.0
+    - 44.0
+    yaw_deg: 10.0
+  - id: C10
+    zone: C
+    center_xy:
+    - 258.0
+    - 73.0
+    size:
+    - 14.0
+    - 12.0
+    - 50.0
+    yaw_deg: -7.0
+  - id: E15
+    zone: E
+    center_xy:
+    - 275.0
+    - 48.0
+    size:
+    - 14.0
+    - 14.0
+    - 66.0
+    yaw_deg: 12.0
+  - id: E16
+    zone: E
+    center_xy:
+    - 336.0
+    - -118.0
+    size:
+    - 16.0
+    - 14.0
+    - 78.0
+    yaw_deg: -10.0
+  - id: F03
+    zone: F
+    center_xy:
+    - 420.0
+    - -62.0
+    size:
+    - 18.0
+    - 14.0
+    - 62.0
+    yaw_deg: 9.0
+  visual_only_boxes:
+  - id: V01
+    zone: V
+    center_xy:
+    - 70
+    - 105
+    size:
+    - 18
+    - 20
+    - 58
+    yaw_deg: -8
+  - id: V02
+    zone: V
+    center_xy:
+    - 120
+    - -120
+    size:
+    - 20
+    - 18
+    - 64
+    yaw_deg: 12
+  - id: V03
+    zone: V
+    center_xy:
+    - 170
+    - 112
+    size:
+    - 17
+    - 22
+    - 72
+    yaw_deg: -14
+  - id: V04
+    zone: V
+    center_xy:
+    - 225
+    - 100
+    size:
+    - 21
+    - 18
+    - 78
+    yaw_deg: 9
+  - id: V05
+    zone: V
+    center_xy:
+    - 275
+    - 105
+    size:
+    - 18
+    - 20
+    - 86
+    yaw_deg: -11
+  - id: V06
+    zone: V
+    center_xy:
+    - 310
+    - -120
+    size:
+    - 20
+    - 18
+    - 92
+    yaw_deg: 13
+  - id: V07
+    zone: V
+    center_xy:
+    - 360
+    - -112
+    size:
+    - 20
+    - 22
+    - 96
+    yaw_deg: -6
+  - id: V08
+    zone: V
+    center_xy:
+    - 410
+    - 72
+    size:
+    - 18
+    - 19
+    - 82
+    yaw_deg: 17
+  - id: V09
+    zone: A
+    district: FOOT_DENSE
+    center_xy:
+    - 118.2
+    - -56.4
+    size:
+    - 12.87
+    - 12.13
+    - 35.7
+    yaw_deg: -18.2
+  - id: V10
+    zone: A
+    district: FOOT_DENSE
+    center_xy:
+    - 18.0
+    - -65.0
+    size:
+    - 8.25
+    - 13.56
+    - 39.95
+    yaw_deg: -19.3
+    corridor_relocated_v34f: true
+  - id: V11
+    zone: A
+    district: FOOT_DENSE
+    center_xy:
+    - 77.23
+    - -20.12
+    size:
+    - 9.09
+    - 13.21
+    - 32.28
+    yaw_deg: 10.1
+  - id: V12
+    zone: A
+    district: FOOT_DENSE
+    center_xy:
+    - 32.0
+    - -52.0
+    size:
+    - 14.27
+    - 12.04
+    - 21.87
+    yaw_deg: 18.6
+    corridor_relocated_v34f: true
+  - id: V13
+    zone: A
+    district: FOOT_DENSE
+    center_xy:
+    - 118.0
+    - -86.0
+    size:
+    - 16.04
+    - 14.88
+    - 18.29
+    yaw_deg: 13.6
+    corridor_relocated_v34f: true
+  - id: V14
+    zone: A
+    district: FOOT_DENSE
+    center_xy:
+    - 104.0
+    - -88.0
+    size:
+    - 8.31
+    - 9.07
+    - 18.07
+    yaw_deg: 4.0
+    corridor_relocated_v34f: true
+  - id: V15
+    zone: A
+    district: FOOT_DENSE
+    center_xy:
+    - 93.13
+    - -133.78
+    size:
+    - 15.34
+    - 11.27
+    - 21.28
+    yaw_deg: 7.4
+  - id: V16
+    zone: A
+    district: FOOT_DENSE
+    center_xy:
+    - 24.26
+    - -32.77
+    size:
+    - 15.6
+    - 17.04
+    - 13.18
+    yaw_deg: -1.6
+  - id: V17
+    zone: A
+    district: FOOT_DENSE
+    center_xy:
+    - 90.0
+    - -106.0
+    size:
+    - 10.67
+    - 8.8
+    - 25.37
+    yaw_deg: -19.7
+    corridor_relocated_v34f: true
+  - id: V18
+    zone: A
+    district: FOOT_DENSE
+    center_xy:
+    - 57.21
+    - -57.35
+    size:
+    - 11.48
+    - 10.95
+    - 19.39
+    yaw_deg: -11.9
+  - id: V19
+    zone: A
+    district: FOOT_DENSE
+    center_xy:
+    - 73.53
+    - -117.07
+    size:
+    - 13.57
+    - 12.32
+    - 35.71
+    yaw_deg: -20.7
+  - id: V20
+    zone: A
+    district: FOOT_DENSE
+    center_xy:
+    - 110.0
+    - -118.0
+    size:
+    - 16.37
+    - 17.12
+    - 20.62
+    yaw_deg: 6.3
+    corridor_relocated_v34f: true
+  - id: V21
+    zone: B
+    district: LOWER_NORTH
+    center_xy:
+    - 119.22
+    - 115.78
+    size:
+    - 15.75
+    - 14.27
+    - 51.48
+    yaw_deg: -1.4
+  - id: V22
+    zone: B
+    district: LOWER_NORTH
+    center_xy:
+    - 209.38
+    - 57.69
+    size:
+    - 15.29
+    - 12.3
+    - 67.49
+    yaw_deg: 0.1
+  - id: V23
+    zone: B
+    district: LOWER_NORTH
+    center_xy:
+    - 93.92
+    - 120.16
+    size:
+    - 13.23
+    - 11.26
+    - 17.85
+    yaw_deg: 11.8
+  - id: V24
+    zone: B
+    district: LOWER_NORTH
+    center_xy:
+    - 78.48
+    - 107.17
+    size:
+    - 10.96
+    - 12.4
+    - 70.56
+    yaw_deg: -7.3
+  - id: V25
+    zone: B
+    district: LOWER_NORTH
+    center_xy:
+    - 145.63
+    - 86.98
+    size:
+    - 11.26
+    - 9.92
+    - 30.76
+    yaw_deg: -21.4
+  - id: V26
+    zone: B
+    district: LOWER_NORTH
+    center_xy:
+    - 60.91
+    - 93.86
+    size:
+    - 9.58
+    - 15.99
+    - 54.95
+    yaw_deg: 12.6
+  - id: V27
+    zone: B
+    district: LOWER_NORTH
+    center_xy:
+    - 112.32
+    - 62.52
+    size:
+    - 15.97
+    - 12.54
+    - 52.82
+    yaw_deg: 17.1
+  - id: V28
+    zone: B
+    district: LOWER_NORTH
+    center_xy:
+    - 103.9
+    - 66.7
+    size:
+    - 11.71
+    - 12.16
+    - 19.58
+    yaw_deg: -13.1
+  - id: V29
+    zone: B
+    district: LOWER_NORTH
+    center_xy:
+    - 130.73
+    - 120.25
+    size:
+    - 13.66
+    - 19.43
+    - 20.19
+    yaw_deg: -6.4
+  - id: V30
+    zone: B
+    district: LOWER_NORTH
+    center_xy:
+    - 79.09
+    - 35.72
+    size:
+    - 10.49
+    - 13.54
+    - 63.19
+    yaw_deg: -12.8
+  - id: V31
+    zone: B
+    district: LOWER_NORTH
+    center_xy:
+    - 94.65
+    - 58.13
+    size:
+    - 11.56
+    - 19.87
+    - 18.47
+    yaw_deg: -21.7
+  - id: V32
+    zone: B
+    district: LOWER_NORTH
+    center_xy:
+    - 193.14
+    - 126.12
+    size:
+    - 12.29
+    - 13.31
+    - 48.73
+    yaw_deg: -19.3
+  - id: V33
+    zone: B
+    district: LOWER_SOUTH
+    center_xy:
+    - 187.46
+    - -78.69
+    size:
+    - 14.08
+    - 12.5
+    - 54.08
+    yaw_deg: 9.0
+  - id: V34
+    zone: B
+    district: LOWER_SOUTH
+    center_xy:
+    - 249.2
+    - -97.79
+    size:
+    - 8.07
+    - 12.38
+    - 30.34
+    yaw_deg: 16.2
+  - id: V35
+    zone: B
+    district: LOWER_SOUTH
+    center_xy:
+    - 216.77
+    - -71.71
+    size:
+    - 12.54
+    - 13.4
+    - 46.83
+    yaw_deg: -17.9
+  - id: V36
+    zone: B
+    district: LOWER_SOUTH
+    center_xy:
+    - 112.95
+    - -86.88
+    size:
+    - 8.0
+    - 14.75
+    - 53.46
+    yaw_deg: -10.9
+  - id: V37
+    zone: B
+    district: LOWER_SOUTH
+    center_xy:
+    - 131.26
+    - -75.8
+    size:
+    - 11.31
+    - 10.07
+    - 37.86
+    yaw_deg: -18.3
+  - id: V38
+    zone: B
+    district: LOWER_SOUTH
+    center_xy:
+    - 122.5
+    - -83.43
+    size:
+    - 14.6
+    - 14.25
+    - 54.02
+    yaw_deg: -4.9
+  - id: V39
+    zone: B
+    district: LOWER_SOUTH
+    center_xy:
+    - 239.47
+    - -69.21
+    size:
+    - 12.04
+    - 10.46
+    - 25.31
+    yaw_deg: 0.7
+  - id: V40
+    zone: B
+    district: LOWER_SOUTH
+    center_xy:
+    - 128.26
+    - -108.41
+    size:
+    - 10.93
+    - 13.45
+    - 19.75
+    yaw_deg: 3.0
+  - id: V41
+    zone: C
+    district: GORGE_BANKS
+    center_xy:
+    - 275.07
+    - 14.48
+    size:
+    - 15.23
+    - 16.7
+    - 21.86
+    yaw_deg: -21.1
+  - id: V42
+    zone: C
+    district: GORGE_BANKS
+    center_xy:
+    - 199.85
+    - -36.96
+    size:
+    - 16.44
+    - 10.32
+    - 19.89
+    yaw_deg: 5.5
+  - id: V43
+    zone: C
+    district: GORGE_BANKS
+    center_xy:
+    - 188.22
+    - -4.83
+    size:
+    - 8.24
+    - 12.74
+    - 56.49
+    yaw_deg: -7.3
+  - id: V44
+    zone: C
+    district: GORGE_BANKS
+    center_xy:
+    - 233.4
+    - 19.47
+    size:
+    - 11.37
+    - 12.79
+    - 41.94
+    yaw_deg: 6.3
+  - id: V45
+    zone: C
+    district: GORGE_BANKS
+    center_xy:
+    - 213.92
+    - -25.31
+    size:
+    - 13.87
+    - 10.72
+    - 57.14
+    yaw_deg: 10.1
+  - id: V46
+    zone: C
+    district: GORGE_BANKS
+    center_xy:
+    - 187.8
+    - 65.41
+    size:
+    - 8.34
+    - 9.0
+    - 27.69
+    yaw_deg: 9.2
+  - id: V47
+    zone: C
+    district: GORGE_BANKS
+    center_xy:
+    - 173.25
+    - -1.3
+    size:
+    - 13.86
+    - 14.17
+    - 18.25
+    yaw_deg: -14.8
+  - id: V48
+    zone: C
+    district: GORGE_BANKS
+    center_xy:
+    - 258.63
+    - 11.76
+    size:
+    - 11.59
+    - 12.92
+    - 15.97
+    yaw_deg: -13.1
+  - id: V49
+    zone: C
+    district: GORGE_BANKS
+    center_xy:
+    - 277.35
+    - -2.12
+    size:
+    - 8.3
+    - 8.9
+    - 45.46
+    yaw_deg: -9.0
+  - id: V50
+    zone: C
+    district: GORGE_BANKS
+    center_xy:
+    - 244.79
+    - 29.33
+    size:
+    - 12.55
+    - 10.84
+    - 46.1
+    yaw_deg: 15.9
+  - id: V51
+    zone: E
+    district: HIGH_SOUTH
+    center_xy:
+    - 292.81
+    - -130.55
+    size:
+    - 14.6
+    - 14.29
+    - 70.33
+    yaw_deg: 18.4
+  - id: V52
+    zone: E
+    district: HIGH_SOUTH
+    center_xy:
+    - 298.02
+    - -113.76
+    size:
+    - 9.53
+    - 10.26
+    - 65.57
+    yaw_deg: 15.4
+  - id: V53
+    zone: E
+    district: HIGH_SOUTH
+    center_xy:
+    - 342.99
+    - -126.45
+    size:
+    - 12.47
+    - 14.07
+    - 70.04
+    yaw_deg: 18.9
+  - id: V54
+    zone: E
+    district: HIGH_SOUTH
+    center_xy:
+    - 353.99
+    - -98.73
+    size:
+    - 9.9
+    - 14.27
+    - 57.3
+    yaw_deg: 11.7
+  - id: V55
+    zone: E
+    district: HIGH_SOUTH
+    center_xy:
+    - 349.73
+    - -64.15
+    size:
+    - 13.12
+    - 14.72
+    - 47.63
+    yaw_deg: 9.2
+  - id: V56
+    zone: E
+    district: HIGH_SOUTH
+    center_xy:
+    - 293.97
+    - -98.46
+    size:
+    - 12.18
+    - 12.45
+    - 53.51
+    yaw_deg: -0.3
+  - id: V57
+    zone: E
+    district: HIGH_SOUTH
+    center_xy:
+    - 363.7
+    - -128.81
+    size:
+    - 11.62
+    - 13.56
+    - 25.81
+    yaw_deg: 2.0
+  - id: V58
+    zone: E
+    district: HIGH_SOUTH
+    center_xy:
+    - 369.37
+    - -107.87
+    size:
+    - 12.12
+    - 13.05
+    - 47.71
+    yaw_deg: 19.9
+  - id: V59
+    zone: E
+    district: HIGH_SOUTH
+    center_xy:
+    - 262.79
+    - -118.46
+    size:
+    - 11.27
+    - 9.8
+    - 60.01
+    yaw_deg: 6.2
+  - id: V60
+    zone: E
+    district: HIGH_SOUTH
+    center_xy:
+    - 400.98
+    - -78.24
+    size:
+    - 17.32
+    - 11.95
+    - 31.06
+    yaw_deg: -18.9
+  - id: V61
+    zone: E
+    district: HIGH_CORE
+    center_xy:
+    - 415.0
+    - -65.0
+    size:
+    - 16.84
+    - 19.54
+    - 26.25
+    yaw_deg: -1.8
+    corridor_relocated_v34f: true
+  - id: V62
+    zone: E
+    district: HIGH_CORE
+    center_xy:
+    - 360.0
+    - 75.0
+    size:
+    - 16.87
+    - 15.79
+    - 92.84
+    yaw_deg: 10.2
+    corridor_relocated_v34f: true
+  - id: V63
+    zone: E
+    district: HIGH_CORE
+    center_xy:
+    - 325.7
+    - -13.84
+    size:
+    - 16.57
+    - 15.81
+    - 77.8
+    yaw_deg: -20.8
+  - id: V64
+    zone: E
+    district: HIGH_CORE
+    center_xy:
+    - 340.52
+    - 35.41
+    size:
+    - 13.69
+    - 15.95
+    - 96.02
+    yaw_deg: -5.6
+  - id: V65
+    zone: E
+    district: HIGH_CORE
+    center_xy:
+    - 271.47
+    - 37.86
+    size:
+    - 9.08
+    - 14.45
+    - 97.92
+    yaw_deg: -12.0
+  - id: V66
+    zone: E
+    district: HIGH_CORE
+    center_xy:
+    - 401.75
+    - -1.42
+    size:
+    - 15.85
+    - 13.62
+    - 76.94
+    yaw_deg: 19.4
+  - id: V67
+    zone: E
+    district: HIGH_CORE
+    center_xy:
+    - 314.97
+    - -2.91
+    size:
+    - 16.39
+    - 14.66
+    - 20.76
+    yaw_deg: -5.5
+  - id: V68
+    zone: E
+    district: HIGH_CORE
+    center_xy:
+    - 314.82
+    - 21.38
+    size:
+    - 20.15
+    - 17.71
+    - 28.07
+    yaw_deg: 11.7
+  - id: V69
+    zone: E
+    district: HIGH_CORE
+    center_xy:
+    - 342.12
+    - 56.35
+    size:
+    - 16.02
+    - 16.5
+    - 25.63
+    yaw_deg: -13.9
+  - id: V70
+    zone: E
+    district: HIGH_CORE
+    center_xy:
+    - 355.01
+    - 12.64
+    size:
+    - 9.71
+    - 16.54
+    - 97.57
+    yaw_deg: -17.4
+  - id: V71
+    zone: E
+    district: HIGH_CORE
+    center_xy:
+    - 315.43
+    - -15.03
+    size:
+    - 16.42
+    - 12.14
+    - 33.75
+    yaw_deg: -12.5
+  - id: V72
+    zone: E
+    district: HIGH_CORE
+    center_xy:
+    - 307.5
+    - 12.51
+    size:
+    - 16.94
+    - 11.23
+    - 86.01
+    yaw_deg: -10.0
+  - id: V73
+    zone: F
+    district: TERMINAL
+    center_xy:
+    - 397.44
+    - 67.85
+    size:
+    - 15.4
+    - 13.54
+    - 31.77
+    yaw_deg: 10.6
+  - id: V74
+    zone: F
+    district: TERMINAL
+    center_xy:
+    - 375.58
+    - 103.24
+    size:
+    - 11.67
+    - 11.04
+    - 82.98
+    yaw_deg: 3.7
+  - id: V75
+    zone: F
+    district: TERMINAL
+    center_xy:
+    - 397.74
+    - 107.07
+    size:
+    - 10.35
+    - 14.44
+    - 84.12
+    yaw_deg: -11.0
+  - id: V76
+    zone: F
+    district: TERMINAL
+    center_xy:
+    - 394.35
+    - 90.7
+    size:
+    - 15.7
+    - 10.54
+    - 81.72
+    yaw_deg: -7.9
+  density_design:
+    goal: Preserve V3.3 terrain while increasing layered urban density without sealing
+      the flight corridor.
+    collision_buildings_target: 57
+    visual_buildings_target: 68
+    total_structures_target: 125
+  corridor_design:
+    version: V3.4F
+    principle: Preserve all 133 visible structures while relocating eight visual-only
+      buildings out of the mission corridor.
+    relocated_visual_ids:
+    - V10
+    - V12
+    - V13
+    - V14
+    - V17
+    - V20
+    - V61
+    - V62
+    planner_resolution_m: 2.0
+    planner_inflation_radius_m: 2.5
+    execution_mode: direct_dense_astar_waypoints

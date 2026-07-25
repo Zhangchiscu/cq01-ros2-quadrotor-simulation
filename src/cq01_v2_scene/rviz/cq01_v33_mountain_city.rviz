@@ -1,0 +1,102 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+  - Class: rviz_common/Views
+    Name: Views
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz_default_plugins/Grid
+      Enabled: true
+      Name: Grid
+      Plane: XY
+      Cell Size: 10
+      Plane Cell Count: 60
+      Reference Frame: world
+      Alpha: 0.18
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: true
+      Name: V3.3 Broad Terraces and River Gorge
+      Topic:
+        Value: /cq01_v2/terrain_markers
+        Reliability Policy: Reliable
+        Durability Policy: Transient Local
+        History Policy: Keep Last
+        Depth: 1
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: true
+      Name: Opaque Layered Mountain-City Buildings
+      Topic:
+        Value: /cq01_v2/structure_markers
+        Reliability Policy: Reliable
+        Durability Policy: Transient Local
+        History Policy: Keep Last
+        Depth: 1
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: true
+      Name: Terrace, Gorge and Goal Labels
+      Topic:
+        Value: /cq01_v2/annotation_markers
+        Reliability Policy: Reliable
+        Durability Policy: Transient Local
+        History Policy: Keep Last
+        Depth: 1
+    - Class: rviz_default_plugins/Path
+      Enabled: true
+      Name: Reference Path
+      Topic:
+        Value: /cq01_v2/reference_path
+        Reliability Policy: Reliable
+        Durability Policy: Transient Local
+        History Policy: Keep Last
+        Depth: 1
+      Line Style: Lines
+      Line Width: 1.2
+      Color: 80; 255; 80
+    - Class: rviz_default_plugins/PoseArray
+      Enabled: false
+      Name: Waypoint Poses
+      Topic:
+        Value: /cq01_v2/waypoints
+        Reliability Policy: Reliable
+        Durability Policy: Transient Local
+        History Policy: Keep Last
+        Depth: 1
+    - Class: rviz_default_plugins/PointCloud2
+      Enabled: false
+      Name: Collision Cloud
+      Topic:
+        Value: /cq01_v2/collision_cloud
+        Reliability Policy: Reliable
+        Durability Policy: Transient Local
+        History Policy: Keep Last
+        Depth: 1
+      Style: Points
+      Size (Pixels): 2
+      Decay Time: 0
+  Enabled: true
+  Global Options:
+    Background Color: 24; 27; 31
+    Fixed Frame: world
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz_default_plugins/Interact
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Select
+    - Class: rviz_default_plugins/FocusCamera
+    - Class: rviz_default_plugins/Measure
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Distance: 690
+      Focal Point:
+        X: 220
+        Y: 0
+        Z: 105
+      Pitch: 0.36
+      Yaw: 1.08
+      Near Clip Distance: 0.01
+Window Geometry:
+  Height: 940
+  Width: 1540

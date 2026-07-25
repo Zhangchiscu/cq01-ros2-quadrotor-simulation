@@ -1,0 +1,20 @@
+===== Narrow S-Corridor Evaluation Summary =====
+Overall pass: True
+Arrival time: 10.070 s
+Final error: 0.0251 m
+Planned path length: 6.968 m
+Actual path length: 7.566 m
+Minimum physical obstacle clearance: 0.184 m
+Minimum safety-zone clearance: 0.047 m
+Maximum |y| inside corridor: 0.444 m
+Minimum outer-wall body clearance: 0.306 m
+First gate minimum y: -0.346 m
+Second gate maximum y: 0.427 m
+
+Acceptance criteria:
+- goal_reached: PASS
+- final_error_below_0_3_m: PASS
+- physical_clearance_positive: PASS
+- safety_zone_clearance_positive: PASS
+- outer_wall_body_clearance_positive: PASS
+- s_curve_passage_confirmed: PASS

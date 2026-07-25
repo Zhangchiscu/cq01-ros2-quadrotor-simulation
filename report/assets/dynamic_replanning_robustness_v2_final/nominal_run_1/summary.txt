@@ -1,0 +1,30 @@
+===== Dynamic Replanning Mission Summary =====
+Success: True
+Overall pass: True
+Arrival time: 27.284344903999227 s
+Final error: 0.0077 m
+Actual path length: 11.213 m
+Minimum static clearance: 1.765 m
+Minimum dynamic clearance: 2.595 m
+Predicted collision count: 8
+Safety hold count: 8
+Replan requests: 8
+Successful replans: 8
+Temporary failed replans: 0
+Recovery wait count: 0
+Planner path count: 9
+Last replan latency: 62.63799700172967 ms
+Maximum motor RPM: 6475.3
+
+Acceptance criteria:
+- mission_successful: PASS
+- dynamic_obstacle_detected: PASS
+- predicted_collision_detected: PASS
+- safety_hold_triggered: PASS
+- online_replan_requested: PASS
+- online_replan_completed: PASS
+- at_least_two_planner_paths: PASS
+- final_error_below_0_3_m: PASS
+- dynamic_clearance_above_0_3_m: PASS
+- static_clearance_above_0_3_m: PASS
+- no_motor_saturation: PASS

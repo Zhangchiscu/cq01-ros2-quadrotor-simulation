@@ -1,0 +1,82 @@
+Panels:
+- Class: rviz_common/Displays
+  Name: Displays
+- Class: rviz_common/Views
+  Name: Views
+Visualization Manager:
+  Class: ''
+  Displays:
+  - Class: rviz_default_plugins/Grid
+    Enabled: true
+    Name: Grid
+    Plane: XY
+    Cell Size: 1
+    Plane Cell Count: 30
+    Reference Frame: world
+    Alpha: 0.35
+  - Class: rviz_default_plugins/Path
+    Enabled: true
+    Name: Actual Trajectory
+    Topic:
+      Value: /cq01_course/actual_trajectory
+      Reliability Policy: Reliable
+      Durability Policy: Volatile
+      History Policy: Keep Last
+      Depth: 1
+    Line Style: Lines
+    Line Width: 3.0
+    Color: 255; 215; 40
+  - Class: rviz_default_plugins/MarkerArray
+    Enabled: true
+    Name: Required Waypoints
+    Topic:
+      Value: /cq01_course/waypoints
+      Reliability Policy: Reliable
+      Durability Policy: Transient Local
+      History Policy: Keep Last
+      Depth: 1
+  - Class: rviz_default_plugins/MarkerArray
+    Enabled: true
+    Name: Current Goal
+    Topic:
+      Value: /cq01_course/current_goal_marker
+      Reliability Policy: Reliable
+      Durability Policy: Transient Local
+      History Policy: Keep Last
+      Depth: 1
+  - Class: rviz_default_plugins/MarkerArray
+    Enabled: true
+    Name: Quadrotor Model
+    Topic:
+      Value: /cq01_course/drone_model
+      Reliability Policy: Reliable
+      Durability Policy: Volatile
+      History Policy: Keep Last
+      Depth: 1
+  Enabled: true
+  Global Options:
+    Background Color: 24; 27; 31
+    Fixed Frame: world
+    Frame Rate: 20
+  Name: root
+  Tools:
+  - Class: rviz_default_plugins/Interact
+  - Class: rviz_default_plugins/MoveCamera
+  - Class: rviz_default_plugins/Select
+  - Class: rviz_default_plugins/FocusCamera
+  - Class: rviz_default_plugins/Measure
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Target Frame: world
+      Distance: 12
+      Focal Point:
+        X: 1.5
+        Y: 1.5
+        Z: 1.5
+      Pitch: 0.65
+      Yaw: 0.90
+      Near Clip Distance: 0.01
+Window Geometry:
+  Height: 940
+  Width: 1540

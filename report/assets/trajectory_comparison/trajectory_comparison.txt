@@ -1,0 +1,31 @@
+===== Raw vs Smoothed Trajectory Comparison =====
+Overall pass: True
+
+[raw]
+Overall pass: True
+Arrival time: 16.670154839999668 s
+Final error: 0.0085 m
+Minimum clearance: 0.491 m
+Actual RMS acceleration: 0.282 m/s^2
+Actual RMS jerk: 1.219 m/s^3
+Reference RMS acceleration: 0.364 m/s^2
+Reference RMS jerk: 1.096 m/s^3
+
+[smooth]
+Overall pass: True
+Arrival time: 40.03123099500044 s
+Final error: 0.0912 m
+Minimum clearance: 0.489 m
+Actual RMS acceleration: 0.121 m/s^2
+Actual RMS jerk: 0.740 m/s^3
+Reference RMS acceleration: 0.066 m/s^2
+Reference RMS jerk: 0.121 m/s^3
+
+Comparison criteria:
+- both_modes_passed: PASS
+- smoothed_reference_jerk_reduced: PASS
+- smoothed_reference_acceleration_not_worse: PASS
+- smoothed_actual_jerk_not_worse: PASS
+- smoothed_actual_acceleration_not_worse: PASS
+- smoothed_clearance_preserved: PASS
+- smoothed_path_length_overhead_below_10_percent: PASS

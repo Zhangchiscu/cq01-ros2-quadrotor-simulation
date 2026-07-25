@@ -1,0 +1,52 @@
+{
+  "scenario": "underpass_3d",
+  "mission_mode": "underpass",
+  "goal": [
+    9.0,
+    0.0,
+    1.5
+  ],
+  "success": true,
+  "failure_reason": "",
+  "overall_pass": true,
+  "criteria": {
+    "mission_successful": true,
+    "planner_3d_succeeded": true,
+    "final_error_below_0_3_m": true,
+    "physical_clearance_above_0_3_m": true,
+    "path_ratio_below_1_5": true,
+    "no_motor_saturation": true,
+    "scenario_specific_3d_behaviour": true
+  },
+  "arrival_time_s": 20.77436926900009,
+  "final_error_m": 0.009164824774112306,
+  "planned_path_length_m": 9.073174747573198,
+  "actual_path_length_m": 9.279214698738045,
+  "actual_over_planned_path_ratio": 1.0227086942439807,
+  "minimum_voxel_clearance_m": 1.1165914758973943,
+  "maximum_altitude_m": 1.503266163824034,
+  "minimum_altitude_m": 0.0,
+  "maximum_motor_rpm": 6750.40966796875,
+  "planner_status": {
+    "execution_waypoints": 14,
+    "fixed_height_path_exists": true,
+    "fixed_height_test_z_m": 1.5,
+    "goal": [
+      9.0,
+      0.0,
+      1.5
+    ],
+    "planned_path_length_m": 9.073174747573198,
+    "planning_time_ms": 18.613249000736687,
+    "raw_voxel_path_nodes": 31,
+    "simplified_path_nodes": 2,
+    "start": [
+      0.0,
+      0.0,
+      0.35
+    ],
+    "state": "path_ready",
+    "success": true
+  },
+  "sample_count": 416
+}

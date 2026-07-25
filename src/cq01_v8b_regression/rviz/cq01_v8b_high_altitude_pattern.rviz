@@ -1,0 +1,142 @@
+Panels:
+- Class: rviz_common/Displays
+  Name: Displays
+- Class: rviz_common/Views
+  Name: Views
+Visualization Manager:
+  Class: ''
+  Displays:
+  - Class: rviz_default_plugins/Grid
+    Enabled: false
+    Name: Grid
+    Plane: XY
+    Cell Size: 10
+    Plane Cell Count: 60
+    Reference Frame: world
+    Alpha: 0.18
+  - Class: rviz_default_plugins/MarkerArray
+    Enabled: true
+    Name: Mountain-City Terrain
+    Topic:
+      Value: /cq01_v2/terrain_markers
+      Reliability Policy: Reliable
+      Durability Policy: Transient Local
+      History Policy: Keep Last
+      Depth: 1
+  - Class: rviz_default_plugins/MarkerArray
+    Enabled: true
+    Name: Dense Mountain-City Buildings
+    Topic:
+      Value: /cq01_v2/structure_markers
+      Reliability Policy: Reliable
+      Durability Policy: Transient Local
+      History Policy: Keep Last
+      Depth: 1
+  - Class: rviz_default_plugins/MarkerArray
+    Enabled: false
+    Name: Scene Text Labels
+    Topic:
+      Value: /cq01_v2/annotation_markers
+      Reliability Policy: Reliable
+      Durability Policy: Transient Local
+      History Policy: Keep Last
+      Depth: 1
+  - Class: rviz_default_plugins/Path
+    Enabled: true
+    Name: Standard Route P0-P15 (Green)
+    Topic:
+      Value: /cq01_v2/reference_path
+      Reliability Policy: Reliable
+      Durability Policy: Transient Local
+      History Policy: Keep Last
+      Depth: 1
+    Line Style: Lines
+    Line Width: 2.2
+    Color: 80; 255; 80
+  - Class: rviz_default_plugins/Path
+    Enabled: true
+    Name: Current A* Path (Red)
+    Topic:
+      Value: /drone/planned_path_3d
+      Reliability Policy: Reliable
+      Durability Policy: Transient Local
+      History Policy: Keep Last
+      Depth: 1
+    Line Style: Lines
+    Line Width: 2.4
+    Color: 255; 50; 50
+  - Class: rviz_default_plugins/MarkerArray
+    Enabled: true
+    Name: H14 High-Altitude Replan Evidence (No Text)
+    Topic:
+      Value: /cq01_v8b/h14/markers_clean
+      Reliability Policy: Reliable
+      Durability Policy: Volatile
+      History Policy: Keep Last
+      Depth: 10
+  - Class: rviz_default_plugins/MarkerArray
+    Enabled: true
+    Name: Summit Rapid-Ascent Circle Figure-Eight (No Text)
+    Topic:
+      Value: /cq01_v8b/pattern/reference_markers_clean
+      Reliability Policy: Reliable
+      Durability Policy: Transient Local
+      History Policy: Keep Last
+      Depth: 10
+  - Class: rviz_default_plugins/MarkerArray
+    Enabled: true
+    Name: Pattern Tracking Geometry (No Text)
+    Topic:
+      Value: /cq01_v8b/pattern/evaluator_markers_clean
+      Reliability Policy: Reliable
+      Durability Policy: Volatile
+      History Policy: Keep Last
+      Depth: 10
+  - Class: rviz_default_plugins/MarkerArray
+    Enabled: true
+    Name: Quadrotor Model
+    Topic:
+      Value: /cq01_v8b/drone_model
+      Reliability Policy: Reliable
+      Durability Policy: Volatile
+      History Policy: Keep Last
+      Depth: 1
+  - Class: rviz_default_plugins/Path
+    Enabled: true
+    Name: Actual High-City and Summit Trajectory (Yellow)
+    Topic:
+      Value: /cq01_v8b/actual_trajectory
+      Reliability Policy: Reliable
+      Durability Policy: Volatile
+      History Policy: Keep Last
+      Depth: 1
+    Line Style: Lines
+    Line Width: 2.0
+    Color: 255; 215; 40
+  Enabled: true
+  Global Options:
+    Background Color: 24; 27; 31
+    Fixed Frame: world
+    Frame Rate: 20
+  Name: root
+  Tools:
+  - Class: rviz_default_plugins/Interact
+  - Class: rviz_default_plugins/MoveCamera
+  - Class: rviz_default_plugins/Select
+  - Class: rviz_default_plugins/FocusCamera
+  - Class: rviz_default_plugins/Measure
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Target Frame: cq01_v8b_camera_focus
+      Distance: 95
+      Focal Point:
+        X: 0
+        Y: 0
+        Z: 4
+      Pitch: 0.58
+      Yaw: 1.02
+      Near Clip Distance: 0.01
+Window Geometry:
+  Height: 940
+  Width: 1540

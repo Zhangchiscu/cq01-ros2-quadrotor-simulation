@@ -1,0 +1,145 @@
+mission:
+  name: CQ-01 V3.4F Structured Street-Canyon Complete Mission
+  frame_id: map
+  waypoints:
+  - name: P0_FOOT_START
+    position:
+    - 20
+    - -120
+    - 10.791
+    yaw_deg: 0.0
+  - name: P1_LOWER_CITY_ENTRY
+    position:
+    - 45
+    - -100
+    - 13.283
+    yaw_deg: 0.0
+  - name: P2_FOOT_STREET
+    position:
+    - 73.0
+    - -73.0
+    - 23.0
+    yaw_deg: 0.0
+  - name: P3_LOWER_TERRACE_APPROACH
+    position:
+    - 105
+    - -30
+    - 37.792
+    yaw_deg: 0.0
+  - name: P4_MID_CITY_TERRACE
+    position:
+    - 141.0
+    - 13.0
+    - 109.0
+    yaw_deg: 0.0
+  - name: P5_BRANCH_RAVINE_DESCENT
+    position:
+    - 151.0
+    - 39.0
+    - 35.0
+    yaw_deg: 0.0
+  - name: P6_MAIN_GORGE_ENTRY
+    position:
+    - 190
+    - 30
+    - 18.362
+    yaw_deg: 0.0
+  - name: P7_UNDER_BRIDGE
+    position:
+    - 212.5
+    - 10
+    - 26.0
+    yaw_deg: 0.0
+  - name: P8_GORGE_EXIT
+    position:
+    - 240
+    - -8
+    - 19.698
+    yaw_deg: 0.0
+  - name: P9_HIGH_CITY_FOOT
+    position:
+    - 295
+    - -40
+    - 23.042
+    yaw_deg: 0.0
+  - name: P10_HIGH_CITY_RAMP_1
+    position:
+    - 304.5
+    - -44.5
+    - 37.5
+    yaw_deg: 0.0
+  - name: P11_HIGH_CITY_RAMP_2
+    position:
+    - 309.0
+    - -45.0
+    - 73.0
+    yaw_deg: 0.0
+  - name: P12_HIGH_CITY_TERRACE
+    position:
+    - 315
+    - -45
+    - 128.205
+    yaw_deg: 0.0
+  - name: P13_UPPER_CITY
+    position:
+    - 350
+    - -20
+    - 190.302
+    yaw_deg: 0.0
+  - name: P14_TERMINAL_RIDGE_ENTRY
+    position:
+    - 385
+    - 10
+    - 214.322
+    yaw_deg: 0.0
+  - name: P15_TERMINAL_RIDGE
+    position:
+    - 410
+    - 45
+    - 219.878
+    yaw_deg: 0.0
+  dynamic_obstacle:
+    trigger_x: 365.0
+    start:
+    - 378.0
+    - -22.0
+    - 210.0
+    end:
+    - 378.0
+    - 32.0
+    - 210.0
+    radius: 1.5
+    height: 3.0
+    cases:
+      early_entry:
+        delay_s: 0.0
+        speed_mps: 1.8
+      nominal:
+        delay_s: 1.5
+        speed_mps: 2.2
+      fast_crossing:
+        delay_s: 1.0
+        speed_mps: 3.5
+      late_entry:
+        delay_s: 3.0
+        speed_mps: 2.0
+  goal_tolerance: 0.8
+  final_tolerance: 0.5
+  dwell_time: 0.1
+  planning_profile:
+    resolution_m: 2.0
+    inflation_radius_m: 2.5
+    minimum_flight_z_m: 2.0
+    maximum_flight_z_m: 285.0
+    visual_collision_consistency: true
+    planning_structure_count: 133
+    execution_mode: direct_astar_waypoint_tracking
+    target_cruise_speed_mps: 3.0
+    minimum_lookahead_m: 2.5
+    maximum_lookahead_m: 10.0
+    target_total_time_s: 1200.0
+    note: V3.4F preserves visual density but relocates eight corridor-conflicting
+      visual buildings. The native A* planner directly executes safe dense waypoints;
+      no custom lookahead follower is used.
+    maximum_waypoint_spacing_m: 2.0
+    waypoint_tolerance_m: 0.75

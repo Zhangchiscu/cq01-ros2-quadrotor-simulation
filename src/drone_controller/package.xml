@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>drone_controller</name>
+  <version>0.1.0</version>
+
+  <description>
+    Cascaded position and attitude controller for the ROS2 quadrotor simulator.
+  </description>
+
+  <maintainer email="taccettabellus@gmail.com">
+    Xianzhe Zhang
+  </maintainer>
+
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>rclcpp</depend>
+  <depend>std_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>eigen3_cmake_module</depend>
+
+  <exec_depend>ros2cli</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

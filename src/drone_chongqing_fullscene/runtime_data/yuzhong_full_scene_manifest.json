@@ -1,0 +1,255 @@
+{
+  "dataset_name": "Chongqing Yuzhong Full-Peninsula 3D UAV Benchmark",
+  "version": "2.0.0",
+  "scene_role": "Full-scene overview and task-area selection. Local planner maps remain true-scale and will be generated separately.",
+  "source_crs": "EPSG:32648",
+  "local_frame": "map",
+  "local_origin": {
+    "easting_m": 647640.0,
+    "northing_m": 3268530.0,
+    "elevation_m": 165.0
+  },
+  "physical_vertical_scale": 1.0,
+  "default_display_vertical_scale": 2.5,
+  "display_scale_note": "The 2.5x vertical scale is display-only and is reported in map status. Terrain, collision and planning data remain at physical scale 1.0.",
+  "bounds_utm_m": [
+    647640.0,
+    3268530.0,
+    653640.0,
+    3272340.0
+  ],
+  "dimensions_m": [
+    6000.0,
+    3810.0
+  ],
+  "dem": {
+    "source_file": "yuzhong_dem_clip.tif",
+    "resolution_m": [
+      30.0,
+      30.0
+    ],
+    "elevation_min_m": 166.98435974121094,
+    "elevation_max_m": 388.23443603515625,
+    "relief_m": 221.2500762939453,
+    "water_context_elevation_m": 168.0
+  },
+  "features": {
+    "buildings": 1775,
+    "roads": 1038,
+    "railways": 169,
+    "bridges": 241,
+    "landmarks": 10,
+    "terrain_triangle_vertices": 65550,
+    "building_triangle_vertices": 97224,
+    "bridge_triangle_vertices": 26748,
+    "bridge_pillar_triangle_vertices": 1116
+  },
+  "building_height_sources": {
+    "osm_height": 30,
+    "category_estimate": 1051,
+    "osm_levels": 694
+  },
+  "landmarks": [
+    {
+      "name": "鹅岭二厂",
+      "name_en": "Eling",
+      "group": "west",
+      "utm_easting_m": 648404.8762730059,
+      "utm_northing_m": 3270267.6723714103,
+      "terrain_elevation_m": 278.603271484375,
+      "x": 764.8762730058515,
+      "y": 1737.672371410299,
+      "z": 131.603271484375
+    },
+    {
+      "name": "李子坝轨道穿楼",
+      "name_en": "Liziba",
+      "group": "west",
+      "utm_easting_m": 648734.9040607399,
+      "utm_northing_m": 3270227.693975449,
+      "terrain_elevation_m": 367.8504638671875,
+      "x": 1094.9040607399074,
+      "y": 1697.693975449074,
+      "z": 220.8504638671875
+    },
+    {
+      "name": "较场口",
+      "name_en": "Jiaochangkou",
+      "group": "central",
+      "utm_easting_m": 652292.0191006549,
+      "utm_northing_m": 3270197.687760839,
+      "terrain_elevation_m": 214.25730895996094,
+      "x": 4652.01910065487,
+      "y": 1667.687760838773,
+      "z": 67.25730895996094
+    },
+    {
+      "name": "十八梯",
+      "name_en": "Shibati",
+      "group": "central",
+      "utm_easting_m": 652064.7011129796,
+      "utm_northing_m": 3270369.4782648324,
+      "terrain_elevation_m": 211.08102416992188,
+      "x": 4424.701112979557,
+      "y": 1839.4782648324035,
+      "z": 64.08102416992188
+    },
+    {
+      "name": "解放碑",
+      "name_en": "Jiefangbei",
+      "group": "central",
+      "utm_easting_m": 652422.3023139844,
+      "utm_northing_m": 3271075.973021935,
+      "terrain_elevation_m": 276.2984619140625,
+      "x": 4782.302313984372,
+      "y": 2545.973021935206,
+      "z": 129.2984619140625
+    },
+    {
+      "name": "魁星楼",
+      "name_en": "Kuixinglou",
+      "group": "central",
+      "utm_easting_m": 653034.9988245892,
+      "utm_northing_m": 3271149.9334032317,
+      "terrain_elevation_m": 275.27203369140625,
+      "x": 5394.998824589187,
+      "y": 2619.933403231669,
+      "z": 128.27203369140625
+    },
+    {
+      "name": "洪崖洞",
+      "name_en": "Hongyadong",
+      "group": "east",
+      "utm_easting_m": 652601.7057010774,
+      "utm_northing_m": 3271628.806583975,
+      "terrain_elevation_m": 216.5988311767578,
+      "x": 4961.705701077357,
+      "y": 3098.806583974976,
+      "z": 69.59883117675781
+    },
+    {
+      "name": "千厮门嘉陵江大桥",
+      "name_en": "Qiansimen Bridge",
+      "group": "east",
+      "utm_easting_m": 653346.1184370487,
+      "utm_northing_m": 3271785.977143082,
+      "terrain_elevation_m": 235.36219787597656,
+      "x": 5706.118437048746,
+      "y": 3255.9771430818364,
+      "z": 88.36219787597656
+    },
+    {
+      "name": "重庆来福士广场",
+      "name_en": "Raffles City",
+      "group": "east",
+      "utm_easting_m": 653364.1604862573,
+      "utm_northing_m": 3271918.913718217,
+      "terrain_elevation_m": 213.2639617919922,
+      "x": 5724.160486257286,
+      "y": 3388.9137182170525,
+      "z": 66.26396179199219
+    },
+    {
+      "name": "朝天门广场",
+      "name_en": "Chaotianmen",
+      "group": "east",
+      "utm_easting_m": 653447.0832449939,
+      "utm_northing_m": 3272138.65030674,
+      "terrain_elevation_m": 200.68533325195312,
+      "x": 5807.0832449939335,
+      "y": 3608.6503067398444,
+      "z": 53.685333251953125
+    }
+  ],
+  "mission_axis": [
+    "鹅岭二厂",
+    "李子坝轨道穿楼",
+    "较场口",
+    "十八梯",
+    "解放碑",
+    "魁星楼",
+    "洪崖洞",
+    "千厮门嘉陵江大桥",
+    "重庆来福士广场",
+    "朝天门广场"
+  ],
+  "mission_rois": [
+    {
+      "name": "CQ-01 鹅岭—李子坝山脊高差",
+      "bounds_utm_m": [
+        648019.8901668729,
+        3269747.6831734297,
+        649119.8901668729,
+        3270747.6831734297
+      ],
+      "size_m": [
+        1100.0,
+        1000.0
+      ],
+      "terrain_relief_m": 208.97743225097656,
+      "building_count": 82
+    },
+    {
+      "name": "CQ-02 较场口—十八梯山城峡谷",
+      "bounds_utm_m": [
+        651628.3601068172,
+        3269783.5830128356,
+        652728.3601068172,
+        3270783.5830128356
+      ],
+      "size_m": [
+        1100.0,
+        1000.0
+      ],
+      "terrain_relief_m": 124.79560852050781,
+      "building_count": 214
+    },
+    {
+      "name": "CQ-03 解放碑—洪崖洞高层建筑避障",
+      "bounds_utm_m": [
+        651862.0040075309,
+        3270752.389802955,
+        653162.0040075309,
+        3271952.389802955
+      ],
+      "size_m": [
+        1300.0,
+        1200.0
+      ],
+      "terrain_relief_m": 158.8451690673828,
+      "building_count": 290
+    },
+    {
+      "name": "CQ-04 洪崖洞—朝天门江岸桥梁任务",
+      "bounds_utm_m": [
+        652374.3944730356,
+        3271233.7284453576,
+        653674.3944730356,
+        3272533.7284453576
+      ],
+      "size_m": [
+        1300.0,
+        1300.0
+      ],
+      "terrain_relief_m": 133.0737762451172,
+      "building_count": 183
+    }
+  ],
+  "topics": {
+    "terrain": "/chongqing/full/terrain",
+    "buildings": "/chongqing/full/buildings",
+    "water_cliffs": "/chongqing/full/water_cliffs",
+    "topography": "/chongqing/full/topography",
+    "transport": "/chongqing/full/transport",
+    "mission": "/chongqing/full/mission",
+    "metadata": "/chongqing/full/metadata",
+    "status": "/chongqing/full/status"
+  },
+  "data_provenance": {
+    "terrain": "User-provided Copernicus DEM, projected and clipped in QGIS.",
+    "building_footprints": "User-provided OSM building geometries.",
+    "roads_railways_bridges": "User-provided OSM transport geometries.",
+    "water_surface": "Display-only context generated from the peninsula boundary; not used as a physical collision source.",
+    "shore_cliff": "Display-only vertical skirt connecting the DEM shore to the contextual water plane."
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "scene_revision": "yuzhong_realdata_validation_v1",
+  "bbox_wgs84": {
+    "south": 29.505,
+    "west": 106.485,
+    "north": 29.59,
+    "east": 106.605
+  },
+  "data_sources": {
+    "terrain_maplibre": "MapTiler/Mapterhorn raster DEM endpoint used by the official MapLibre terrain example",
+    "terrain_cesium": "Cesium World Terrain when an ion token is supplied",
+    "buildings_maplibre": "OpenStreetMap building footprints fetched through Overpass API",
+    "buildings_cesium": "Cesium OSM Buildings when an ion token is supplied",
+    "base_map": "OpenStreetMap raster tiles"
+  },
+  "overpass_queries": {
+    "buildings": {
+      "endpoint": "https://overpass.private.coffee/api/interpreter",
+      "timestamp_osm_base": "2026-06-12T12:14:17Z",
+      "raw_element_count": 4663
+    },
+    "transport": {
+      "endpoint": "https://overpass-api.de/api/interpreter",
+      "timestamp_osm_base": "2026-07-11T13:47:30Z",
+      "raw_element_count": 6295
+    },
+    "attractions": {
+      "endpoint": "https://overpass-api.de/api/interpreter",
+      "timestamp_osm_base": "2026-07-11T13:48:33Z",
+      "raw_element_count": 380
+    }
+  },
+  "feature_counts": {
+    "buildings": 4675,
+    "roads": 5753,
+    "railways": 541,
+    "bridges": 928,
+    "osm_attractions": 380
+  },
+  "building_height_sources": {
+    "category_estimate": 3855,
+    "osm_height": 62,
+    "osm_levels": 758
+  },
+  "limitations": [
+    "Building footprints and coordinates are real OSM data; facade textures are not included.",
+    "When OSM height and level tags are absent, the MapLibre fallback viewer uses a clearly marked category estimate.",
+    "Cesium OSM Buildings provides its own estimatedHeight for buildings without recorded height.",
+    "This stage validates network data coverage and visual alignment before ROS collision-map conversion."
+  ]
+}

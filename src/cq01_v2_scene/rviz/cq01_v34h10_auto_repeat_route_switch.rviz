@@ -1,0 +1,174 @@
+Panels:
+- Class: rviz_common/Displays
+  Name: Displays
+- Class: rviz_common/Views
+  Name: Views
+Visualization Manager:
+  Class: ''
+  Displays:
+  - Class: rviz_default_plugins/Grid
+    Enabled: false
+    Name: Grid
+    Plane: XY
+    Cell Size: 10
+    Plane Cell Count: 60
+    Reference Frame: world
+    Alpha: 0.18
+  - Class: rviz_default_plugins/MarkerArray
+    Enabled: true
+    Name: V3.4 Terraced Gorge Terrain
+    Topic:
+      Value: /cq01_v2/terrain_markers
+      Reliability Policy: Reliable
+      Durability Policy: Transient Local
+      History Policy: Keep Last
+      Depth: 1
+  - Class: rviz_default_plugins/MarkerArray
+    Enabled: true
+    Name: V3.4 Dense Layered Mountain-City Buildings
+    Topic:
+      Value: /cq01_v2/structure_markers
+      Reliability Policy: Reliable
+      Durability Policy: Transient Local
+      History Policy: Keep Last
+      Depth: 1
+  - Class: rviz_default_plugins/MarkerArray
+    Enabled: false
+    Name: Terrace, Gorge and Goal Labels
+    Topic:
+      Value: /cq01_v2/annotation_markers
+      Reliability Policy: Reliable
+      Durability Policy: Transient Local
+      History Policy: Keep Last
+      Depth: 1
+  - Class: rviz_default_plugins/Path
+    Enabled: false
+    Name: Reference Path
+    Topic:
+      Value: /cq01_v2/reference_path
+      Reliability Policy: Reliable
+      Durability Policy: Transient Local
+      History Policy: Keep Last
+      Depth: 1
+    Line Style: Lines
+    Line Width: 1.2
+    Color: 80; 255; 80
+  - Class: rviz_default_plugins/PoseArray
+    Enabled: false
+    Name: Waypoint Poses
+    Topic:
+      Value: /cq01_v2/waypoints
+      Reliability Policy: Reliable
+      Durability Policy: Transient Local
+      History Policy: Keep Last
+      Depth: 1
+  - Class: rviz_default_plugins/PointCloud2
+    Enabled: false
+    Name: Collision Cloud
+    Topic:
+      Value: /cq01_v2/collision_cloud
+      Reliability Policy: Reliable
+      Durability Policy: Transient Local
+      History Policy: Keep Last
+      Depth: 1
+    Style: Points
+    Size (Pixels): 2
+    Decay Time: 0
+  - Class: rviz_default_plugins/PointCloud2
+    Enabled: false
+    Name: V3.4F All-Visible-Structure Planning Voxels
+    Topic:
+      Value: /drone/voxel_cloud
+      Reliability Policy: Reliable
+      Durability Policy: Transient Local
+      History Policy: Keep Last
+      Depth: 1
+    Style: Boxes
+    Size (m): 3.0
+    Alpha: 0.2
+    Decay Time: 0
+    Position Transformer: XYZ
+    Color Transformer: FlatColor
+    Color: 255; 70; 70
+    Selectable: true
+  - Class: rviz_default_plugins/Path
+    Enabled: false
+    Name: A* Planned Path 3D
+    Topic:
+      Value: /drone/planned_path_3d
+      Reliability Policy: Reliable
+      Durability Policy: Transient Local
+      History Policy: Keep Last
+      Depth: 1
+    Line Style: Lines
+    Line Width: 1.8
+    Color: 255; 50; 50
+  - Class: rviz_default_plugins/Path
+    Enabled: false
+    Name: Legacy Smoothed Trajectory Reference (unused)
+    Topic:
+      Value: /drone/trajectory_reference
+      Reliability Policy: Reliable
+      Durability Policy: Transient Local
+      History Policy: Keep Last
+      Depth: 1
+    Line Style: Lines
+    Line Width: 1.2
+    Color: 50; 220; 255
+  - Class: rviz_default_plugins/MarkerArray
+    Enabled: true
+    Name: Quadrotor Model (Current Pose)
+    Topic:
+      Value: /cq01_v34h/drone_model
+      Reliability Policy: Reliable
+      Durability Policy: Volatile
+      History Policy: Keep Last
+      Depth: 1
+  - Class: rviz_default_plugins/Path
+    Enabled: true
+    Name: Actual Flight Trajectory
+    Topic:
+      Value: /cq01_v34h/actual_trajectory
+      Reliability Policy: Reliable
+      Durability Policy: Volatile
+      History Policy: Keep Last
+      Depth: 1
+    Line Style: Lines
+    Line Width: 1.6
+    Color: 255; 215; 40
+  - Class: rviz_default_plugins/MarkerArray
+    Enabled: true
+    Name: CQ-01 Auto-Repeat Route-Switch Evidence
+    Topic:
+      Value: /cq01_v34h/disturbance_markers
+      Reliability Policy: Reliable
+      Durability Policy: Volatile
+      History Policy: Keep Last
+      Depth: 10
+  Enabled: true
+  Global Options:
+    Background Color: 24; 27; 31
+    Fixed Frame: world
+    Frame Rate: 20
+  Name: root
+  Tools:
+  - Class: rviz_default_plugins/Interact
+  - Class: rviz_default_plugins/MoveCamera
+  - Class: rviz_default_plugins/Select
+  - Class: rviz_default_plugins/FocusCamera
+  - Class: rviz_default_plugins/Measure
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Target Frame: world
+      Distance: 58
+      Focal Point:
+        X: 60.70
+        Y: -85.88
+        Z: 24.0
+      Pitch: 1.20
+      Yaw: 0.78
+      Near Clip Distance: 0.01
+Window Geometry:
+  Height: 940
+  Width: 1540

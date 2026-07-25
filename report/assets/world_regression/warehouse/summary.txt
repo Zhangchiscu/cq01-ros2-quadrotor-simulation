@@ -1,0 +1,23 @@
+===== World Scenario Mission Summary =====
+Scenario: warehouse
+Goal: [6.8, 4.5, 1.5]
+Success: True
+Overall pass: True
+Arrival time: 7.904146588999993 s
+Final error: 0.0110 m
+Steady-state error: 0.0064 m
+Planned path length: 8.463 m
+Actual path length: 8.937 m
+Actual/planned ratio: 1.056
+Minimum point-cloud clearance: 0.481 m
+Safety-grid collision samples: 0
+Maximum motor RPM: 7422.3
+
+Acceptance criteria:
+- mission_successful: PASS
+- planned_path_received: PASS
+- final_error_below_0_3_m: PASS
+- safety_grid_collision_free: PASS
+- physical_clearance_above_required_margin: PASS
+- path_ratio_below_1_5: PASS
+- no_motor_saturation: PASS

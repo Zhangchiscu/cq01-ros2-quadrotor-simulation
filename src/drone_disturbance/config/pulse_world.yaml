@@ -1,0 +1,46 @@
+disturbance_injector:
+  ros__parameters:
+    mode: pulse
+    frame_id: map
+    publish_rate_hz: 100.0
+    start_delay_s: 8.0
+    duration_s: 1.0
+    ramp_time_s: 0.15
+
+    force_x_n: 4.0
+    force_y_n: 0.0
+    force_z_n: 0.0
+    torque_x_nm: 0.0
+    torque_y_nm: 0.0
+    torque_z_nm: 0.0
+
+    sine_frequency_hz: 0.5
+    random_seed: 2026
+    random_force_std_x_n: 1.5
+    random_force_std_y_n: 1.5
+    random_force_std_z_n: 0.3
+    random_torque_std_x_nm: 0.02
+    random_torque_std_y_nm: 0.02
+    random_torque_std_z_nm: 0.01
+    gust_correlation_time_s: 0.5
+    marker_scale_m_per_n: 0.25
+
+
+disturbance_experiment:
+  ros__parameters:
+    goal_x: 0.0
+    goal_y: 0.0
+    goal_z: 1.5
+    startup_delay_s: 1.0
+    duration_s: 20.0
+    expected_disturbance_start_s: 8.0
+    expected_disturbance_duration_s: 1.0
+    recovery_tolerance_m: 0.20
+    recovery_hold_s: 1.0
+    final_tolerance_m: 0.30
+    baseline_tolerance_m: 0.20
+    maximum_tilt_deg: 45.0
+    maximum_rpm: 10000.0
+    saturation_ratio_threshold: 0.98
+    maximum_saturation_fraction: 0.05
+    final_window_s: 2.0

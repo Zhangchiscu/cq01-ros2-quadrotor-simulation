@@ -1,0 +1,186 @@
+{
+  "scenario": "CQ-01 Jialing Riverside Foothill to Eling Ridge",
+  "scenario_cn": "CQ-01 嘉陵江滨江路山脚—鹅岭山脊联合避障任务",
+  "version": "3.0.0",
+  "source_crs": "EPSG:32648",
+  "source_data": {
+    "dem": "Copernicus DEM clipped to Yuzhong Peninsula",
+    "buildings": "OSM building footprints and height attributes",
+    "roads": "OSM roads",
+    "railways": "OSM railways"
+  },
+  "geometric_scale": {
+    "uniform_scale": 0.05,
+    "scale_ratio": "1:20",
+    "display_z_scale": 2.5,
+    "note": "Physical planning uses uniform 1:20 geometry. RViz presentation applies an additional Z-only 2.5x display scale; it never enters collision, control or evaluation."
+  },
+  "real_world": {
+    "roi_bounds_epsg32648": [
+      648345.0,
+      3270045.0,
+      648945.0,
+      3270765.0
+    ],
+    "roi_size_m": [
+      600.0,
+      720.0
+    ],
+    "start": {
+      "name": "嘉陵江滨江路山脚",
+      "easting_m": 648525.0,
+      "northing_m": 3270585.0,
+      "elevation_m": 166.98435974121094,
+      "nearest_road": "嘉陵江滨江路",
+      "distance_to_road_m": 8.68
+    },
+    "goal": {
+      "name": "鹅岭—李子坝山脊高点",
+      "easting_m": 648765.0,
+      "northing_m": 3270225.0,
+      "elevation_m": 368.3872375488281,
+      "nearest_road": "鹅岭正街",
+      "distance_to_road_m": 94.71
+    },
+    "horizontal_distance_m": 432.6661530556787,
+    "terrain_elevation_difference_m": 201.4028778076172,
+    "buildings_in_roi": 38,
+    "direct_corridor_half_width_m": 10.0,
+    "direct_corridor_buildings": 5,
+    "direct_corridor_obstacle_records": [
+      {
+        "osm_id": "481835399",
+        "name": null,
+        "building": "apartments",
+        "height_m": 38.5,
+        "local_position": [
+          2.7747516626492144,
+          -4.162127493973822,
+          4.260768127441406
+        ]
+      },
+      {
+        "osm_id": "583628690",
+        "name": "隐居鹅岭",
+        "building": "yes",
+        "height_m": 27.04,
+        "local_position": [
+          9.003737356350758,
+          -13.507453185971826,
+          8.369346405029297
+        ]
+      },
+      {
+        "osm_id": "1467213788",
+        "name": null,
+        "building": "yes",
+        "height_m": 24.43,
+        "local_position": [
+          12.17587899734499,
+          -18.428616041503847,
+          10.68089389038086
+        ]
+      },
+      {
+        "osm_id": "1467213789",
+        "name": null,
+        "building": "yes",
+        "height_m": 18.11,
+        "local_position": [
+          11.705715146253352,
+          -17.558572719385847,
+          10.52289389038086
+        ]
+      },
+      {
+        "osm_id": "1467213790",
+        "name": null,
+        "building": "yes",
+        "height_m": 29.89,
+        "local_position": [
+          10.858614648878575,
+          -16.28792197331786,
+          10.159103790283202
+        ]
+      }
+    ]
+  },
+  "simulation": {
+    "frame_id": "map",
+    "bounds": {
+      "min_x": -9.0,
+      "max_x": 21.0,
+      "min_y": -27.0,
+      "max_y": 9.0,
+      "min_z": -1.0,
+      "max_z": 16.0
+    },
+    "dimensions": {
+      "x": 60,
+      "y": 72,
+      "z": 34
+    },
+    "resolution_m": 0.5,
+    "inflation_radius_m": 0.5,
+    "minimum_flight_z_m": 0.35,
+    "maximum_flight_z_m": 15.0,
+    "terrain_clearance_goal_m": 1.5,
+    "start_goal": [
+      0.0,
+      0.0,
+      1.5
+    ],
+    "final_goal": [
+      12.0,
+      -18.0,
+      11.570143699645996
+    ],
+    "terrain_relief_m": 10.448871612548828,
+    "raw_occupied_voxels": 58316,
+    "inflated_occupied_voxels": 65527,
+    "building_occupied_voxels": 1151
+  },
+  "offline_validation": {
+    "path_found": true,
+    "raw_path_nodes": 37,
+    "expanded_nodes": 3479,
+    "path_length_m": 26.81844711303711,
+    "minimum_path_z_m": 1.25,
+    "maximum_path_z_m": 11.75,
+    "fixed_height_test_z_m": 1.5,
+    "fixed_height_path_exists": false,
+    "direct_line_collision_samples": 447,
+    "direct_line_total_samples": 600,
+    "direct_line_collision_fraction": 0.745,
+    "expected_conclusion": "The direct corridor contains at least five real buildings, a constant-height route is infeasible, and a 3D planner must combine horizontal detour with a large terrain climb."
+  },
+  "requirements_mapping": {
+    "map_and_static_obstacles": {
+      "evidence": "Real DEM plus OSM building occupancy; 5 buildings lie in the 10 m direct-flight safety corridor.",
+      "pass_condition": "direct_corridor_buildings >= 5"
+    },
+    "three_dimensional_planning": {
+      "evidence": "Fixed-height path is unavailable while 26-neighbour 3D A* returns a safe path.",
+      "pass_condition": "fixed_height_path_exists == false and path_found == true"
+    },
+    "rviz_visualization": {
+      "evidence": "Terrain, buildings, start, goal, planned path, actual path, quadrotor body/rotors/heading and terrain-clearance pole."
+    },
+    "automatic_evaluation": {
+      "evidence": "Final error, arrival time, terrain/building clearance, maximum tilt, maximum RPM and saturation fraction."
+    },
+    "chongqing_specific_advantage": {
+      "evidence": "Real elevation gain 201.40 m from Jialing riverside foothill to the Eling ridge."
+    }
+  },
+  "topics": {
+    "raw_cloud": "/drone/voxel_cloud_raw",
+    "inflated_cloud": "/drone/voxel_cloud",
+    "terrain_cloud": "/chongqing/cq01/terrain_surface",
+    "building_cloud": "/chongqing/cq01/buildings",
+    "metadata": "/drone/voxel_metadata",
+    "map_status": "/chongqing/cq01/map_status",
+    "context_markers": "/chongqing/cq01/context",
+    "goal_raw": "/drone/goal_raw"
+  }
+}

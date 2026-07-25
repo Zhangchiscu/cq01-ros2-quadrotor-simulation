@@ -1,0 +1,120 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz_default_plugins/Grid
+      Enabled: true
+      Name: Grid
+      Alpha: 0.5
+      Cell Size: 1
+      Color: 160; 160; 164
+      Plane: XY
+      Plane Cell Count: 30
+      Reference Frame: map
+      Value: true
+
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: true
+      Name: Obstacle Markers
+      Topic:
+        Depth: 1
+        Durability Policy: Transient Local
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /drone/obstacle_markers
+      Queue Size: 100
+      Value: true
+
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: true
+      Name: Drone Markers
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /drone/markers
+      Queue Size: 100
+      Value: true
+
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: true
+      Name: Planner Markers
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /drone/planner_markers
+      Queue Size: 100
+      Value: true
+
+    - Class: rviz_default_plugins/Path
+      Enabled: true
+      Name: Planned Path
+      Alpha: 1
+      Buffer Length: 1
+      Color: 30; 140; 255
+      Line Style: Lines
+      Line Width: 0.06
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /drone/planned_path
+      Value: true
+
+    - Class: rviz_default_plugins/Path
+      Enabled: true
+      Name: Actual Flight Path
+      Alpha: 1
+      Buffer Length: 1
+      Color: 30; 255; 70
+      Line Style: Lines
+      Line Width: 0.035
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /drone/path
+      Value: true
+
+  Enabled: true
+  Global Options:
+    Background Color: 42; 42; 48
+    Fixed Frame: map
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz_default_plugins/Interact
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Select
+    - Class: rviz_default_plugins/FocusCamera
+    - Class: rviz_default_plugins/Measure
+  Transformation:
+    Current:
+      Class: rviz_default_plugins/TF
+  Value: true
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Distance: 11
+      Focal Point:
+        X: 3
+        Y: 0
+        Z: 1
+      Name: Current View
+      Pitch: 0.65
+      Target Frame: map
+      Value: Orbit (rviz)
+      Yaw: 0.75
+    Saved: ~
+Window Geometry:
+  Height: 900
+  Width: 1400
+  X: 50
+  Y: 40

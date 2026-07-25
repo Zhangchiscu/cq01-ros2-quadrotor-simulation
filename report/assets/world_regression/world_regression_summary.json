@@ -1,0 +1,171 @@
+{
+  "overall_pass": true,
+  "quick_mode": false,
+  "criteria": {
+    "all_scenarios_passed": true,
+    "all_scenarios_have_plans": true,
+    "all_scenarios_collision_free": true
+  },
+  "records": [
+    {
+      "scenario": "warehouse",
+      "goal": [
+        6.8,
+        4.5,
+        1.5
+      ],
+      "success": true,
+      "overall_pass": true,
+      "criteria": {
+        "mission_successful": true,
+        "planned_path_received": true,
+        "final_error_below_0_3_m": true,
+        "safety_grid_collision_free": true,
+        "physical_clearance_above_required_margin": true,
+        "path_ratio_below_1_5": true,
+        "no_motor_saturation": true
+      },
+      "arrival_time_s": 7.904146588999993,
+      "final_error_m": 0.010959475826989553,
+      "steady_state_error_m": 0.00641250698544972,
+      "planned_path_length_m": 8.463219986436112,
+      "actual_path_length_m": 8.937256635988508,
+      "actual_over_planned_path_ratio": 1.0560113822294739,
+      "minimum_pointcloud_clearance_m": 0.48085434379297143,
+      "safety_grid_collision_samples": 0,
+      "required_physical_clearance_m": 0.3,
+      "maximum_motor_rpm": 7422.28076171875,
+      "sample_count": 179,
+      "planned_waypoint_count": 4,
+      "source_result_directory": "/home/zhangxianzhe/drone_task/your_drone_sim_ws/results/world_validation_raw/warehouse_20260711_165031"
+    },
+    {
+      "scenario": "forest",
+      "goal": [
+        8.0,
+        0.0,
+        1.5
+      ],
+      "success": true,
+      "overall_pass": true,
+      "criteria": {
+        "mission_successful": true,
+        "planned_path_received": true,
+        "final_error_below_0_3_m": true,
+        "safety_grid_collision_free": true,
+        "physical_clearance_above_required_margin": true,
+        "path_ratio_below_1_5": true,
+        "no_motor_saturation": true
+      },
+      "arrival_time_s": 4.6119819390000885,
+      "final_error_m": 0.045880398719063485,
+      "steady_state_error_m": 0.04505350159588521,
+      "planned_path_length_m": 8.100617126551965,
+      "actual_path_length_m": 8.63777844426946,
+      "actual_over_planned_path_ratio": 1.0663111599185207,
+      "minimum_pointcloud_clearance_m": 1.1520213290686285,
+      "safety_grid_collision_samples": 0,
+      "required_physical_clearance_m": 0.3,
+      "maximum_motor_rpm": 7365.00341796875,
+      "sample_count": 117,
+      "planned_waypoint_count": 2,
+      "source_result_directory": "/home/zhangxianzhe/drone_task/your_drone_sim_ws/results/world_validation_raw/forest_20260711_165042"
+    },
+    {
+      "scenario": "urban_canyon",
+      "goal": [
+        11.0,
+        0.0,
+        1.5
+      ],
+      "success": true,
+      "overall_pass": true,
+      "criteria": {
+        "mission_successful": true,
+        "planned_path_received": true,
+        "final_error_below_0_3_m": true,
+        "safety_grid_collision_free": true,
+        "physical_clearance_above_required_margin": true,
+        "path_ratio_below_1_5": true,
+        "no_motor_saturation": true
+      },
+      "arrival_time_s": 4.7235465160001695,
+      "final_error_m": 0.05301021718818691,
+      "steady_state_error_m": 0.061562596906568755,
+      "planned_path_length_m": 10.875718367078104,
+      "actual_path_length_m": 12.039974290104329,
+      "actual_over_planned_path_ratio": 1.1070509444737504,
+      "minimum_pointcloud_clearance_m": 1.5007704924127865,
+      "safety_grid_collision_samples": 0,
+      "required_physical_clearance_m": 0.3,
+      "maximum_motor_rpm": 7372.12158203125,
+      "sample_count": 119,
+      "planned_waypoint_count": 2,
+      "source_result_directory": "/home/zhangxianzhe/drone_task/your_drone_sim_ws/results/world_validation_raw/urban_canyon_20260711_165052"
+    },
+    {
+      "scenario": "tunnel",
+      "goal": [
+        8.5,
+        0.0,
+        1.5
+      ],
+      "success": true,
+      "overall_pass": true,
+      "criteria": {
+        "mission_successful": true,
+        "planned_path_received": true,
+        "final_error_below_0_3_m": true,
+        "safety_grid_collision_free": true,
+        "physical_clearance_above_required_margin": true,
+        "path_ratio_below_1_5": true,
+        "no_motor_saturation": true
+      },
+      "arrival_time_s": 4.6614635089999865,
+      "final_error_m": 0.045933850088777074,
+      "steady_state_error_m": 0.04499733736904862,
+      "planned_path_length_m": 8.52503626102906,
+      "actual_path_length_m": 9.136815667151374,
+      "actual_over_planned_path_ratio": 1.071762674948255,
+      "minimum_pointcloud_clearance_m": 0.49179880131929377,
+      "safety_grid_collision_samples": 0,
+      "required_physical_clearance_m": 0.3,
+      "maximum_motor_rpm": 7372.5625,
+      "sample_count": 118,
+      "planned_waypoint_count": 2,
+      "source_result_directory": "/home/zhangxianzhe/drone_task/your_drone_sim_ws/results/world_validation_raw/tunnel_20260711_165103"
+    },
+    {
+      "scenario": "random_clutter",
+      "goal": [
+        8.0,
+        0.0,
+        1.5
+      ],
+      "success": true,
+      "overall_pass": true,
+      "criteria": {
+        "mission_successful": true,
+        "planned_path_received": true,
+        "final_error_below_0_3_m": true,
+        "safety_grid_collision_free": true,
+        "physical_clearance_above_required_margin": true,
+        "path_ratio_below_1_5": true,
+        "no_motor_saturation": true
+      },
+      "arrival_time_s": 9.213747014000091,
+      "final_error_m": 0.01935064676715307,
+      "steady_state_error_m": 0.01308254366979684,
+      "planned_path_length_m": 8.21925430324811,
+      "actual_path_length_m": 8.780777378608981,
+      "actual_over_planned_path_ratio": 1.0683180072843064,
+      "minimum_pointcloud_clearance_m": 0.43617605943969306,
+      "safety_grid_collision_samples": 0,
+      "required_physical_clearance_m": 0.3,
+      "maximum_motor_rpm": 7410.67626953125,
+      "sample_count": 205,
+      "planned_waypoint_count": 5,
+      "source_result_directory": "/home/zhangxianzhe/drone_task/your_drone_sim_ws/results/world_validation_raw/random_clutter_20260711_165118"
+    }
+  ]
+}

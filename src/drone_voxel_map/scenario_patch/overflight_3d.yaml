@@ -1,0 +1,33 @@
+world:
+  name: overflight_3d
+  frame_id: map
+  resolution: 0.20
+  planning_z: 1.50
+  bounds:
+    min_x: -1.5
+    max_x: 10.5
+    min_y: -4.5
+    max_y: 4.5
+    min_z: 0.0
+    max_z: 5.5
+
+  obstacles:
+    - id: full_width_low_wall
+      type: wall
+      category: wall
+      center: [4.5, 0.0, 1.35]
+      size: [0.75, 8.2, 2.70]
+
+    - id: left_gate_post
+      type: cylinder
+      category: column
+      center: [8.7, -2.7, 2.0]
+      radius: 0.42
+      height: 4.0
+
+    - id: right_gate_post
+      type: cylinder
+      category: column
+      center: [8.7, 2.7, 2.0]
+      radius: 0.42
+      height: 4.0

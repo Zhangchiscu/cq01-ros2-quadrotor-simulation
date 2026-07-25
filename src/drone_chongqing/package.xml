@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>drone_chongqing</name>
+  <version>0.3.0</version>
+  <description>Whole Yuzhong Peninsula procedural Chongqing 8D city overview scene.</description>
+  <maintainer email="taccettabellus@gmail.com">Xianzhe Zhang</maintainer>
+  <license>Apache-2.0</license>
+  <buildtool_depend>ament_python</buildtool_depend>
+  <exec_depend>ament_index_python</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>python3-yaml</exec_depend>
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>rviz2</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>visualization_msgs</exec_depend>
+  <export><build_type>ament_python</build_type></export>
+</package>

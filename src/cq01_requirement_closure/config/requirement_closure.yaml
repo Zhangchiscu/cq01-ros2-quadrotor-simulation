@@ -1,0 +1,31 @@
+sensor_noise_bridge:
+  ros__parameters:
+    enabled: true
+    random_seed: 20260723
+
+    odom_input_topic: "/drone/odom"
+    odom_output_topic: "/drone/odom_noisy"
+    imu_input_topic: "/drone/imu"
+    imu_output_topic: "/drone/imu_noisy"
+
+    odom_position_sigma_m: 0.020
+    odom_velocity_sigma_mps: 0.030
+    odom_attitude_sigma_deg: 0.30
+    odom_angular_rate_sigma_rps: 0.010
+
+    imu_orientation_sigma_deg: 0.30
+    imu_angular_velocity_sigma_rps: 0.010
+    imu_linear_acceleration_sigma_mps2: 0.080
+
+    status_publish_period_s: 1.0
+
+local_perception_filter:
+  ros__parameters:
+    odom_topic: "/drone/odom"
+    obstacle_cloud_topic: "/map/obstacles"
+    local_cloud_topic: "/map/local_obstacles_cloud"
+    perception_marker_topic: "/cq01_bonus/perception_range"
+
+    sensing_radius_m: 12.0
+    filter_rate_hz: 5.0
+    status_publish_period_s: 0.5

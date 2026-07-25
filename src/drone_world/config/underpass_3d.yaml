@@ -1,0 +1,41 @@
+world:
+  name: underpass_3d
+  frame_id: map
+  resolution: 0.20
+  planning_z: 1.50
+  bounds:
+    min_x: -1.5
+    max_x: 10.5
+    min_y: -4.5
+    max_y: 4.5
+    min_z: 0.0
+    max_z: 5.5
+
+  obstacles:
+    - id: bridge_deck
+      type: bridge
+      category: bridge
+      center: [4.5, 0.0, 3.20]
+      size: [1.20, 8.20, 0.70]
+      project_to_2d: false
+
+    - id: bridge_pillar_left
+      type: cylinder
+      category: column
+      center: [4.5, -3.25, 1.55]
+      radius: 0.45
+      height: 3.10
+
+    - id: bridge_pillar_right
+      type: cylinder
+      category: column
+      center: [4.5, 3.25, 1.55]
+      radius: 0.45
+      height: 3.10
+
+    - id: hanging_sign
+      type: beam
+      category: beam
+      center: [7.2, 0.0, 2.85]
+      size: [0.45, 3.20, 0.45]
+      project_to_2d: false

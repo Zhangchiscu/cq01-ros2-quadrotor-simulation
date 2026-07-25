@@ -1,0 +1,22 @@
+===== 3D A* Mission Summary =====
+Scenario: overflight_3d
+Mode: overflight
+Success: True
+Overall pass: True
+Arrival time: 23.388600076999865 s
+Final error: 0.0115 m
+Planned path length: 10.532 m
+Actual path length: 11.024 m
+Actual/planned ratio: 1.047
+Minimum voxel clearance: 0.492 m
+Maximum altitude: 3.461 m
+Maximum motor RPM: 7107.6
+
+Acceptance criteria:
+- mission_successful: PASS
+- planner_3d_succeeded: PASS
+- final_error_below_0_3_m: PASS
+- physical_clearance_above_0_3_m: PASS
+- path_ratio_below_1_5: PASS
+- no_motor_saturation: PASS
+- scenario_specific_3d_behaviour: PASS

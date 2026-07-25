@@ -1,0 +1,31 @@
+{
+  "scenario": "warehouse",
+  "goal": [
+    6.8,
+    4.5,
+    1.5
+  ],
+  "success": true,
+  "overall_pass": true,
+  "criteria": {
+    "mission_successful": true,
+    "planned_path_received": true,
+    "final_error_below_0_3_m": true,
+    "safety_grid_collision_free": true,
+    "physical_clearance_above_required_margin": true,
+    "path_ratio_below_1_5": true,
+    "no_motor_saturation": true
+  },
+  "arrival_time_s": 7.904146588999993,
+  "final_error_m": 0.010959475826989553,
+  "steady_state_error_m": 0.00641250698544972,
+  "planned_path_length_m": 8.463219986436112,
+  "actual_path_length_m": 8.937256635988508,
+  "actual_over_planned_path_ratio": 1.0560113822294739,
+  "minimum_pointcloud_clearance_m": 0.48085434379297143,
+  "safety_grid_collision_samples": 0,
+  "required_physical_clearance_m": 0.3,
+  "maximum_motor_rpm": 7422.28076171875,
+  "sample_count": 179,
+  "planned_waypoint_count": 4
+}

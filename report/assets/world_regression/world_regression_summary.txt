@@ -1,0 +1,43 @@
+===== Multi-Scenario World Regression =====
+Overall pass: True
+Scenario count: 5
+
+[warehouse]
+Overall pass: True
+Arrival time: 7.904146588999993 s
+Final error: 0.0110 m
+Minimum point-cloud clearance: 0.481 m
+Actual/planned ratio: 1.056
+
+[forest]
+Overall pass: True
+Arrival time: 4.6119819390000885 s
+Final error: 0.0459 m
+Minimum point-cloud clearance: 1.152 m
+Actual/planned ratio: 1.066
+
+[urban_canyon]
+Overall pass: True
+Arrival time: 4.7235465160001695 s
+Final error: 0.0530 m
+Minimum point-cloud clearance: 1.501 m
+Actual/planned ratio: 1.107
+
+[tunnel]
+Overall pass: True
+Arrival time: 4.6614635089999865 s
+Final error: 0.0459 m
+Minimum point-cloud clearance: 0.492 m
+Actual/planned ratio: 1.072
+
+[random_clutter]
+Overall pass: True
+Arrival time: 9.213747014000091 s
+Final error: 0.0194 m
+Minimum point-cloud clearance: 0.436 m
+Actual/planned ratio: 1.068
+
+Regression criteria:
+- all_scenarios_passed: PASS
+- all_scenarios_have_plans: PASS
+- all_scenarios_collision_free: PASS

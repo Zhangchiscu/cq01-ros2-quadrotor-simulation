@@ -1,0 +1,17 @@
+avoidance_experiment:
+  ros__parameters:
+    goal_x: 6.5
+    goal_y: 0.0
+    goal_z: 1.5
+
+    warmup_seconds: 3.0
+    arrival_tolerance_m: 0.20
+    arrival_hold_seconds: 1.0
+    settle_seconds: 2.0
+    experiment_timeout_seconds: 40.0
+
+    command_publish_hz: 5.0
+    command_publish_seconds: 0.2
+
+    drone_radius_m: 0.15
+    rpm_limit: 10000.0

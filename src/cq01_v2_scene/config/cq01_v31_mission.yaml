@@ -1,0 +1,116 @@
+mission:
+  name: CQ-01 V3.1 Peak-Gorge Mountain-City Mission
+  frame_id: world
+  goal_tolerance: 0.8
+  final_tolerance: 0.5
+  dwell_time: 0.5
+  waypoints:
+  - name: P0_MOUNTAIN_FOOT
+    position:
+    - 15.0
+    - -75.0
+    - 6.5
+    yaw_deg: 0.0
+  - name: P1_TAKEOFF
+    position:
+    - 15.0
+    - -75.0
+    - 16.0
+    yaw_deg: 8.0
+  - name: P2_FOOTHILL_ENTRY
+    position:
+    - 52.0
+    - -22.0
+    - 24.0
+    yaw_deg: 20.0
+  - name: P3_LOWER_MOUNTAIN
+    position:
+    - 90.0
+    - -5.0
+    - 42.0
+    yaw_deg: 28.0
+  - name: P4_FIRST_SHOULDER
+    position:
+    - 112.0
+    - 25.0
+    - 70.0
+    yaw_deg: 22.0
+  - name: P5_FIRST_SUMMIT
+    position:
+    - 128.0
+    - 62.0
+    - 105.0
+    yaw_deg: 5.0
+  - name: P6_NORTH_GORGE_RIM
+    position:
+    - 155.0
+    - 45.0
+    - 75.0
+    yaw_deg: -18.0
+  - name: P7_GORGE_DESCENT
+    position:
+    - 180.0
+    - 20.0
+    - 35.0
+    yaw_deg: -28.0
+  - name: P8_UNDER_BRIDGE
+    position:
+    - 190.0
+    - 8.0
+    - 18.0
+    yaw_deg: -22.0
+  - name: P9_GORGE_EXIT
+    position:
+    - 225.0
+    - -12.0
+    - 35.0
+    yaw_deg: -12.0
+  - name: P10_HIGH_MOUNTAIN_SHOULDER
+    position:
+    - 260.0
+    - -40.0
+    - 95.0
+    yaw_deg: 10.0
+  - name: P11_HIGH_CITY_TRAVERSE
+    position:
+    - 285.0
+    - -15.0
+    - 120.0
+    yaw_deg: 18.0
+  - name: P12_TERMINAL_APPROACH
+    position:
+    - 320.0
+    - 10.0
+    - 112.0
+    yaw_deg: 24.0
+  - name: P13_TERMINAL_SUMMIT
+    position:
+    - 350.0
+    - 28.0
+    - 178.0
+    yaw_deg: 0.0
+  dynamic_obstacle:
+    trigger_x: 305.0
+    start:
+    - 318.0
+    - -24.0
+    - 110.0
+    end:
+    - 318.0
+    - 34.0
+    - 110.0
+    radius: 1.5
+    height: 3.0
+    cases:
+      early_entry:
+        delay_s: 0.0
+        speed_mps: 1.8
+      nominal:
+        delay_s: 1.5
+        speed_mps: 2.2
+      fast_crossing:
+        delay_s: 1.0
+        speed_mps: 3.5
+      late_entry:
+        delay_s: 3.0
+        speed_mps: 2.0

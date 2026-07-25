@@ -1,0 +1,94 @@
+scene:
+  name: "CQ-01 V2 Stylized Chongqing Mountain City"
+  frame_id: "world"
+  world_bounds:
+    x_min: 0.0
+    x_max: 330.0
+    y_min: -90.0
+    y_max: 90.0
+    z_min: 0.0
+    z_max: 130.0
+
+  sampling:
+    terrain_resolution: 2.0
+    obstacle_resolution: 1.25
+
+  terrain:
+    # Piecewise terrain profile along X. Y is deliberately not used in collision
+    # terrain in V2.0, so terrain-clearance evaluation remains deterministic.
+    segments:
+      - {name: "L0_foothill", type: "flat", x0: 0.0,   x1: 65.0,  z0: 0.0,  z1: 0.0}
+      - {name: "ramp_1",     type: "ramp", x0: 65.0,  x1: 110.0, z0: 0.0,  z1: 22.0}
+      - {name: "L1_mid",     type: "flat", x0: 110.0, x1: 155.0, z0: 22.0, z1: 22.0}
+      - {name: "down_ramp",  type: "ramp", x0: 155.0, x1: 170.0, z0: 22.0, z1: 8.0}
+      - {name: "valley",     type: "flat", x0: 170.0, x1: 195.0, z0: 8.0,  z1: 8.0}
+      - {name: "ramp_2",     type: "ramp", x0: 195.0, x1: 245.0, z0: 8.0,  z1: 46.0}
+      - {name: "L2_upper",   type: "flat", x0: 245.0, x1: 330.0, z0: 46.0, z1: 46.0}
+
+  # Collision geometry. All boxes use bottom_on_terrain=true unless an explicit
+  # center_z is provided. Dimensions are [dx, dy, dz] in metres.
+  collision_boxes:
+    # B zone: lower-city high-rise street canyon
+    - {id: "B01", zone: "B", center_xy: [28.0, 24.0],  size: [16.0, 18.0, 34.0]}
+    - {id: "B02", zone: "B", center_xy: [50.0, 28.0],  size: [16.0, 20.0, 44.0]}
+    - {id: "B03", zone: "B", center_xy: [76.0, 24.0],  size: [18.0, 18.0, 52.0]}
+    - {id: "B04", zone: "B", center_xy: [100.0, 30.0], size: [14.0, 18.0, 40.0]}
+    - {id: "B05", zone: "B", center_xy: [30.0, -24.0], size: [18.0, 18.0, 30.0]}
+    - {id: "B06", zone: "B", center_xy: [58.0, -28.0], size: [18.0, 20.0, 46.0]}
+    - {id: "B07", zone: "B", center_xy: [84.0, -24.0], size: [16.0, 18.0, 50.0]}
+    - {id: "B08", zone: "B", center_xy: [104.0, -30.0], size: [16.0, 18.0, 38.0]}
+    - {id: "B09", zone: "B", center_xy: [46.0, 5.0],   size: [10.0, 10.0, 28.0]}
+    - {id: "B10", zone: "B", center_xy: [72.0, -4.0],  size: [10.0, 10.0, 34.0]}
+    - {id: "B11", zone: "B", center_xy: [95.0, 8.0],   size: [10.0, 10.0, 36.0]}
+
+    # C zone: buildings placed on the mid-level terrace
+    - {id: "C01", zone: "C", center_xy: [118.0, 20.0],  size: [16.0, 18.0, 35.0]}
+    - {id: "C02", zone: "C", center_xy: [136.0, 27.0],  size: [18.0, 20.0, 50.0]}
+    - {id: "C03", zone: "C", center_xy: [152.0, 20.0],  size: [12.0, 18.0, 42.0]}
+    - {id: "C04", zone: "C", center_xy: [116.0, -22.0], size: [16.0, 18.0, 38.0]}
+    - {id: "C05", zone: "C", center_xy: [134.0, -30.0], size: [16.0, 18.0, 48.0]}
+    - {id: "C06", zone: "C", center_xy: [152.0, -22.0], size: [12.0, 16.0, 55.0]}
+    - {id: "C07", zone: "C", center_xy: [125.0, 3.0],   size: [10.0, 10.0, 32.0]}
+    - {id: "C08", zone: "C", center_xy: [145.0, -4.0],  size: [10.0, 10.0, 40.0]}
+
+    # D zone: bridge, inner/outer piers, and valley guide walls
+    - {id: "D_DECK", zone: "D", center: [182.0, 0.0, 28.5], size: [10.0, 120.0, 3.0], bottom_on_terrain: false}
+    - {id: "D_P1", zone: "D", center: [182.0, -12.0, 17.5], size: [4.0, 4.0, 19.0], bottom_on_terrain: false}
+    - {id: "D_P2", zone: "D", center: [182.0, 12.0, 17.5],  size: [4.0, 4.0, 19.0], bottom_on_terrain: false}
+    - {id: "D_P3", zone: "D", center: [182.0, -42.0, 17.5], size: [4.0, 6.0, 19.0], bottom_on_terrain: false}
+    - {id: "D_P4", zone: "D", center: [182.0, 42.0, 17.5],  size: [4.0, 6.0, 19.0], bottom_on_terrain: false}
+    - {id: "D_W1", zone: "D", center: [182.0, -31.0, 19.0], size: [52.0, 4.0, 22.0], bottom_on_terrain: false}
+    - {id: "D_W2", zone: "D", center: [182.0, 31.0, 19.0],  size: [52.0, 4.0, 22.0], bottom_on_terrain: false}
+
+    # E zone: upper-city narrow canyon
+    - {id: "E01", zone: "E", center_xy: [250.0, 15.0],  size: [18.0, 14.0, 55.0]}
+    - {id: "E02", zone: "E", center_xy: [250.0, -14.0], size: [18.0, 14.0, 48.0]}
+    - {id: "E03", zone: "E", center_xy: [267.0, 18.0],  size: [16.0, 18.0, 68.0]}
+    - {id: "E04", zone: "E", center_xy: [267.0, -13.0], size: [16.0, 16.0, 58.0]}
+    - {id: "E05", zone: "E", center_xy: [280.0, 20.0],  size: [12.0, 18.0, 72.0]}
+    - {id: "E06", zone: "E", center_xy: [280.0, -12.0], size: [12.0, 16.0, 62.0]}
+
+    # F zone: constrain dynamic replanning without turning it into a tunnel
+    - {id: "F01", zone: "F", center_xy: [294.0, 32.0],  size: [30.0, 14.0, 50.0]}
+    - {id: "F02", zone: "F", center_xy: [294.0, -31.0], size: [30.0, 14.0, 45.0]}
+
+  # Visual-only skyline blocks. These markers deliberately do not enter the
+  # planner collision cloud; they exaggerate the mountain-city silhouette.
+  visual_only_boxes:
+    - {id: "V01", center_xy: [55.0, 63.0],   size: [18.0, 18.0, 70.0]}
+    - {id: "V02", center_xy: [82.0, -66.0],  size: [20.0, 20.0, 82.0]}
+    - {id: "V03", center_xy: [126.0, 62.0],  size: [18.0, 22.0, 88.0]}
+    - {id: "V04", center_xy: [154.0, -63.0], size: [22.0, 18.0, 78.0]}
+    - {id: "V05", center_xy: [220.0, 66.0],  size: [20.0, 22.0, 90.0]}
+    - {id: "V06", center_xy: [242.0, -65.0], size: [18.0, 20.0, 84.0]}
+    - {id: "V07", center_xy: [303.0, 66.0],  size: [22.0, 22.0, 86.0]}
+    - {id: "V08", center_xy: [316.0, -64.0], size: [18.0, 20.0, 75.0]}
+
+  zone_labels:
+    - {text: "A FOOTHILL TAKEOFF", position: [15.0, -60.0, 8.0]}
+    - {text: "B HIGH-RISE CANYON", position: [65.0, -60.0, 12.0]}
+    - {text: "C MID-TERRACE", position: [132.0, -60.0, 34.0]}
+    - {text: "D BRIDGE VALLEY", position: [182.0, -60.0, 18.0]}
+    - {text: "E NARROW UPPER CITY", position: [263.0, 55.0, 58.0]}
+    - {text: "F DYNAMIC CROSSING", position: [296.0, 55.0, 58.0]}
+    - {text: "G HIGH TERMINAL", position: [320.0, 55.0, 58.0]}

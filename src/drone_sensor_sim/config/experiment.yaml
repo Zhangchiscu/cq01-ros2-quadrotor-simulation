@@ -1,0 +1,18 @@
+sensor_experiment:
+  ros__parameters:
+    duration_s: 18.0
+    goal_x: 2.0
+    goal_y: 1.0
+    goal_z: 1.5
+    final_error_threshold_m: 0.30
+    maximum_tilt_threshold_deg: 35.0
+    maximum_rpm: 10000.0
+    rpm_saturation_ratio: 0.995
+    maximum_rpm_saturation_fraction: 0.02
+    minimum_odom_pairs: 500
+    minimum_imu_pairs: 500
+    position_rmse_threshold_m: 0.20
+    velocity_rmse_threshold_mps: 0.20
+    orientation_rmse_threshold_deg: 3.0
+    gyro_rmse_threshold_rps: 0.05
+    accel_rmse_threshold_mps2: 0.50

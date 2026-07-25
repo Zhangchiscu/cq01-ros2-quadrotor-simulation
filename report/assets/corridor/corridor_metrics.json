@@ -1,0 +1,26 @@
+{
+  "scenario": "narrow_s_corridor",
+  "source_result_directory": "/home/zhangxianzhe/drone_task/your_drone_sim_ws/results/corridor/avoidance_20260711_030847",
+  "overall_pass": true,
+  "criteria": {
+    "goal_reached": true,
+    "final_error_below_0_3_m": true,
+    "physical_clearance_positive": true,
+    "safety_zone_clearance_positive": true,
+    "outer_wall_body_clearance_positive": true,
+    "s_curve_passage_confirmed": true
+  },
+  "arrival_time_s": 10.070366064000154,
+  "final_error_m": 0.02511946566036099,
+  "steady_state_error_m": 0.021731064671671095,
+  "planned_path_length_m": 6.967845791904414,
+  "actual_path_length_m": 7.565837047958502,
+  "actual_over_planned_path_ratio": 1.085821539958428,
+  "minimum_obstacle_clearance_m": 0.1835489828128171,
+  "minimum_safety_zone_clearance_m": 0.04688344787802791,
+  "maximum_absolute_lateral_deviation_m": 0.4444923365660507,
+  "minimum_outer_wall_body_clearance_m": 0.3055076634339493,
+  "first_gate_minimum_y_m": -0.34564475552934437,
+  "second_gate_maximum_y_m": 0.42708718831472403,
+  "maximum_motor_rpm": 7402.908203125
+}

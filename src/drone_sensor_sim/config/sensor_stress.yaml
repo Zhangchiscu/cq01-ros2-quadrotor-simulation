@@ -1,0 +1,33 @@
+sensor_model:
+  ros__parameters:
+    profile: stress
+    seed: 2026
+    dropout_probability: 0.005
+
+    position_noise_std_m: 0.080
+    velocity_noise_std_mps: 0.060
+    orientation_noise_std_deg: 0.80
+    angular_velocity_noise_std_rps: 0.015
+
+    position_bias_initial_m: [0.030, -0.025, 0.040]
+    velocity_bias_initial_mps: [0.015, -0.012, 0.018]
+    orientation_bias_initial_deg: [0.30, -0.25, 0.35]
+    angular_velocity_bias_initial_rps: [0.004, -0.003, 0.005]
+
+    position_bias_rw_std_m_sqrt_s: 0.0040
+    velocity_bias_rw_std_mps_sqrt_s: 0.0030
+    orientation_bias_rw_std_deg_sqrt_s: 0.040
+    angular_velocity_bias_rw_std_rps_sqrt_s: 0.0008
+
+    accelerometer_noise_std_mps2: 0.250
+    gyroscope_noise_std_rps: 0.020
+    imu_orientation_noise_std_deg: 0.70
+    accelerometer_bias_initial_mps2: [0.080, -0.060, 0.100]
+    gyroscope_bias_initial_rps: [0.004, -0.003, 0.005]
+    imu_orientation_bias_initial_deg: [0.25, -0.20, 0.30]
+    accelerometer_bias_rw_std_mps2_sqrt_s: 0.010
+    gyroscope_bias_rw_std_rps_sqrt_s: 0.0010
+    accelerometer_scale_error: [0.004, -0.003, 0.005]
+    gyroscope_scale_error: [0.002, -0.0015, 0.0025]
+    accelerometer_limit_mps2: 80.0
+    gyroscope_limit_rps: 20.0

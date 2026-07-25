@@ -1,0 +1,188 @@
+scene:
+  name: yuzhong_solid_peninsula_v3
+  frame_id: map
+  seed: 20260711
+  horizontal_extent_m: 520.8
+  north_south_extent_m: 198.4
+  visual_scale_note: Asymmetric pointed Yuzhong outline, closed solid mountain mass,
+    dense stepped skyline and 55–80 m ridge-to-river relief.
+  building_target_count: 1900
+  terrain_grid_x: 91
+  terrain_grid_y: 45
+  publish_hz: 0.5
+  show_labels: true
+  position_scale_x: 4.2
+  position_scale_y: 3.2
+  object_footprint_scale: 1.9
+  object_height_scale: 2.2
+  line_width_scale: 1.2
+  text_scale: 1.15
+  estimated_relief_m: 72.0
+  terrain_bottom_z: -8.0
+landmarks:
+- id: eling_factory
+  label: 鹅岭二厂 Eling Factory
+  kind: industrial
+  position:
+  - -50.0
+  - 6.0
+  exclusion_radius: 5.0
+- id: liziba
+  label: 李子坝穿楼 Liziba
+  kind: rail_through_building
+  position:
+  - -50.0
+  - 14.0
+  exclusion_radius: 5.0
+- id: lianglukou
+  label: 两路口 Lianglukou
+  kind: interchange
+  position:
+  - -34.0
+  - 1.0
+  exclusion_radius: 4.0
+- id: crown_escalator
+  label: 皇冠大扶梯 Crown Escalator
+  kind: escalator
+  position:
+  - -30.0
+  - -4.0
+  exclusion_radius: 3.5
+- id: great_hall
+  label: 人民大礼堂 Great Hall
+  kind: hall
+  position:
+  - -15.0
+  - 16.0
+  exclusion_radius: 5.0
+- id: shibati
+  label: 十八梯 Shibati
+  kind: stairs_oldtown
+  position:
+  - -5.0
+  - -13.0
+  exclusion_radius: 5.0
+- id: jiaochangkou
+  label: 较场口 Jiaochangkou
+  kind: plaza
+  position:
+  - -1.0
+  - -2.0
+  exclusion_radius: 4.0
+- id: baixiangju
+  label: 白象居 Baixiangju
+  kind: hillside_residence
+  position:
+  - 12.0
+  - -21.0
+  exclusion_radius: 4.5
+- id: jiefangbei
+  label: 解放碑 Jiefangbei
+  kind: monument
+  position:
+  - 16.0
+  - 1.0
+  exclusion_radius: 5.0
+- id: kuixinglou
+  label: 魁星楼 Kuixinglou
+  kind: rooftop_plaza
+  position:
+  - 23.0
+  - 12.0
+  exclusion_radius: 5.0
+- id: hongyadong
+  label: 洪崖洞 Hongyadong
+  kind: cliff_houses
+  position:
+  - 32.0
+  - 19.0
+  exclusion_radius: 6.0
+- id: qiansimen
+  label: 千厮门嘉陵江大桥 Qiansimen Bridge
+  kind: bridge
+  position:
+  - 35.0
+  - 31.0
+  exclusion_radius: 3.0
+- id: chaotianmen
+  label: 朝天门 Chaotianmen
+  kind: confluence_plaza
+  position:
+  - 58.0
+  - 1.0
+  exclusion_radius: 6.0
+- id: raffles
+  label: 来福士 Raffles City
+  kind: sail_towers
+  position:
+  - 49.0
+  - 4.0
+  exclusion_radius: 6.0
+- id: cableway
+  label: 长江索道 Yangtze Cableway
+  kind: cableway
+  position:
+  - 31.0
+  - -25.0
+  exclusion_radius: 3.0
+routes:
+- id: west_8d_route
+  label: 西部立体交通线
+  color:
+  - 0.95
+  - 0.52
+  - 0.1
+  - 0.95
+  points:
+  - - -52.0
+    - 8.0
+    - 17.0
+  - - -48.0
+    - 20.0
+    - 15.0
+  - - -38.0
+    - 14.0
+    - 18.0
+  - - -31.0
+    - 2.0
+    - 20.0
+- id: central_mountain_route
+  label: 中央山城线
+  color:
+  - 0.2
+  - 0.95
+  - 0.45
+  - 0.95
+  points:
+  - - -8.0
+    - -14.0
+    - 12.0
+  - - -2.0
+    - -1.0
+    - 18.0
+  - - 15.0
+    - 1.0
+    - 20.0
+  - - 22.0
+    - 12.0
+    - 20.0
+- id: east_river_route
+  label: 东部两江线
+  color:
+  - 0.2
+  - 0.72
+  - 1.0
+  - 0.95
+  points:
+  - - 28.0
+    - 20.0
+    - 15.0
+  - - 34.0
+    - 30.0
+    - 18.0
+  - - 45.0
+    - 13.0
+    - 18.0
+  - - 54.0
+    - 4.0
+    - 16.0

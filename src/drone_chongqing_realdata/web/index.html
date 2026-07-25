@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+  <title>渝中半岛真实数据验证｜MapLibre</title>
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css"
+  >
+  <link rel="stylesheet" href="./styles.css">
+  <script
+    src="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js"
+  ></script>
+</head>
+<body>
+  <div id="map"></div>
+
+  <aside class="panel">
+    <header>
+      <h1>渝中半岛真实数据验证</h1>
+      <p>
+        MapLibre开放模式：真实OSM建筑轮廓、道路、轨道和桥梁，
+        配合网络DEM地形。无令牌，但无真实外墙纹理。
+      </p>
+      <span class="badge">网络真实地理数据驱动</span>
+    </header>
+
+    <section class="section">
+      <div class="section-title">视角</div>
+      <div class="button-grid" id="viewButtons"></div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">显示与夸张系数</div>
+      <div class="control-row">
+        <label for="terrainScale">地形垂直系数</label>
+        <input
+          id="terrainScale"
+          type="range"
+          min="1"
+          max="2.5"
+          value="1.35"
+          step="0.05"
+        >
+        <span id="terrainValue">1.35</span>
+      </div>
+      <div class="control-row">
+        <label for="heightScale">建筑高度系数</label>
+        <input
+          id="heightScale"
+          type="range"
+          min="0.8"
+          max="2.5"
+          value="1.15"
+          step="0.05"
+        >
+        <span id="heightValue">1.15</span>
+      </div>
+      <div class="button-grid">
+        <button id="toggleBuildings">建筑</button>
+        <button id="toggleTransport">交通</button>
+        <button id="toggleLabels">地标</button>
+        <a class="button-link" href="./cesium.html">
+          Cesium模式
+        </a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">高度来源</div>
+      <div class="legend">
+        <div class="legend-item">
+          <span class="swatch" style="background:#62c995"></span>
+          OSM记录的height
+        </div>
+        <div class="legend-item">
+          <span class="swatch" style="background:#e9a54a"></span>
+          OSM building:levels推算
+        </div>
+        <div class="legend-item">
+          <span class="swatch" style="background:#758390"></span>
+          无高度标签时的类别估计
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">数据状态</div>
+      <div id="status" class="status warn">
+        正在读取本地GeoJSON……
+      </div>
+    </section>
+  </aside>
+
+  <script src="./app.js"></script>
+</body>
+</html>

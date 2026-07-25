@@ -1,0 +1,15 @@
+===== A* Avoidance Experiment Summary =====
+Success: True
+Termination: goal_reached
+Arrival time: 12.153 s
+Final error: 0.0195 m
+Steady-state error: 0.0157 m
+Planned path length: 9.386 m
+Actual path length: 10.167 m
+Actual/planned path ratio: 1.083
+Minimum obstacle clearance: 0.230 m
+Minimum safety-zone clearance: 0.053 m
+Maximum |roll|: 15.58 deg
+Maximum |pitch|: 16.71 deg
+Maximum motor RPM: 7376.3 RPM
+RPM saturation ratio: 0.000 %

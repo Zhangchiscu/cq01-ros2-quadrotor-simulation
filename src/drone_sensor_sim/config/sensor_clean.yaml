@@ -1,0 +1,33 @@
+sensor_model:
+  ros__parameters:
+    profile: clean
+    seed: 2026
+    dropout_probability: 0.0
+
+    position_noise_std_m: 0.0
+    velocity_noise_std_mps: 0.0
+    orientation_noise_std_deg: 0.0
+    angular_velocity_noise_std_rps: 0.0
+
+    position_bias_initial_m: [0.0, 0.0, 0.0]
+    velocity_bias_initial_mps: [0.0, 0.0, 0.0]
+    orientation_bias_initial_deg: [0.0, 0.0, 0.0]
+    angular_velocity_bias_initial_rps: [0.0, 0.0, 0.0]
+
+    position_bias_rw_std_m_sqrt_s: 0.0
+    velocity_bias_rw_std_mps_sqrt_s: 0.0
+    orientation_bias_rw_std_deg_sqrt_s: 0.0
+    angular_velocity_bias_rw_std_rps_sqrt_s: 0.0
+
+    accelerometer_noise_std_mps2: 0.0
+    gyroscope_noise_std_rps: 0.0
+    imu_orientation_noise_std_deg: 0.0
+    accelerometer_bias_initial_mps2: [0.0, 0.0, 0.0]
+    gyroscope_bias_initial_rps: [0.0, 0.0, 0.0]
+    imu_orientation_bias_initial_deg: [0.0, 0.0, 0.0]
+    accelerometer_bias_rw_std_mps2_sqrt_s: 0.0
+    gyroscope_bias_rw_std_rps_sqrt_s: 0.0
+    accelerometer_scale_error: [0.0, 0.0, 0.0]
+    gyroscope_scale_error: [0.0, 0.0, 0.0]
+    accelerometer_limit_mps2: 80.0
+    gyroscope_limit_rps: 20.0

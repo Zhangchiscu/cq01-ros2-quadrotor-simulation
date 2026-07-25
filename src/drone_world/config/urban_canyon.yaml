@@ -1,0 +1,18 @@
+world:
+  name: urban_canyon
+  frame_id: map
+  resolution: 0.25
+  planning_z: 1.50
+  bounds: {min_x: -12.0, max_x: 12.0, min_y: -8.0, max_y: 8.0, min_z: 0.0, max_z: 14.0}
+  obstacles:
+    - {id: building_a, type: building, category: building, center: [-8.5, -4.6, 5.0], size: [5.0, 5.2, 10.0]}
+    - {id: building_b, type: building, category: building, center: [-2.7, -5.1, 4.0], size: [4.2, 4.4, 8.0], yaw: 0.12}
+    - {id: building_c, type: building, category: building, center: [4.0, -5.0, 6.0], size: [5.0, 4.8, 12.0], yaw: -0.08}
+    - {id: building_d, type: building, category: building, center: [9.3, -4.2, 4.5], size: [3.6, 5.0, 9.0]}
+    - {id: building_e, type: building, category: building, center: [-8.2, 4.7, 4.5], size: [5.2, 5.0, 9.0], yaw: -0.10}
+    - {id: building_f, type: building, category: building, center: [-1.8, 5.1, 6.5], size: [5.0, 4.6, 13.0], yaw: 0.10}
+    - {id: building_g, type: building, category: building, center: [5.2, 4.8, 5.5], size: [4.6, 5.0, 11.0]}
+    - {id: building_h, type: building, category: building, center: [10.0, 4.7, 3.8], size: [3.0, 4.8, 7.6]}
+    - {id: skybridge, type: bridge, category: bridge, center: [1.0, 0.0, 4.6], size: [4.8, 1.2, 0.6], yaw: 1.57079632679, project_to_2d: false}
+    - {id: skybridge_pillar_1, type: cylinder, category: column, center: [1.0, -2.0, 2.3], radius: 0.35, height: 4.6}
+    - {id: skybridge_pillar_2, type: cylinder, category: column, center: [1.0, 2.0, 2.3], radius: 0.35, height: 4.6}

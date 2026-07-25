@@ -1,0 +1,45 @@
+quadrotor_dynamics:
+  ros__parameters:
+    simulation_rate_hz: 200.0
+
+    mass: 1.36
+    gravity: 9.81
+    arm_length: 0.225
+
+    inertia_xx: 0.030
+    inertia_yy: 0.030
+    inertia_zz: 0.050
+
+    thrust_coefficient: 8.54858e-6
+    torque_coefficient: 1.60e-7
+
+    motor_time_constant_up: 0.050
+    motor_time_constant_down: 0.080
+
+    minimum_rpm: 0.0
+    maximum_rpm: 10000.0
+
+    linear_drag_coefficient: 0.10
+    angular_drag_x: 0.020
+    angular_drag_y: 0.020
+    angular_drag_z: 0.030
+
+    command_timeout_s: 0.50
+    path_publish_period_s: 0.05
+    path_max_points: 3000
+
+    # External wrench interface for wind and disturbance experiments.
+    external_wrench_timeout_s: 0.25
+    maximum_external_force_n: 25.0
+    maximum_external_torque_nm: 2.0
+    world_frame_id: map
+    body_frame_id: base_link
+
+    # Parameterized initial state for namespaced multi-UAV launches.
+    initial_position_x: 0.0
+    initial_position_y: 0.0
+    initial_position_z: 0.0
+    initial_velocity_x: 0.0
+    initial_velocity_y: 0.0
+    initial_velocity_z: 0.0
+    initial_yaw_deg: 0.0

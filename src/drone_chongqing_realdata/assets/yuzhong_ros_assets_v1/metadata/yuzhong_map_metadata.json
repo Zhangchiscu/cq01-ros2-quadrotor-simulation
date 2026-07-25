@@ -1,0 +1,83 @@
+{
+  "dataset_name": "Chongqing Yuzhong 3D Urban UAV Navigation Benchmark",
+  "source_crs": "EPSG:32648",
+  "units": "metres",
+  "dem": {
+    "file": "dem/yuzhong_dem_clip_32648.tif",
+    "resolution_m": [
+      30.0,
+      30.0
+    ],
+    "full_bounds_m": [
+      647640.0,
+      3268530.0,
+      653640.0,
+      3272340.0
+    ],
+    "elevation_min_m": 166.98435974121094,
+    "elevation_max_m": 388.23443603515625,
+    "relief_m": 221.2500762939453,
+    "vertical_scale_for_physics": 1.0
+  },
+  "full_dataset_counts": {
+    "boundary": 1,
+    "buildings": 1775,
+    "roads": 1038,
+    "railways": 169,
+    "bridges": 241,
+    "landmarks": 8,
+    "attractions": 218
+  },
+  "recommended_planning_roi": {
+    "name": "Hongyadong–Kuixinglou",
+    "size_m": [
+      600.0,
+      600.0
+    ],
+    "bounds_epsg32648": [
+      652709.4954026823,
+      3270943.8030328914,
+      653309.4954026823,
+      3271543.8030328914
+    ],
+    "origin_easting_m": 652709.4954026823,
+    "origin_northing_m": 3270943.8030328914,
+    "origin_elevation_m": 209.82931518554688,
+    "local_frame_extent_m": [
+      0.0,
+      0.0,
+      600.0,
+      600.0
+    ],
+    "terrain_min_m": 209.82931518554688,
+    "terrain_max_m": 301.30859375,
+    "terrain_relief_m": 91.47927856445312,
+    "feature_counts": {
+      "buildings": 109,
+      "roads": 89,
+      "railways": 21,
+      "bridges": 25,
+      "landmarks": 2,
+      "attractions": 15
+    },
+    "selection_reason": "Dense real buildings, strong terrain relief, Hongyadong and Kuixinglou landmarks, suitable for 3D terrain clearance, urban-canyon avoidance, narrow-passage and multi-goal missions."
+  },
+  "building_height_policy": {
+    "top_height": "height_total_m",
+    "base_height": "base_height_m",
+    "solid_height": "solid_height_m",
+    "quality_field": "height_quality",
+    "note": "Footprints are real OSM geometries. Heights use OSM height where available, derive from OSM levels where available, otherwise retain deterministic category estimates."
+  },
+  "runtime_files": {
+    "required": [
+      "dem/yuzhong_dem_clip_32648.tif",
+      "vectors/yuzhong_ros_vectors_32648.gpkg",
+      "metadata/yuzhong_map_metadata.json"
+    ],
+    "optional_qgis_preview_projects": [
+      "yuzhong_display_v1.qgz",
+      "yuzhong_display_v1.qgz.qto3settings"
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+world:
+  name: forest
+  frame_id: map
+  resolution: 0.20
+  planning_z: 1.50
+  bounds: {min_x: -9.0, max_x: 9.0, min_y: -7.0, max_y: 7.0, min_z: 0.0, max_z: 7.0}
+  obstacles:
+    - {id: trunk_01, type: cylinder, category: tree_trunk, center: [-6.5, -4.5, 2.2], radius: 0.35, height: 4.4}
+    - {id: crown_01, type: sphere, category: tree_crown, center: [-6.5, -4.5, 4.9], radius: 1.7, project_to_2d: false}
+    - {id: trunk_02, type: cylinder, category: tree_trunk, center: [-3.7, -2.0, 2.5], radius: 0.42, height: 5.0}
+    - {id: crown_02, type: sphere, category: tree_crown, center: [-3.7, -2.0, 5.4], radius: 1.9, project_to_2d: false}
+    - {id: trunk_03, type: cylinder, category: tree_trunk, center: [-0.7, -4.6, 2.0], radius: 0.32, height: 4.0}
+    - {id: crown_03, type: sphere, category: tree_crown, center: [-0.7, -4.6, 4.6], radius: 1.6, project_to_2d: false}
+    - {id: trunk_04, type: cylinder, category: tree_trunk, center: [2.5, -1.8, 2.6], radius: 0.50, height: 5.2}
+    - {id: crown_04, type: sphere, category: tree_crown, center: [2.5, -1.8, 5.8], radius: 2.0, project_to_2d: false}
+    - {id: trunk_05, type: cylinder, category: tree_trunk, center: [6.0, -4.0, 2.2], radius: 0.40, height: 4.4}
+    - {id: crown_05, type: sphere, category: tree_crown, center: [6.0, -4.0, 5.0], radius: 1.8, project_to_2d: false}
+    - {id: trunk_06, type: cylinder, category: tree_trunk, center: [-5.4, 3.0, 2.3], radius: 0.38, height: 4.6}
+    - {id: crown_06, type: sphere, category: tree_crown, center: [-5.4, 3.0, 5.1], radius: 1.7, project_to_2d: false}
+    - {id: trunk_07, type: cylinder, category: tree_trunk, center: [-1.8, 4.6, 2.5], radius: 0.44, height: 5.0}
+    - {id: crown_07, type: sphere, category: tree_crown, center: [-1.8, 4.6, 5.5], radius: 1.9, project_to_2d: false}
+    - {id: trunk_08, type: cylinder, category: tree_trunk, center: [1.6, 2.0, 2.0], radius: 0.34, height: 4.0}
+    - {id: crown_08, type: sphere, category: tree_crown, center: [1.6, 2.0, 4.6], radius: 1.5, project_to_2d: false}
+    - {id: trunk_09, type: cylinder, category: tree_trunk, center: [5.0, 4.5, 2.7], radius: 0.48, height: 5.4}
+    - {id: crown_09, type: sphere, category: tree_crown, center: [5.0, 4.5, 5.9], radius: 2.0, project_to_2d: false}

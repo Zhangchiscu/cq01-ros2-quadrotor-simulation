@@ -1,0 +1,43 @@
+===== Corridor Odometry-Noise Robustness Summary =====
+Overall pass: True
+
+[nominal]
+Position noise std: 0.000 m
+Velocity noise std: 0.000 m/s
+Success: True
+Arrival time: 9.956 s
+Final error: 0.0247 m
+Actual/planned ratio: 1.085
+Minimum obstacle clearance: 0.184 m
+Minimum safety clearance: 0.047 m
+Maximum motor RPM: 7402.9 RPM
+
+[noise_1cm]
+Position noise std: 0.010 m
+Velocity noise std: 0.020 m/s
+Success: True
+Arrival time: 10.096 s
+Final error: 0.0225 m
+Actual/planned ratio: 1.085
+Minimum obstacle clearance: 0.184 m
+Minimum safety clearance: 0.047 m
+Maximum motor RPM: 7403.1 RPM
+
+[noise_3cm]
+Position noise std: 0.030 m
+Velocity noise std: 0.050 m/s
+Success: True
+Arrival time: 10.097 s
+Final error: 0.0185 m
+Actual/planned ratio: 1.085
+Minimum obstacle clearance: 0.184 m
+Minimum safety clearance: 0.047 m
+Maximum motor RPM: 7409.5 RPM
+
+Acceptance criteria:
+- all_scenarios_successful: PASS
+- all_final_errors_below_0_3_m: PASS
+- all_physical_clearances_positive: PASS
+- all_safety_clearances_positive: PASS
+- all_path_ratios_below_1_4: PASS
+- no_motor_saturation: PASS

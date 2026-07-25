@@ -1,0 +1,689 @@
+scene:
+  name: CQ-01 V2.2 Terrain-Emphasis Chongqing Mountain City
+  frame_id: world
+  world_bounds:
+    x_min: 0.0
+    x_max: 330.0
+    y_min: -90.0
+    y_max: 90.0
+    z_min: 0.0
+    z_max: 180.0
+  sampling:
+    terrain_resolution: 1.5
+    obstacle_resolution: 1.25
+  terrain:
+    segments:
+    - name: L0_foothill
+      type: flat
+      x0: 0.0
+      x1: 52.0
+      z0: 0.0
+      z1: 0.0
+    - name: ramp_1_steep
+      type: ramp
+      x0: 52.0
+      x1: 76.0
+      z0: 0.0
+      z1: 32.0
+    - name: L1_mid_terrace
+      type: flat
+      x0: 76.0
+      x1: 136.0
+      z0: 32.0
+      z1: 32.0
+    - name: drop_into_valley
+      type: ramp
+      x0: 136.0
+      x1: 150.0
+      z0: 32.0
+      z1: 4.0
+    - name: deep_valley
+      type: flat
+      x0: 150.0
+      x1: 178.0
+      z0: 4.0
+      z1: 4.0
+    - name: ramp_2_steep
+      type: ramp
+      x0: 178.0
+      x1: 210.0
+      z0: 4.0
+      z1: 58.0
+    - name: L2_upper_ridge
+      type: flat
+      x0: 210.0
+      x1: 330.0
+      z0: 58.0
+      z1: 58.0
+  terrain_visual:
+    enabled: true
+    alpha: 1.0
+    surface_y_min: -68.0
+    surface_y_max: 68.0
+    base_z: -4.0
+    side_darkening: 0.52
+    flat_color:
+    - 0.35
+    - 0.62
+    - 0.3
+    - 1.0
+    ramp_color:
+    - 0.86
+    - 0.48
+    - 0.16
+    - 1.0
+    segment_colors:
+      L0_foothill:
+      - 0.25
+      - 0.48
+      - 0.3
+      - 1.0
+      ramp_1_steep:
+      - 0.92
+      - 0.49
+      - 0.12
+      - 1.0
+      L1_mid_terrace:
+      - 0.78
+      - 0.64
+      - 0.24
+      - 1.0
+      drop_into_valley:
+      - 0.7
+      - 0.31
+      - 0.16
+      - 1.0
+      deep_valley:
+      - 0.18
+      - 0.38
+      - 0.48
+      - 1.0
+      ramp_2_steep:
+      - 0.94
+      - 0.38
+      - 0.1
+      - 1.0
+      L2_upper_ridge:
+      - 0.67
+      - 0.56
+      - 0.2
+      - 1.0
+    contour_color:
+    - 1.0
+    - 0.9
+    - 0.18
+    - 1.0
+    contour_width: 0.7
+    elevation_band_color:
+    - 1.0
+    - 1.0
+    - 1.0
+    - 1.0
+  collision_boxes:
+  - id: B01
+    zone: B
+    center_xy:
+    - 22.0
+    - 25.0
+    size:
+    - 16.0
+    - 18.0
+    - 42.0
+  - id: B02
+    zone: B
+    center_xy:
+    - 42.0
+    - 30.0
+    size:
+    - 18.0
+    - 20.0
+    - 55.0
+  - id: B03
+    zone: B
+    center_xy:
+    - 64.0
+    - 25.0
+    size:
+    - 18.0
+    - 18.0
+    - 62.0
+  - id: B04
+    zone: B
+    center_xy:
+    - 84.0
+    - 30.0
+    size:
+    - 16.0
+    - 18.0
+    - 50.0
+  - id: B05
+    zone: B
+    center_xy:
+    - 24.0
+    - -25.0
+    size:
+    - 18.0
+    - 18.0
+    - 38.0
+  - id: B06
+    zone: B
+    center_xy:
+    - 48.0
+    - -30.0
+    size:
+    - 18.0
+    - 20.0
+    - 58.0
+  - id: B07
+    zone: B
+    center_xy:
+    - 70.0
+    - -24.0
+    size:
+    - 16.0
+    - 18.0
+    - 64.0
+  - id: B08
+    zone: B
+    center_xy:
+    - 88.0
+    - -30.0
+    size:
+    - 16.0
+    - 18.0
+    - 52.0
+  - id: B09
+    zone: B
+    center_xy:
+    - 35.0
+    - 4.0
+    size:
+    - 10.0
+    - 10.0
+    - 34.0
+  - id: B10
+    zone: B
+    center_xy:
+    - 58.0
+    - -5.0
+    size:
+    - 10.0
+    - 10.0
+    - 40.0
+  - id: B11
+    zone: B
+    center_xy:
+    - 78.0
+    - 7.0
+    size:
+    - 10.0
+    - 10.0
+    - 48.0
+  - id: C01
+    zone: C
+    center_xy:
+    - 88.0
+    - 21.0
+    size:
+    - 16.0
+    - 18.0
+    - 48.0
+  - id: C02
+    zone: C
+    center_xy:
+    - 106.0
+    - 29.0
+    size:
+    - 18.0
+    - 20.0
+    - 66.0
+  - id: C03
+    zone: C
+    center_xy:
+    - 128.0
+    - 21.0
+    size:
+    - 16.0
+    - 18.0
+    - 58.0
+  - id: C04
+    zone: C
+    center_xy:
+    - 90.0
+    - -22.0
+    size:
+    - 16.0
+    - 18.0
+    - 52.0
+  - id: C05
+    zone: C
+    center_xy:
+    - 110.0
+    - -30.0
+    size:
+    - 18.0
+    - 20.0
+    - 64.0
+  - id: C06
+    zone: C
+    center_xy:
+    - 132.0
+    - -22.0
+    size:
+    - 14.0
+    - 16.0
+    - 72.0
+  - id: C07
+    zone: C
+    center_xy:
+    - 98.0
+    - 3.0
+    size:
+    - 10.0
+    - 10.0
+    - 42.0
+  - id: C08
+    zone: C
+    center_xy:
+    - 122.0
+    - -4.0
+    size:
+    - 10.0
+    - 10.0
+    - 50.0
+  - id: T_CLIFF1_N
+    zone: T
+    center:
+    - 76.0
+    - 54.0
+    - 16.0
+    size:
+    - 5.0
+    - 60.0
+    - 32.0
+    bottom_on_terrain: false
+  - id: T_CLIFF1_S
+    zone: T
+    center:
+    - 76.0
+    - -54.0
+    - 16.0
+    size:
+    - 5.0
+    - 60.0
+    - 32.0
+    bottom_on_terrain: false
+  - id: D_DECK
+    zone: D
+    center:
+    - 164.0
+    - 0.0
+    - 33.0
+    size:
+    - 10.0
+    - 126.0
+    - 4.0
+    bottom_on_terrain: false
+  - id: D_P1
+    zone: D
+    center:
+    - 164.0
+    - -13.0
+    - 17.5
+    size:
+    - 4.0
+    - 4.0
+    - 27.0
+    bottom_on_terrain: false
+  - id: D_P2
+    zone: D
+    center:
+    - 164.0
+    - 13.0
+    - 17.5
+    size:
+    - 4.0
+    - 4.0
+    - 27.0
+    bottom_on_terrain: false
+  - id: D_P3
+    zone: D
+    center:
+    - 164.0
+    - -44.0
+    - 17.5
+    size:
+    - 4.0
+    - 6.0
+    - 27.0
+    bottom_on_terrain: false
+  - id: D_P4
+    zone: D
+    center:
+    - 164.0
+    - 44.0
+    - 17.5
+    size:
+    - 4.0
+    - 6.0
+    - 27.0
+    bottom_on_terrain: false
+  - id: D_W1
+    zone: D
+    center:
+    - 164.0
+    - -34.0
+    - 18.0
+    size:
+    - 50.0
+    - 5.0
+    - 28.0
+    bottom_on_terrain: false
+  - id: D_W2
+    zone: D
+    center:
+    - 164.0
+    - 34.0
+    - 18.0
+    size:
+    - 50.0
+    - 5.0
+    - 28.0
+    bottom_on_terrain: false
+  - id: T_CLIFF2_N
+    zone: T
+    center:
+    - 210.0
+    - 52.0
+    - 31.0
+    size:
+    - 6.0
+    - 64.0
+    - 54.0
+    bottom_on_terrain: false
+  - id: T_CLIFF2_S
+    zone: T
+    center:
+    - 210.0
+    - -52.0
+    - 31.0
+    size:
+    - 6.0
+    - 64.0
+    - 54.0
+    bottom_on_terrain: false
+  - id: E01
+    zone: E
+    center_xy:
+    - 224.0
+    - 15.0
+    size:
+    - 18.0
+    - 14.0
+    - 68.0
+  - id: E02
+    zone: E
+    center_xy:
+    - 224.0
+    - -14.0
+    size:
+    - 18.0
+    - 14.0
+    - 60.0
+  - id: E03
+    zone: E
+    center_xy:
+    - 244.0
+    - 18.0
+    size:
+    - 18.0
+    - 18.0
+    - 82.0
+  - id: E04
+    zone: E
+    center_xy:
+    - 244.0
+    - -13.0
+    size:
+    - 18.0
+    - 16.0
+    - 72.0
+  - id: E05
+    zone: E
+    center_xy:
+    - 264.0
+    - 20.0
+    size:
+    - 14.0
+    - 18.0
+    - 88.0
+  - id: E06
+    zone: E
+    center_xy:
+    - 264.0
+    - -12.0
+    size:
+    - 14.0
+    - 16.0
+    - 78.0
+  - id: E07
+    zone: E
+    center_xy:
+    - 280.0
+    - 21.0
+    size:
+    - 12.0
+    - 18.0
+    - 84.0
+  - id: E08
+    zone: E
+    center_xy:
+    - 280.0
+    - -11.0
+    size:
+    - 12.0
+    - 16.0
+    - 74.0
+  - id: F01
+    zone: F
+    center_xy:
+    - 298.0
+    - 34.0
+    size:
+    - 34.0
+    - 16.0
+    - 68.0
+  - id: F02
+    zone: F
+    center_xy:
+    - 298.0
+    - -33.0
+    size:
+    - 34.0
+    - 16.0
+    - 62.0
+  visual_only_boxes:
+  - id: V01
+    center_xy:
+    - 38.0
+    - 66.0
+    size:
+    - 20.0
+    - 20.0
+    - 82.0
+  - id: V02
+    center_xy:
+    - 60.0
+    - -68.0
+    size:
+    - 22.0
+    - 20.0
+    - 94.0
+  - id: V03
+    center_xy:
+    - 94.0
+    - 66.0
+    size:
+    - 20.0
+    - 22.0
+    - 105.0
+  - id: V04
+    center_xy:
+    - 124.0
+    - -66.0
+    size:
+    - 24.0
+    - 20.0
+    - 96.0
+  - id: V05
+    center_xy:
+    - 198.0
+    - 68.0
+    size:
+    - 20.0
+    - 22.0
+    - 110.0
+  - id: V06
+    center_xy:
+    - 218.0
+    - -68.0
+    size:
+    - 20.0
+    - 22.0
+    - 102.0
+  - id: V07
+    center_xy:
+    - 250.0
+    - 68.0
+    size:
+    - 22.0
+    - 24.0
+    - 116.0
+  - id: V08
+    center_xy:
+    - 274.0
+    - -68.0
+    size:
+    - 22.0
+    - 22.0
+    - 108.0
+  - id: V09
+    center_xy:
+    - 310.0
+    - 68.0
+    size:
+    - 24.0
+    - 24.0
+    - 112.0
+  - id: V10
+    center_xy:
+    - 318.0
+    - -66.0
+    size:
+    - 20.0
+    - 22.0
+    - 98.0
+  - id: VT01
+    center:
+    - 106.0
+    - 68.0
+    - 15.0
+    size:
+    - 62.0
+    - 28.0
+    - 30.0
+    bottom_on_terrain: false
+  - id: VT02
+    center:
+    - 106.0
+    - -68.0
+    - 15.0
+    size:
+    - 62.0
+    - 28.0
+    - 30.0
+    bottom_on_terrain: false
+  - id: VT03
+    center:
+    - 264.0
+    - 70.0
+    - 29.0
+    size:
+    - 108.0
+    - 26.0
+    - 58.0
+    bottom_on_terrain: false
+  - id: VT04
+    center:
+    - 264.0
+    - -70.0
+    - 29.0
+    size:
+    - 108.0
+    - 26.0
+    - 58.0
+    bottom_on_terrain: false
+  zone_labels:
+  - text: A FOOTHILL
+    position:
+    - 16.0
+    - -58.0
+    - 10.0
+  - text: B STEEP STREET CANYON
+    position:
+    - 55.0
+    - -58.0
+    - 24.0
+  - text: C 32M MID-TERRACE
+    position:
+    - 108.0
+    - -58.0
+    - 45.0
+  - text: D DEEP BRIDGE VALLEY
+    position:
+    - 164.0
+    - -58.0
+    - 18.0
+  - text: E 58M UPPER RIDGE
+    position:
+    - 246.0
+    - 55.0
+    - 72.0
+  - text: F DYNAMIC CROSSING
+    position:
+    - 296.0
+    - 55.0
+    - 72.0
+  - text: G HIGH TERMINAL
+    position:
+    - 320.0
+    - 55.0
+    - 72.0
+  structure_visual:
+    collision_alpha: 0.56
+    visual_only_alpha: 0.16
+  elevation_callouts:
+  - text: L0  0 m
+    position:
+    - 22.0
+    - -72.0
+    - 7.0
+    scale: 4.2
+  - text: L1  32 m
+    position:
+    - 105.0
+    - -72.0
+    - 39.0
+    scale: 4.2
+  - text: VALLEY  4 m
+    position:
+    - 164.0
+    - -72.0
+    - 11.0
+    scale: 4.2
+  - text: L2  58 m
+    position:
+    - 258.0
+    - -72.0
+    - 65.0
+    scale: 4.2

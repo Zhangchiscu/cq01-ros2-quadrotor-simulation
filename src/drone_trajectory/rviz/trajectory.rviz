@@ -1,0 +1,129 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+  - Class: rviz_common/Views
+    Name: Views
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Alpha: 0.50
+      Cell Size: 1
+      Class: rviz_default_plugins/Grid
+      Color: 155; 155; 160
+      Enabled: true
+      Name: Ground Grid
+      Plane: XY
+      Plane Cell Count: 40
+      Reference Frame: map
+      Value: true
+
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: true
+      Name: Original Geometry
+      Topic:
+        Depth: 1
+        Durability Policy: Transient Local
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /drone/obstacle_markers
+      Value: true
+
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: true
+      Name: 3D Voxel Occupancy
+      Topic:
+        Depth: 1
+        Durability Policy: Transient Local
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /drone/voxel_markers
+      Value: true
+
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: true
+      Name: Drone Markers
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /drone/markers
+      Value: true
+
+    - Alpha: 1
+      Buffer Length: 1
+      Class: rviz_default_plugins/Path
+      Color: 70; 130; 255
+      Enabled: true
+      Line Style: Lines
+      Line Width: 0.05
+      Name: Original 3D A-star Path
+      Topic:
+        Depth: 1
+        Durability Policy: Transient Local
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /drone/planned_path_3d
+      Value: true
+
+    - Alpha: 1
+      Buffer Length: 1
+      Class: rviz_default_plugins/Path
+      Color: 255; 190; 50
+      Enabled: true
+      Line Style: Lines
+      Line Width: 0.08
+      Name: Executed Trajectory Reference
+      Topic:
+        Depth: 1
+        Durability Policy: Transient Local
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /drone/trajectory_reference
+      Value: true
+
+    - Alpha: 1
+      Buffer Length: 1
+      Class: rviz_default_plugins/Path
+      Color: 40; 255; 80
+      Enabled: true
+      Line Style: Lines
+      Line Width: 0.04
+      Name: Actual Flight Path
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /drone/path
+      Value: true
+
+  Enabled: true
+  Global Options:
+    Background Color: 30; 32; 38
+    Fixed Frame: map
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz_default_plugins/Interact
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Select
+    - Class: rviz_default_plugins/FocusCamera
+    - Class: rviz_default_plugins/Measure
+  Transformation:
+    Current:
+      Class: rviz_default_plugins/TF
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Distance: 21
+      Focal Point:
+        X: 4.5
+        Y: 0
+        Z: 2
+      Pitch: 0.42
+      Target Frame: map
+      Yaw: 0.82
+Window Geometry:
+  Height: 900
+  Width: 1450

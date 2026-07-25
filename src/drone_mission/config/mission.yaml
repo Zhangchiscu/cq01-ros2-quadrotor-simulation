@@ -1,0 +1,16 @@
+multi_goal_experiment:
+  ros__parameters:
+    waypoint_x: [0.0, 2.0, -1.0, 0.0]
+    waypoint_y: [0.0, 1.0, 2.0, 0.0]
+    waypoint_z: [1.5, 1.5, 2.0, 1.5]
+
+    startup_delay_s: 2.0
+    goal_publish_rate_hz: 10.0
+
+    arrival_tolerance_m: 0.30
+    hold_time_s: 1.0
+
+    waypoint_timeout_s: 15.0
+    mission_timeout_s: 70.0
+
+    maximum_rpm: 10000.0

@@ -1,0 +1,29 @@
+static_obstacle_map:
+  ros__parameters:
+    frame_id: map
+    safety_margin: 0.25
+
+    grid_resolution: 0.10
+    grid_origin_x: -1.0
+    grid_origin_y: -4.0
+    grid_width_m: 8.0
+    grid_height_m: 8.0
+
+    obstacle_names:
+      - upper_corridor_wall
+      - lower_corridor_wall
+      - upper_gate
+      - lower_gate
+      - entrance_guard
+      - exit_guard
+
+    # Two long walls form the main corridor.
+    # The two gates alternate from top and bottom,
+    # creating a narrow S-shaped passage.
+    center_x: [3.25, 3.25, 2.20, 4.30, 0.20, 6.30]
+    center_y: [1.40, -1.40, 0.45, -0.45, 2.55, -2.55]
+    center_z: [1.25, 1.25, 1.25, 1.25, 1.10, 1.10]
+
+    size_x: [5.50, 5.50, 0.45, 0.45, 0.60, 0.60]
+    size_y: [1.00, 1.00, 0.90, 0.90, 0.80, 0.80]
+    size_z: [2.50, 2.50, 2.50, 2.50, 2.20, 2.20]

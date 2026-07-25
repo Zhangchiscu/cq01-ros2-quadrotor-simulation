@@ -1,0 +1,26 @@
+static_obstacle_map:
+  ros__parameters:
+    frame_id: map
+    safety_margin: 0.25
+
+    grid_resolution: 0.10
+    grid_origin_x: -1.0
+    grid_origin_y: -4.0
+    grid_width_m: 8.0
+    grid_height_m: 8.0
+
+    obstacle_names:
+      - center_block
+      - upper_pillar
+      - lower_pillar
+      - corridor_upper_wall
+      - corridor_lower_wall
+      - goal_block
+
+    center_x: [1.0, 2.4, 2.4, 4.0, 4.0, 5.5]
+    center_y: [0.0, 1.4, -1.4, 1.45, -1.45, 0.0]
+    center_z: [1.1, 1.2, 1.2, 1.25, 1.25, 1.1]
+
+    size_x: [0.65, 0.70, 0.70, 0.40, 0.40, 0.75]
+    size_y: [1.70, 0.70, 0.70, 2.00, 2.00, 0.75]
+    size_z: [2.20, 2.40, 2.40, 2.50, 2.50, 2.20]

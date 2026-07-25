@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>drone_benchmark</name>
+  <version>0.1.0</version>
+
+  <description>
+    Automated repeatability benchmarks for the ROS2 quadrotor simulator.
+  </description>
+
+  <maintainer email="taccettabellus@gmail.com">
+    Xianzhe Zhang
+  </maintainer>
+
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <exec_depend>drone_evaluation</exec_depend>
+  <exec_depend>python3-matplotlib</exec_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
