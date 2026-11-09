@@ -1,55 +1,51 @@
-# CQ01 Requirement Closure Add-ons
+# CQ01 需求补全扩展模块
 
-Independent ROS 2 package added after the core CQ01 system was frozen.
+这是在核心 CQ01 系统冻结之后增加的独立 ROS 2 软件包。
 
-## 1. Sensor-noise simulation
+## 1. 传感器噪声仿真
 
-Inputs:
-- `/drone/odom` (`nav_msgs/msg/Odometry`)
-- `/drone/imu` (`sensor_msgs/msg/Imu`)
+输入：
+- `/drone/odom`（`nav_msgs/msg/Odometry`）
+- `/drone/imu`（`sensor_msgs/msg/Imu`）
 
-Outputs:
+输出：
 - `/drone/odom_noisy`
 - `/drone/imu_noisy`
 - `/cq01_bonus/sensor_noise/status`
 
-Noise model:
-- zero-mean Gaussian position noise;
-- zero-mean Gaussian linear/angular velocity noise;
-- Euler-angle perturbation followed by quaternion normalization;
-- IMU angular-rate and linear-acceleration noise;
-- fixed random seed for reproducible experiments.
+噪声模型：
+- 零均值高斯位置噪声；
+- 零均值高斯线速度／角速度噪声；
+- 欧拉角扰动后进行四元数归一化；
+- IMU 角速度与线加速度噪声；
+- 固定随机种子，以保证实验可复现。
 
-Default values are in `config/requirement_closure.yaml`.
+默认参数位于 `config/requirement_closure.yaml`。
 
-The frozen main controller is **not** modified. This module is an optional
-sensor-model experiment and evidence for the "传感器噪声、IMU 简化模型" item.
+冻结后的主控制器**没有修改**。本模块属于可选的传感器模型实验，用于提供“传感器噪声、IMU 简化模型”加分项的验证证据。
 
-## 2. Local perception-range simulation
+## 2. 局部感知范围仿真
 
-Inputs:
+输入：
 - `/drone/odom`
-- `/map/obstacles` (`visualization_msgs/msg/MarkerArray`)
+- `/map/obstacles`（`visualization_msgs/msg/MarkerArray`）
 
-Outputs:
+输出：
 - `/map/local_obstacles`
 - `/cq01_bonus/perception_range`
 - `/cq01_bonus/local_perception/status`
 
-The node keeps only obstacles whose approximate surface distance to the
-vehicle is within the configured radius. The default radius is 12 m.
-A three-ring wireframe sphere is published for RViz evidence.
+该节点仅保留障碍物表面近似距离落在配置半径以内的障碍物。默认半径为 12 m。同时发布由三个圆环构成的线框球体，便于在 RViz 中展示验证结果。
 
-This satisfies the optional "局部感知范围模拟" direction without changing
-the frozen global planner.
+本模块在不改变冻结版全局规划器的前提下，满足可选的“局部感知范围模拟”方向。
 
-## Run
+## 运行方式
 
-First start the normal CQ01 mission. Then in another terminal:
+首先启动正常的 CQ01 任务，再打开另一个终端：
 
 ```bash
 source ~/drone_task/your_drone_sim_ws/install/setup.bash
 ros2 launch cq01_requirement_closure requirement_closure.launch.py
 ```
 
-Then run the audit script supplied with the installer bundle.
+然后运行随安装包提供的审计脚本。
