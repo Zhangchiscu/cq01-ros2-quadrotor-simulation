@@ -1,80 +1,80 @@
-# CQ01 ROS2 Quadrotor Autonomous Navigation
+# CQ01：基于 ROS2 的四旋翼自主导航系统
 
-A ROS 2 Humble quadrotor simulation and autonomous-navigation project integrating six-DOF dynamics, cascaded flight control, 3D A* planning, obstacle avoidance, disturbance testing, sensor simulation, local perception, quantitative evaluation, and a Chongqing-inspired mountainous urban scenario.
+本项目基于 ROS 2 Humble，将六自由度动力学、级联飞行控制、三维 A* 规划、避障、扰动测试、传感器仿真、局部感知、定量评价与重庆山地城市风格场景集成为四旋翼仿真和自主导航系统。
 
-The repository is the frozen final submission baseline for the CQ01 course project. The final runtime intentionally excludes multi-UAV operation and the experimental direct-motor end-to-end neural-control branch.
+本仓库保存 CQ01 考核项目**冻结的最终提交基线**。最终运行系统有意排除了多无人机功能，以及实验性的端到端神经网络直接电机控制分支。
 
-## Key Features
+## 主要功能
 
-- Six-DOF quadrotor rigid-body dynamics driven by four motor RPM commands
-- Cascaded position / velocity / attitude control with motor mixing and actuator limits
-- 3D A* path planning with collision checking and obstacle inflation
-- Multi-goal autonomous flight and waypoint execution
-- Static-obstacle avoidance, narrow-passage / bridge / gorge traversal
-- Dynamic-obstacle replanning and disturbance-recovery testing
-- Simplified IMU, sensor noise injection, and local `PointCloud2` perception
-- Chongqing-inspired mountainous urban CQ01 scenario
-- RViz2 visualization, recording, automated evaluation, and teacher-interface audit
-- Reproducible acceptance evidence and experiment figures stored in the repository
+- 以四个电机 RPM 指令驱动的四旋翼六自由度刚体动力学；
+- 位置、速度和姿态级联控制，包含电机混控与执行器限幅；
+- 具有碰撞检查与障碍物膨胀的三维 A* 路径规划；
+- 多目标自主飞行与航点执行；
+- 静态避障、狭窄通道、桥梁及峡谷穿越；
+- 动态障碍重规划与扰动恢复测试；
+- 简化 IMU、传感器噪声注入与局部 `PointCloud2` 感知；
+- 重庆风格的 CQ01 山地城市场景；
+- RViz2 可视化、数据记录、自动评价及教师接口审计；
+- 仓库保存可复现的验收证据及实验图表。
 
-## System Overview
+## 系统架构
 
-The final submission follows a modular ROS 2 architecture:
+最终版本采用模块化 ROS 2 架构：
 
 ```text
-Mission / Goal
-     |
-     v
-3D A* Planner  --->  Waypoints / Safe Goal
-     |                     |
-     v                     v
-Reference Generation ---> Cascaded Controller
-                              |
-                              v
-                       Four Motor RPMs
-                              |
-                              v
-                     Six-DOF Dynamics
-                              |
-                              v
-              Odometry / IMU / TF / Path
-                              |
-           +------------------+------------------+
-           |                                     |
-           v                                     v
-   Evaluation / Recorder                  RViz2 Visualization
+任务／目标
+    |
+    v
+三维 A* 规划器 ---> 航点／安全目标
+    |                  |
+    v                  v
+参考轨迹生成 ----> 级联控制器
+                         |
+                         v
+                    四电机 RPM
+                         |
+                         v
+                    六自由度动力学
+                         |
+                         v
+                 里程计／IMU／TF／轨迹
+                         |
+              +----------+----------+
+              |                     |
+              v                     v
+          评价／记录器           RViz2 可视化
 ```
 
-Core packages:
+主要软件包：
 
-- `src/drone_dynamics/` — six-DOF quadrotor dynamics
-- `src/drone_controller/` — cascaded position / attitude / motor-RPM controller
-- `src/drone_planner_3d/` — 3D planning and collision checking
-- `src/cq01_v9_mc/` — frozen integrated CQ01 mission, A* planner, recorder, dashboard, visualization, and teacher-interface bridge
-- `src/cq01_requirement_closure/` — sensor-noise bridge, simplified IMU, and local perception
-- `scripts/run_cq01_nominal_full.sh` — one-command nominal final entry point
+- `src/drone_dynamics/`：六自由度四旋翼动力学；
+- `src/drone_controller/`：级联位置、姿态及电机 RPM 控制；
+- `src/drone_planner_3d/`：三维规划和碰撞检测；
+- `src/cq01_v9_mc/`：冻结版 CQ01 综合任务、A* 规划、记录器、监控面板、可视化及教师接口桥接；
+- `src/cq01_requirement_closure/`：传感器噪声桥接、简化 IMU 和局部感知；
+- `scripts/run_cq01_nominal_full.sh`：标称配置的最终一键运行入口。
 
-## Environment
+## 运行环境
 
-The frozen baseline was developed and validated with:
+冻结基线的开发和验证环境：
 
 - Ubuntu 22.04
 - ROS 2 Humble
-- C++17 and Python
+- C++17 与 Python
 - Eigen3
 - RViz2
 - `colcon`
 
-## Quick Start
+## 快速启动
 
-Clone the repository:
+克隆仓库：
 
 ```bash
 git clone https://github.com/Zhangchiscu/cq01-ros2-quadrotor-simulation.git
 cd cq01-ros2-quadrotor-simulation
 ```
 
-Build:
+构建：
 
 ```bash
 source /opt/ros/humble/setup.bash
@@ -82,13 +82,13 @@ colcon build --symlink-install
 source install/setup.bash
 ```
 
-Run the frozen nominal CQ01 integrated mission:
+启动冻结版标称 CQ01 综合任务：
 
 ```bash
 ./scripts/run_cq01_nominal_full.sh
 ```
 
-Useful verification scripts:
+可用的验证脚本：
 
 ```bash
 ./scripts/check_cq01_teacher_interfaces.sh
@@ -96,176 +96,169 @@ Useful verification scripts:
 ./scripts/audit_cq01_requirement_closure_v14.sh
 ```
 
-The clean repository intentionally does not track generated `build/`, `install/`, `log/`, or large runtime `results/` directories.
+干净仓库有意不跟踪生成的 `build/`、`install/`、`log/` 及体积较大的运行期 `results/` 目录。
 
-## Final Acceptance Results
+## 最终验收结果
 
-The frozen acceptance set covers the six minimum experiments required by the course.
+冻结版验收涵盖考核要求的六项最低实验。
 
-| Requirement | Scenario | Result | Main evidence |
-|---|---|---:|---|
-| Hover | Hover near `(0, 0, 1.5)` | PASS | `docs/evidence/acceptance_summary.json` |
-| Single goal | Goal `(2, 1, 1.5)` and hover after arrival | PASS | `docs/evidence/acceptance_summary.json` |
-| Multi-goal | Four consecutive targets / waypoint sequence | PASS | `docs/figures/03_multi_target_actual_trajectory.png` |
-| Static avoidance | P0-P15 route with more than five static obstacles | PASS | `docs/evidence/acceptance_summary.json` |
-| Narrow passage / detour | Bridge / gorge / corridor traversal | PASS | `docs/figures/04_route_planned_vs_actual.png` |
-| Stability display | Position error, RPM, trajectory, clearance, altitude | PASS | `docs/figures/` |
+| 验收要求 | 测试场景 | 结果 | 主要证据 |
+|---|---|---|---|
+| 悬停 | 在 `(0, 0, 1.5)` 附近悬停 | PASS | `docs/evidence/acceptance_summary.json` |
+| 单目标 | 到达 `(2, 1, 1.5)` 并悬停 | PASS | `docs/evidence/acceptance_summary.json` |
+| 多目标 | 连续执行四个目标／航点 | PASS | `docs/figures/03_multi_target_actual_trajectory.png` |
+| 静态避障 | 在超过五个静态障碍物的 P0–P15 路线飞行 | PASS | `docs/evidence/acceptance_summary.json` |
+| 狭窄通道／绕行 | 桥梁、峡谷及走廊穿越 | PASS | `docs/figures/04_route_planned_vs_actual.png` |
+| 稳定性展示 | 位置误差、RPM、轨迹、净空和高度 | PASS | `docs/figures/` |
 
-The final acceptance aggregator records all six minimum scenarios as passed. Machine-readable evidence is available in:
+最终验收汇总将六项最低要求全部标记为通过。机器可读证据见：
 
 - `docs/evidence/acceptance_summary.json`
 - `docs/evidence/teacher_interface_summary.json`
 - `docs/evidence/ACCEPTANCE_REPORT.md`
 
-## Required Experiment Figures
+## 要求提交的实验图表
 
-### 1. Hover, Single-Target and Multi-Target Position Error
+### 1. 悬停、单目标和多目标位置误差
 
-![Position error curve](docs/figures/01_position_error_curve.png)
+![位置误差曲线](docs/figures/01_position_error_curve.png)
 
-### 2. Four-Motor RPM Response
+### 2. 四电机 RPM 响应
 
-![Four motor RPM curves](docs/figures/02_four_motor_rpm_curves.png)
+![四电机 RPM 曲线](docs/figures/02_four_motor_rpm_curves.png)
 
-### 3. Multi-Goal Actual Trajectory
+### 3. 多目标实际轨迹
 
-![Multi-goal actual trajectory](docs/figures/03_multi_target_actual_trajectory.png)
+![多目标实际轨迹](docs/figures/03_multi_target_actual_trajectory.png)
 
-### 4. P0-P15 Planned Path and Actual Trajectory
+### 4. P0–P15 规划路径与实际轨迹
 
-![Planned and actual trajectory](docs/figures/04_route_planned_vs_actual.png)
+![规划与实际轨迹](docs/figures/04_route_planned_vs_actual.png)
 
-### 5. Minimum Static-Obstacle Distance
+### 5. 最小静态障碍物距离
 
-![Minimum obstacle distance curve](docs/figures/05_minimum_obstacle_distance_curve.png)
+![最小障碍距离曲线](docs/figures/05_minimum_obstacle_distance_curve.png)
 
-### 6. P0-P15 Altitude Profile
+### 6. P0–P15 飞行高度曲线
 
-![Route altitude profile](docs/figures/06_route_altitude_profile.png)
+![飞行高度曲线](docs/figures/06_route_altitude_profile.png)
 
-## Core ROS 2 Interfaces
+## ROS 2 核心接口
 
-The strict teacher-interface audit verifies the following interfaces:
+严格的教师接口审计检查以下接口：
 
-| Topic / TF | Role |
+| Topic／TF | 用途 |
 |---|---|
-| `/drone/motor_rpm_cmd` | Four-motor RPM command sent to the dynamics |
-| `/drone/odom` | Vehicle position, velocity, and attitude state |
-| `/drone/imu` | Simplified IMU output |
-| `/drone/path` | Actual / historical trajectory |
-| `/drone/goal` | Goal pose |
-| `/map/obstacles` | Obstacle map |
-| `/drone/reference` | Planner / controller reference |
-| `/drone/waypoints` | Planned waypoint sequence |
-| `/drone/safe_goal` | Collision-safe local goal |
-| `map -> base_link` | Dynamic world-to-vehicle TF |
+| `/drone/motor_rpm_cmd` | 发送给动力学节点的四电机 RPM 指令 |
+| `/drone/odom` | 无人机的位置、速度和姿态状态 |
+| `/drone/imu` | 简化 IMU 输出 |
+| `/drone/path` | 实际／历史轨迹 |
+| `/drone/goal` | 目标位姿 |
+| `/map/obstacles` | 障碍地图 |
+| `/drone/reference` | 规划器／控制器参考输入 |
+| `/drone/waypoints` | 规划航点序列 |
+| `/drone/safe_goal` | 局部无碰撞安全目标 |
+| `map -> base_link` | 世界坐标系到机体坐标系的动态 TF |
 
-Strict interface evidence is tracked in `docs/evidence/teacher_interface_summary.json`.
+严格接口证据见 `docs/evidence/teacher_interface_summary.json`。
 
-## Coordinate Frames
+## 坐标系约定
 
-The simulation uses a right-handed Cartesian world convention:
+本仿真采用右手笛卡尔世界坐标系：
 
-- `map` is the fixed world frame
-- `x` and `y` are horizontal map coordinates
-- positive `z` is altitude
-- `base_link` is the vehicle body frame
-- the dynamics publishes the dynamic transform `map -> base_link`
+- `map`：固定世界坐标系；
+- `x` 和 `y`：地图水平坐标；
+- `z` 正方向：高度增加；
+- `base_link`：飞行器机体坐标系；
+- 动力学节点发布动态变换 `map -> base_link`。
 
-Mission goals, obstacle geometry, planned paths, and actual trajectories use the same map/world convention unless a node explicitly documents an intermediate body-frame quantity.
+除非节点明确注明使用了中间机体系量，否则任务目标、障碍物几何、规划路径和实际轨迹均使用一致的地图／世界坐标约定。
 
-## Goal Input from the Command Line
+## 通过命令行发送目标
 
-The controller accepts `geometry_msgs/msg/PoseStamped` on `/drone/goal`.
+控制器通过 `/drone/goal` 接收 `geometry_msgs/msg/PoseStamped`。
 
-Example:
+示例：
 
 ```bash
 ros2 topic pub --once /drone/goal geometry_msgs/msg/PoseStamped \
 "{header: {frame_id: map}, pose: {position: {x: 2.0, y: 1.0, z: 1.5}, orientation: {w: 1.0}}}"
 ```
 
-A helper script is also provided:
+另提供辅助脚本：
 
 ```text
 src/drone_controller/scripts/send_goal
 ```
 
-## Map, Collision Checking, and Safety
+## 地图、碰撞检测与安全性
 
-Obstacle dimensions are scenario-configured rather than globally fixed. Canonical definitions include:
+障碍物尺寸由具体场景配置，并非使用全局固定数值。主要定义位于：
 
 - `src/drone_map/config/obstacles.yaml`
 - `src/drone_world/config/*.yaml`
 - `src/cq01_v2_scene/config/*.yaml`
-- final CQ01 scene and planning modules under `src/cq01_v9_mc/`
+- `src/cq01_v9_mc/` 下的最终 CQ01 场景与规划模块。
 
-Collision checking uses configured obstacle inflation / clearance parameters. The acceptance layer independently measures actual obstacle clearance.
+碰撞检测使用配置的障碍物膨胀／净空参数。验收层会独立测量实际飞行轨迹的障碍物净空。
 
-The final success criterion is that the actual minimum obstacle distance remains greater than the configured safety threshold.
+最终成功判据是：实际最小障碍物距离大于设定的安全阈值。
 
-Exact tracked geometry and safety-related configuration lines are collected in:
+已跟踪的几何和安全相关配置详情见 `docs/CONFIGURATION_EVIDENCE.md`。
 
-- `docs/CONFIGURATION_EVIDENCE.md`
+## 规划器行为与失败条件
 
-## Planner Behavior and Failure Conditions
+最终规划链采用具有碰撞检测的三维 A* 和航点生成。
 
-The final planning stack uses 3D A* / waypoint generation with collision checking.
+输入：
+- 当前飞行器状态；
+- 目标位置；
+- 障碍地图。
 
-Inputs include:
+输出：
+- 安全参考；
+- 航点序列；
+- 局部无碰撞安全目标。
 
-- current vehicle state
-- target goal
-- obstacle map
+典型失败情况：
+- 不存在无碰撞路径；
+- 起点或终点落在占据空间／膨胀障碍区内；
+- 安全膨胀使狭窄通道封闭；
+- 所需地图或状态输入不可用；
+- 动态障碍使原路径失效，且重规划无法找到可行替代路径。
 
-Outputs include:
+最终仓库包含静态避障、P0–P15 路线净空、桥梁／峡谷狭窄通道和动态重规划实验。
 
-- safe reference
-- waypoint sequence
-- collision-safe local goal
+## 加分项：轨迹输入
 
-Typical failure conditions include:
+除必做的目标点任务外，还实现了可选的轨迹输入功能。
 
-- no collision-free path exists
-- start or goal lies inside occupied / inflated space
-- safety inflation closes a narrow passage
-- required map or state input is unavailable
-- a dynamic obstacle invalidates the current route and replanning cannot produce a valid replacement
+实现模式：
+- 圆形轨迹；
+- 八字轨迹；
+- 航点列表／多目标轨迹。
 
-The final repository includes static avoidance, P0-P15 route clearance, bridge / gorge narrow-passage tests, and dynamic replanning experiments.
-
-## Trajectory-Input Bonus Functions
-
-The optional trajectory-input item is implemented in addition to the required goal-based tasks.
-
-Implemented modes include:
-
-- circle trajectory
-- figure-eight trajectory
-- waypoint-list / multi-goal trajectory
-
-Relevant packages:
-
+相关软件包：
 - `src/drone_pattern_trajectory/`
 - `src/drone_multigoal/`
-- pattern manager / orchestrator / evaluator modules under `src/cq01_v9_mc/`
+- `src/cq01_v9_mc/` 下的轨迹模式管理、任务编排与评价模块。
 
-## Chongqing CQ01 Scenario
+## 重庆 CQ01 场景
 
-The CQ01 extension is a Chongqing-inspired mountainous urban scenario designed to stress the planner and controller with:
+CQ01 是受重庆山地城市启发设计的工程压力测试场景，主要考察规划器与控制器在以下条件下的表现：
 
-- strong elevation variation
-- dense buildings
-- narrow passages
-- bridge / gorge geometry
-- long multi-stage routes
-- static and dynamic obstacles
-- external disturbances
-- perception and sensor-noise tests
+- 显著高差；
+- 密集建筑；
+- 狭窄通道；
+- 桥梁／峡谷几何；
+- 多阶段长距离航线；
+- 静态与动态障碍物；
+- 外部扰动；
+- 感知和传感器噪声测试。
 
-The scenario is intended as an engineering stress-test environment rather than a survey-grade reconstruction of real building geometry.
+场景定位是工程压力测试环境，而非对真实建筑分布进行测绘级精度重建。
 
-Packages related to Chongqing visualization and data include:
+重庆场景可视化与数据相关包：
 
 - `src/drone_chongqing/`
 - `src/drone_chongqing_cq01/`
@@ -275,13 +268,13 @@ Packages related to Chongqing visualization and data include:
 - `src/cq01_v2_scene/`
 - `src/cq01_v9_mc/`
 
-## Final Runtime vs. Development Packages
+## 最终运行系统与开发阶段软件包
 
-The repository preserves development and regression packages because the system was built incrementally.
+由于采用增量开发方式，仓库保留了开发阶段和回归测试软件包。
 
-### Frozen final runtime
+### 冻结的最终运行系统
 
-The teacher-facing final chain is centered on:
+面向教师验收的最终链路以以下内容为中心：
 
 - `src/drone_dynamics/`
 - `src/drone_controller/`
@@ -290,55 +283,51 @@ The teacher-facing final chain is centered on:
 - `src/cq01_requirement_closure/`
 - `scripts/run_cq01_nominal_full.sh`
 
-### Development / regression support
+### 开发／回归测试支持
 
-Packages containing earlier CQ01 versions or `regression` preserve development-stage tests such as disturbance regression, high-altitude wind checks, visualization iterations, and supporting benchmarks.
+早期 CQ01 版本或带 `regression` 名称的软件包，保留扰动回归、高空阵风检查、可视化迭代和基准测试等开发阶段证据。
 
-General-purpose packages such as `drone_world_validation`, `drone_robustness`, `drone_dynamic_replanning`, and analysis / evaluation modules are supporting test infrastructure rather than competing final controllers.
+`drone_world_validation`、`drone_robustness`、`drone_dynamic_replanning` 等通用软件包，以及分析／评价模块，属于辅助测试基础设施，并非与最终控制器竞争的另一套正式实现。
 
-The frozen baseline and exclusions are documented in:
+冻结范围及排除项见 `FINAL_BASELINE.md`。
 
-- `FINAL_BASELINE.md`
+## 与参考仓库的关系
 
-## Relationship to Reference Repositories
+考核题目提供的仓库仅用作设计参考，并非直接复制为最终运行系统。
 
-The repositories named in the assignment were used as design references rather than copied as the final runtime.
-
-| Reference | Used as a reference for | Implemented independently in this repository |
+| 参考项目 | 借鉴内容 | 本仓库独立实现的内容 |
 |---|---|---|
-| `pengyu_sim` | ROS 2-oriented simulation task decomposition and separation of dynamics, control, and visualization | `drone_dynamics`, `drone_controller`, teacher-interface bridge, acceptance tooling, and CQ01 integrated launch chain |
-| `MARSIM` | 3D / point-cloud mapping and local-perception concepts | Local `PointCloud2` representation, local perception crop, 3D planning, and collision-checking chain |
+| `pengyu_sim` | 面向 ROS 2 的仿真任务分解，以及动力学、控制与可视化解耦思路 | `drone_dynamics`、`drone_controller`、教师接口桥接、验收工具及 CQ01 综合启动链 |
+| `MARSIM` | 三维／点云地图及局部感知概念 | 本地 `PointCloud2` 表示、局部感知裁剪、三维规划与碰撞检查链 |
 
-The final submission does not require either reference repository as a runtime dependency.
+最终提交系统运行时不依赖上述两个参考仓库。
 
-## AI Usage and Human Verification
+## AI 使用及人工验证
 
-AI tools were used during development for code drafting, debugging support, documentation, experiment analysis, and exploration of alternative control approaches.
+开发期间使用 AI 辅助代码初稿、调试、文档编写、实验分析和替代控制方案探索。
 
-All final functionality was manually integrated, executed, inspected, and validated through the repository's acceptance and regression tools.
+最终功能均经过人工集成、执行、检查，并利用仓库中的验收和回归工具验证。
 
-An experimental recurrent direct-motor neural policy was explored during development but did not achieve reliable closed-loop hover. It is therefore documented as a failed research experiment and is intentionally excluded from the frozen final runtime.
+开发阶段曾探索循环神经网络直接电机控制策略，但未能实现可靠的闭环悬停。因此将其明确记录为失败的研究实验，有意排除在冻结的最终运行系统之外。
 
-See:
+详见 `ai_usage.md`。
 
-- `ai_usage.md`
-
-## Repository Structure
+## 仓库目录结构
 
 ```text
 .
-├── docs/                 # acceptance evidence, requirement traceability, figures
-├── report/assets/        # experiment outputs and quantitative analysis
-├── scripts/              # final run, audit, and evaluation scripts
-├── src/                  # ROS 2 packages
-├── FINAL_BASELINE.md     # frozen final scope and exclusions
-├── ai_usage.md           # AI-use disclosure and failed AI-control exploration
+├── docs/                 # 验收证据、需求追踪与图表
+├── report/assets/        # 实验结果及定量分析
+├── scripts/              # 最终运行、审计和评价脚本
+├── src/                  # ROS 2 软件包
+├── FINAL_BASELINE.md     # 冻结版范围和排除项
+├── ai_usage.md           # AI 使用披露及失败的 AI 控制探索
 └── README.md
 ```
 
-## Reproducibility and Traceability
+## 可复现性与可追溯性
 
-Useful traceability documents:
+主要追溯资料：
 
 - `docs/REQUIREMENTS_TRACEABILITY.md`
 - `docs/CONFIGURATION_EVIDENCE.md`
@@ -346,22 +335,21 @@ Useful traceability documents:
 - `docs/evidence/acceptance_summary.json`
 - `docs/evidence/teacher_interface_summary.json`
 
-The final clean repository excludes generated build artifacts and large runtime result directories, while retaining the source, configuration, scripts, figures, and machine-readable acceptance evidence needed to inspect and reproduce the submitted baseline.
+最终干净仓库排除了生成的构建产物和大型运行结果目录，但保留检查与复现最终提交基线所需的源码、配置、脚本、图表和机器可读验收证据。
 
-## Scope and Limitations
+## 范围与局限
 
-The frozen final runtime intentionally excludes:
+冻结的最终运行系统有意排除：
+- 多无人机运行；
+- 实验性端到端神经网络直接电机控制。
 
-- multi-UAV operation
-- experimental direct-motor end-to-end neural control
+最终提交的验证系统包括经典动力学、控制器、三维规划、重庆场景、扰动、传感器和评价链。
 
-The final submitted system is the validated classical dynamics + controller + 3D planning + Chongqing scene + disturbance / sensor / evaluation stack.
+## 许可与数据说明
 
-## Licensing and Data Notes
-
-This repository currently contains component-level license and data-license notices, including:
+仓库目前包含组件级许可证和数据许可说明：
 
 - `src/drone_dynamics/LICENSE`
 - `src/drone_chongqing_realdata/web/DATA_LICENSE.md`
 
-A repository-wide license has not yet been added. Public visibility alone should not be interpreted as granting a blanket license over all source code, data, and third-party-derived assets. Component and data notices should be reviewed before reuse.
+尚未添加覆盖全仓库的统一许可证。仓库公开可见并不意味着所有源码、数据和由第三方素材衍生的资源都已获得统一的再利用许可。复用前应分别检查组件与数据许可声明。
