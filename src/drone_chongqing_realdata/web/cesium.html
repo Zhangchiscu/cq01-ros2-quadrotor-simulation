@@ -21,25 +21,25 @@
     <header>
       <h1>渝中半岛真实数据验证</h1>
       <p>
-        Cesium推荐模式：Cesium World Terrain与Cesium OSM Buildings。
+        Cesium 推荐模式：Cesium World Terrain与Cesium OSM Buildings。
         建筑位置和轮廓来自OSM，建筑缺失高度由Cesium估计。
       </p>
-      <span class="badge">真实地形 + 全球OSM 3D Buildings</span>
+      <span class="badge">真实地形 + 全球 OSM 三维建筑</span>
     </header>
 
     <section class="section" id="tokenSection">
-      <div class="section-title">Cesium ion令牌</div>
+      <div class="section-title">Cesium ion 访问令牌</div>
       <form class="token-form" id="tokenForm">
         <input
           id="tokenInput"
           type="password"
           autocomplete="off"
-          placeholder="粘贴本机使用的Cesium ion access token"
+          placeholder="粘贴本机使用的 Cesium ion 访问令牌"
         >
         <button type="submit">加载真实三维场景</button>
       </form>
       <p class="small">
-        令牌只保存在当前浏览器localStorage中，不会写入ROS工程文件。
+        令牌只保存在当前浏览器 localStorage中，不会写入ROS工程文件。
       </p>
     </section>
 
@@ -66,7 +66,7 @@
         <button id="toggleCesiumBuildings">建筑</button>
         <button id="toggleCesiumLabels">地标</button>
         <a class="button-link" href="./index.html">
-          MapLibre模式
+          MapLibre 模式
         </a>
         <button id="clearToken">清除令牌</button>
       </div>
@@ -75,7 +75,7 @@
     <section class="section">
       <div class="section-title">状态</div>
       <div id="cesiumStatus" class="status warn">
-        请粘贴Cesium ion令牌。
+        请粘贴Cesium ion 访问令牌。
       </div>
     </section>
   </aside>
