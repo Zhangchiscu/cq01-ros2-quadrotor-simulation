@@ -206,7 +206,7 @@ class BonusDashboard:
         ).pack(side='left')
         ttk.Label(
             header,
-            text='READ-ONLY｜无目标发布器｜无控制权限',
+            text='只读｜无目标发布器｜无控制权限',
             font=('Sans', 11, 'bold'),
         ).pack(side='right')
 
@@ -253,7 +253,7 @@ class BonusDashboard:
             ('任务阶段', 'stage'),
             ('当前位置 x/y/z (m)', 'position'),
             ('速度 vx/vy/vz (m/s)', 'velocity'),
-            ('姿态 roll/pitch/yaw (deg)', 'attitude'),
+            ('姿态：横滚／俯仰／偏航（度）', 'attitude'),
             ('当前目标 x/y/z (m)', 'goal'),
             ('位置误差 (m)', 'position_error'),
         ]
@@ -468,9 +468,9 @@ class BonusDashboard:
         metrics = sensor.get('metrics', {}) if isinstance(sensor, dict) else {}
         nominal_rmse = metrics.get('nominal_position_rmse_m')
         self.variables['footer'].set(
-            'Nominal sensor RMSE: '
+            '标称传感器 RMSE：'
             + ('--' if nominal_rmse is None else f'{float(nominal_rmse):.3f} m')
-            + ' | GUI publishes no ROS topics'
+            + '｜图形界面不发布 ROS2 话题'
         )
         self.root.after(200, self._refresh)
 
