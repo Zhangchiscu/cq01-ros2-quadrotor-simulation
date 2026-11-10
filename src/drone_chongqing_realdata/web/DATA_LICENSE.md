@@ -9,17 +9,17 @@
 
 `© OpenStreetMap contributors`
 
-## Cesium OSM Buildings
+## Cesium OSM 三维建筑
 
 Cesium 模式通过 Cesium ion 加载 Cesium OSM Buildings。建筑数据来源为
 OpenStreetMap，Cesium 提供 3D Tiles 服务与 estimatedHeight 等属性。
 
-## Cesium World Terrain
+## Cesium 全球地形
 
-Cesium 模式通过用户自己的 Cesium ion access token 加载 World Terrain。
+Cesium 模式通过用户自己的 Cesium ion 访问令牌 加载 World Terrain。
 令牌仅保存在本机浏览器 localStorage 中，不应提交到 Git。
 
-## MapLibre 地形
+## MapLibre 地形数据
 
 MapLibre 模式使用 MapLibre 官方 3D Terrain 示例所采用的网络 DEM
 TileJSON 服务。该模式用于无令牌覆盖率检查，不作为最终离线交付数据源。
