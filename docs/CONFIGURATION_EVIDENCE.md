@@ -1,9 +1,9 @@
-# CQ01 Configuration Evidence
+# CQ01 配置证据
 
-This file lists exact tracked configuration/code lines related to obstacle geometry and safety/clearance parameters.
-It is generated from the frozen Git source tree so the README does not invent numeric values.
+本文列出与障碍物几何以及安全／净空参数有关的、在版本库中受跟踪的准确配置或代码行。
+内容从冻结的 Git 源码树生成，避免 README 编造配置数值。
 
-## Safety / clearance related tracked lines
+## 安全与净空相关的受跟踪代码行
 
 - `src/cq01_v9_mc/setup.py:51` — `'course_route_clearance_evaluator = cq01_v9_mc.course_route_clearance_evaluator:main',`
 - `src/cq01_v9_mc/cq01_v9_mc/v9_astar_planner.py:265` — `structured = np.frombuffer(`
@@ -46,7 +46,7 @@ It is generated from the frozen Git source tree so the README does not invent nu
 - `src/cq01_v9_mc/cq01_v9_mc/v9_high_altitude_wind.py:1042` — `def safety_reason(self) -> Optional[str]:`
 - `src/cq01_v9_mc/cq01_v9_mc/v9_high_altitude_wind.py:1047` — `if tilt >= self.safety_tilt_deg:`
 
-## Obstacle geometry / dimensions related tracked lines
+## 障碍物几何与尺寸相关的受跟踪代码行
 
 - `src/cq01_v9_mc/setup.py:30` — `'v9_dynamic_obstacle = cq01_v9_mc.v9_dynamic_obstacle:main',`
 - `src/cq01_v9_mc/cq01_v9_mc/v9_astar_planner.py:43` — `self.declare_parameter("fixed_height_test_z_m", 1.50)`

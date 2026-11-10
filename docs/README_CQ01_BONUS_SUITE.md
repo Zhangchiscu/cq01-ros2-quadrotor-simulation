@@ -4,9 +4,9 @@
 
 该套件统一管理三组重庆完整闭环实验：
 
-1. nominal + truth odom；
-2. heavy + truth odom；
-3. nominal + noisy odom/IMU closed loop。
+1. `nominal`（标称机体）＋ `truth odom`（真值里程计）；
+2. `heavy`（较重机体）＋ `truth odom`（真值里程计）；
+3. `nominal`（标称机体）＋ `noisy odom/IMU closed loop`（带噪声里程计／IMU 的闭环控制）。
 
 三组实验使用相同的重庆场景、P0–P15 路线、扰动、动态障碍、
 圆形/八字和最终定点评价。
